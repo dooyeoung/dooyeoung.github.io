@@ -56,7 +56,7 @@
 <body>
     <div class="wrapper">
         <div class="navbar container">
-            <a id="author-name" class="alignable pull-left" href="{{ site.baseurl }}">{{ site.title }}</a>
+            <a id="author-name" class="alignable pull-left" href="{{ site.url }}">{{ site.title }}</a>
             <ul id="navlist" class="alignable pull-right navbar-ul">
                 {% for x in site.nav %}
                     {% if x.name == "Resume" %}
@@ -84,6 +84,7 @@
 					<p style="text-align: center; margin-bottom: 10px">
 					<a href="{{ site.footer_url }}" style="color: black"><small>{{ site.footer_text }}</small></a>
 					</p>
+                    <br>
 				{% endif %}
             </div>
     </div>
