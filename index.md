@@ -27,14 +27,15 @@ dooyeoung.ryu@gmail.com / 010-5061-2576 / [**GitHub**](https://github.com/dooyeo
 	- D3를 사용한 데이터시각화
 
 1. 보유기술 
-	- Python / Flask
-	- Vue / D3 / PHP / HTML / Javascript
-	- C# / C++ / Java
-	- RDS / Redis / AMQP
-	- EC2 / S3 / VPC 
+
+	자주 사용하는 기술
+	- Python / Flask / SQLAlchemy / PostgresSQL
+	- Terraform / Redis / AMQP / EC2
+	- K8S
 	- Lambda
-	- PostgresSQL
-	- Terraform
+
+	학습했던 기술
+	- Vue.js / D3.js
 
 ---
 
