@@ -27,6 +27,8 @@ $brand-color: map-get($brand-colors, "orangered");
   $theme-color: {{ site.theme_color | default: '#ffffff' }};
 }
 
+$header-text-color: {{ site.header_text_color | default: '#ffffff' }};
+
 @if map-has-key($brand-colors, $brand-name) {
   $brand-color: map-get($brand-colors, $brand-name);
 } @else if str-index($brand-name, "#") == 1 {
@@ -36,3 +38,21 @@ $brand-color: map-get($brand-colors, "orangered");
 $content-width: {{ site.content_width | default: '920px' }};
 
 @import "yat";
+
+#search-bar {
+  margin: 32px auto;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 0 20px;
+
+  & #search-input {
+    width: calc(100% - 30px);
+    border: none;
+    line-height: 44px;
+    outline: none;
+  }
+}
+
+#results-container > li > a {
+  color: #000;
+};
