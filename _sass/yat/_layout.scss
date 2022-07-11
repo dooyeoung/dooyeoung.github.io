@@ -11,7 +11,7 @@ html {
   &[data-scroll-status='top'] {
     header.site-header-transparent {
       height: 0;
-      margin-top: 12px;
+      margin-top: 0px;
       background-color: transparent;
       transition: 0.1s height,background-color,box-shadow;
 
@@ -202,7 +202,7 @@ html {
 
   a {
     $a-color: $brand-color;
-    color: $a-color;
+    color: $footer-text-color;
 
     &:hover {
       color: lighten($a-color, 10%);
@@ -596,10 +596,13 @@ html {
 
   .wrapper {
     height: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
   }
 
   .page-banner-inner {
-    @include vertical-center(relative);
+    // @include vertical-center(relative);
 
     color: $banner-text-color;
     padding: 10px 5px;
