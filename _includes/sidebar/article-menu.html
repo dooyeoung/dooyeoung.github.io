@@ -26,9 +26,10 @@
     var menuHTML = '';
     for (var i = 0; i < headings.length; i++) {
       var h = headings[i];
+      display_name = h.getAttribute('name') || h.textContent
       menuHTML += (
         '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+        + '<a href="#h-' + h.getAttribute('id') + '">' + display_name + '</a></li>');
     }
 
     menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
