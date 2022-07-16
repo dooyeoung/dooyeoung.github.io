@@ -35,14 +35,14 @@ html {
       }
     }
 
-    footer.site-footer {
-      color: unset;
-      background-color: transparent;
+    // footer.site-footer {
+    //   color: unset;
+    //   background-color: transparent;
 
-      .site-footer-inner {
-        border-top: solid 1px #eee;
-      }
-    }
+    //   .site-footer-inner {
+    //     border-top: solid 1px #eee;
+    //   }
+    // }
   }
 
   &[data-scroll-status='down'] {
