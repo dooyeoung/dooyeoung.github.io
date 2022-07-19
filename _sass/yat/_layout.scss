@@ -567,7 +567,9 @@ html {
  * Page banner
  */
 .page-banner {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   height: $banner-height;
   background-color: $banner-background;
@@ -595,10 +597,10 @@ html {
   }
 
   .wrapper {
-    height: 100%;
     display: flex;
     justify-content: end;
     flex-direction: column;
+    position: absolute;
   }
 
   .page-banner-inner {
@@ -612,7 +614,7 @@ html {
       margin: 0;
 
       > :nth-child(1) {
-        @include relative-font-size(3.9);
+        @include relative-font-size(3.3);
         letter-spacing: -1px;
         margin-bottom: 0.1em;
         font-weight: normal;
@@ -625,7 +627,7 @@ html {
 
       > :nth-child(2) {
         font-weight: lighter;
-        margin-bottom: 0.8em;
+        margin-bottom: 0;
         transition: 0.2s all;
 
         @include media-query($on-palm) {
@@ -650,6 +652,7 @@ html {
 
     .post-meta {
       color: #ffffffcc;
+      margin-bottom: 0;
     }
 
     .left-vsplit:before {
