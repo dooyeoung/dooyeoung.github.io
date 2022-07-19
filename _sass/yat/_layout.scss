@@ -443,6 +443,7 @@ html {
 
     p, hr {
       margin-bottom: 24px;
+      word-break: keep-all;
     }
 
     hr {
