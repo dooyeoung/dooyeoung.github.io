@@ -442,7 +442,7 @@ html {
     }
 
     p, hr {
-      margin-bottom: 24px;
+      // margin-bottom: 24px;
       word-break: keep-all;
     }
 
@@ -617,7 +617,7 @@ html {
       > :nth-child(1) {
         @include relative-font-size(3.3);
         letter-spacing: -1px;
-        margin-bottom: 0.1em;
+        margin-bottom: 0;
         font-weight: normal;
         transition: 0.2s all;
 
@@ -628,7 +628,7 @@ html {
 
       > :nth-child(2) {
         font-weight: lighter;
-        margin-bottom: 0;
+        margin-bottom: 10px;
         transition: 0.2s all;
 
         @include media-query($on-palm) {
