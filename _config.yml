@@ -141,10 +141,10 @@ header_pages:
   - search.html
 
 # Page default value
-defaults:
-  home:
-    heading: "sdfsdfsdf awesome heading"
-    subheading: "Your awesome subheading"
+# defaults:
+#   home:
+#     heading: "sdfsdfsdf awesome heading"
+#     subheading: "Your awesome subheading"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
