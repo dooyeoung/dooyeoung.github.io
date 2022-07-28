@@ -12,8 +12,9 @@ eks에서 AWS Load Balancer Controller를 적용시 정책을 필수로 설정�
 
 ## 정책 생성
 아래 [공식 문서](https://github.com/kubernetes-sigs/aws-load-balancer-controller/blob/main/docs/install/iam_policy_v1_to_v2_additional.json)의 정책 내용을 확인한 뒤 aws console에서 정책을 생성합니다
-<img src="/assets/images/posts/alb_policy_01.png" width="640px" style="margin-left:0">
-<img src="/assets/images/posts/alb_policy_02.png" width="640px" style="margin-left:0">
+
+<img class="post_img" src="/assets/images/posts/alb_policy_01.png">
+<img class="post_img" src="/assets/images/posts/alb_policy_02.png">
 
 aws cli로 작업할 경우 명령어는 아래와 같습니다
 ``` bash
@@ -22,7 +23,8 @@ aws iam create-policy --policy-name [POLICY_NAME] --policy-document [POLICY_DOCU
 
 ## 정책 연결
 eks에서 사용중인 역할에 위에서 만든 정책을 추가합니다
-<img src="/assets/images/posts/alb_policy_03.png" width="640px" style="margin-left:0">
+
+<img class="post_img" src="/assets/images/posts/alb_policy_03.png">
 
 aws cli로 작업할 경우 명령어는 아래와 같습니다
 ``` bash

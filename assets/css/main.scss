@@ -56,3 +56,9 @@ $content-width: {{ site.content_width | default: '920px' }};
 #results-container > li > a {
   color: #000;
 };
+
+
+.post_img{
+  width: 560px;
+  margin-left: 0px !important
+}
