@@ -23,342 +23,307 @@ https://jbee.io/about/ -->
         margin-left:0 !important;
         margin-right:2px !important;
         margin-bottom:2px !important;
-        height: 24px;
+        height: 22px;
     }
+
+    ul.list-inside > li{
+        margin-left:4px;
+        text-indent: -18px;
+        padding-left: 14px;
+    }
+
+    @media print
+    {    
+        .sidebar, .site-header, .site-header-inner, .site-nav, .site-footer, .site-footer-inner
+        {
+            display: none !important;
+        }
+
+        #introduce{
+            grid-column: span 4 / span 4
+        }
+
+        #Experience{
+            margin-top: 0px !important;
+        }
+
+        .print-break{
+            page-break-before:always;
+        }
+
+        .page-content{
+            padding-top: 10px !important;
+        }
+
+        .page-content > .wrapper{
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+    }
+
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
 <script src="https://cdn.tailwindcss.com"></script>
 
-<br>
-
-<h2 class="font-semibold" id="Introduce" style="margin-top:10px">Introduce</h2>
 <div class="grid grid-cols-4">
     <div class="col-span-1">
-        <div 
-            class="mx-auto rounded-full h-32 w-32 bg-center bg-no-repeat bg-origin-content bg-contain" 
-            style="background-image: url(assets/images/dooyeoung.jpg);">
-        </div>
+        <img src="assets/images/dooyeoung.png">
     </div>
     <div class="col-span-3 flex flex-col justify-center">
-        <div class="font-medium text-2xl mb-2">
+        <div class="text-2xl mb-4 font-semibold">
             류두영 / Dooyeoung Ryu
         </div>
+
+        010-5061-2576 <br>
         dooyeoung.ryu@gmail.com<br>
-        https://github.com/dooyeoung
+        https://dooyeoung.github.io/about
     </div>
 </div>
 
-<div class="grid grid-cols-4 mb-4">
-    <div class="col-span-1"></div>
-    <div class="col-span-3"> 
-        여러 스타트업에서 데이터 팀에서 백엔드 개발까지 개발자로서 다양한 업무를 경험 하였습니다.<br>
-        AWS 기반의 프로덕션 서비스를 설계, 개발, 운영을 경험하였고 확장성과 유지 보수성이 높은 제품을 개발하기 위해 고민하고 있습니다. <br><br>
 
+<h2 class="font-semibold" id="Introduce">
+    Introduce
+</h2>
+<div class="grid grid-cols-4">
+    <div class="col-span-4">
+
+        여러 스타트업에서 백엔드 개발, 데이터 엔지니어, 업무 자동화를 위한 ERP 개발 등 개발자로서 다양한 업무를 경험하였습니다.
+        <br>
+        AWS 기반의 프로덕션 서비스를 설계, 개발, 운영을 경험하였고 확장성과 유지 보수성이 높은 제품을 개발하기 위해 고민하고 있습니다.
+        <br><br>
+
+        AWS 인프라 레거시 정리 작업 시 제대로 된 이해와 작업을 위해 devops 강의를 수강하였으며 AWS 인프라 현황을 전수 조사 하였습니다.
+        region을 하나로 통합하였으며 사용하지 않는 보안그룹 약 230개 제거와 접근 제한 설정, RDS vpc를 통일하는 작업을 진행하였습니다.
+
+        <br><br>
+        도도포인트 앱 구현 초반 QA에서 수동으로 가입과 포인트 적립을 시도하여 QA를 준비하는 모습을 보고 
+        QA 백오피스를 구현하여 다양한 조건의 dummy 데이터 생성할 수 있게 하여 QA 기간을 대폭 줄이는 데 도움이 된 경험이 있습니다.
+
+        <br><br>
         서비스 개발이란 결국 비즈니스와의 커뮤니케이션이 가장 중요하다고 생각하고 있으며 팀원들과 논의하여
-        외부 서비스 적용, 운영 정책 수정, 기능 개발 등 여러 수단으로 적합한 문제 해결 방법을 찾는것을 좋아합니다.<br>
-        적극적인 커뮤니케이션으로 문제를 해결하며 비즈니스에 집중 할수있도록 반복 업무의 자동화를 모색합니다.<br>
-        함께 일하면 좋은, 문제해결에 도움이 되는 개발자로 성장하기 위해 학습하고, 경험하고, 노력하고 있습니다.<br>
-    </div>
-</div>
-<hr>
+        외부 서비스 적용, 운영 정책 수정, 기능 개발 등 여러 수단으로 적합한 문제 해결 방법을 찾는 것을 좋아합니다.
 
-<h2 class="font-semibold" id="Experience">Experience</h2>
-<div class="">
-    <div class="grid grid-cols-4 mb-4">
-        <div class="col-span-1">
-            <div class="text-lg text-neutral-400 font-medium">
-                2022.02 ~
-            </div>
-        </div>
-        <div class="col-span-3">
-            <div class="text-lg font-medium">
-                야놀자 FNB Solution
-            </div>
-            <div class="text-sm text-neutral-500 mb-4">
-                도도포인트 백엔드 개발자
-            </div>
-            <ul class="list-inside list-disc mb-4">
-                <li>야놀자 이관 후 사업 정상화를 위한 서비스 정비</li>
-                <li>도도포인트 전체 서비스 도메인 교체</li>
-                <li>AWS 인프라 리소스 전수 조사 및 정리</li>
-            </ul>
-            <div class="skil">
-                <img alt="Html" src ="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/flask-000000.svg?&style=for-the-badge&logo=flask&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/postgresql-4169E1.svg?&style=for-the-badge&logo=postgresql&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/terraform-7B42BC.svg?&style=for-the-badge&logo=terraform&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/circleci-343434.svg?&style=for-the-badge&logo=circleci&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/helm-0F1689.svg?&style=for-the-badge&logo=helm&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/k8s-326CE5.svg?&style=for-the-badge&logo=kubernetes&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/docker-2496ED.svg?&style=for-the-badge&logo=docker&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/redis-DC382D.svg?&style=for-the-badge&logo=redis&logoColor=white"/>
-            </div>
-        </div>
-    </div>
+        <br><br>
+        적극적인 커뮤니케이션으로 문제를 해결하려 합니다. 비즈니스에 집중 할수있도록 반복 업무의 자동화를 모색합니다.
 
-    <div class="grid grid-cols-4 mb-4">
-        <div class="col-span-1">
-            <div class="text-lg text-neutral-400 font-medium">
-                2021.03 ~ 2022.02
-            </div>
-        </div>
-        <div class="col-span-3">
-            <div class="text-lg font-medium">
-                스포카
-            </div>
-            <div class="text-sm text-neutral-500 mb-4">
-                도도포인트 백엔드 개발자
-            </div> 
-            <ul class="list-inside list-disc mb-4">
-                <li>도도포인트 앱 푸시기능 구현</li>
-                <li>개인정보 제3자 제공 동의 정책 구현</li>
-                <li>테라폼을 사용한 인프라 관리</li> 
-                <li>AWS Event Brdige를 통해 API를 호출하던 방식을 Celery Crontab으로 교체</li>
-                <li>레포지토리 패턴을 적용하여 데이터 관리 로직 분리</li>
-                <li>파이썬 프로잭트의 패키지 관리를 위한 peotry 교체 작업</li>
-                <li>데이터 추출 및 전치리 지원</li>
-            </ul>
-            <div class="skil">
-                <img alt="Html" src ="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/flask-000000.svg?&style=for-the-badge&logo=flask&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/postgresql-4169E1.svg?&style=for-the-badge&logo=postgresql&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/terraform-7B42BC.svg?&style=for-the-badge&logo=terraform&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/circleci-343434.svg?&style=for-the-badge&logo=circleci&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/helm-0F1689.svg?&style=for-the-badge&logo=helm&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/k8s-326CE5.svg?&style=for-the-badge&logo=kubernetes&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/docker-2496ED.svg?&style=for-the-badge&logo=docker&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/redis-DC382D.svg?&style=for-the-badge&logo=redis&logoColor=white"/>
-            </div>
-        </div>
-    </div>
-
-    <div class="grid grid-cols-4 mb-4">
-        <div class="col-span-1">
-            <div class="text-lg text-neutral-400 font-medium">
-                2020.01 ~ 2021.03
-            </div>
-        </div>
-        <div class="col-span-3">
-            <div class="text-lg font-medium">
-                시티스푸너스
-            </div>
-            <div class="text-sm text-neutral-500 mb-4">
-                IT 엔지니어
-            </div> 
-            <ul class="list-inside list-disc mb-4">
-                <li>EC2에 Flask와 Vue를 사용하여 사내 ERP 개발</li>
-                <li>Selenium으로 Cafe24, Shopify 주문 수집 자동화</li>
-                <li>주문 알림 slack bot 개발</li>
-                <li>Cafe24, Shopify 커스터마이즈</li>
-                <li>GA, GTM 관리 및 설정</li>
-                <li>페이스북 광고데이터 수집 후 D3로 대시보드 구현</li>
-                <li>인스타그램 특정 검색어 검색결과 대시보드 구축</li>
-            </ul>
-            <div class="skil">
-                <img alt="Html" src ="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/flask-000000.svg?&style=for-the-badge&logo=flask&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/Vue-4FC08D.svg?&style=for-the-badge&logo=vuedotjs&logoColor=white"/> 
-                <img alt="Html" src ="https://img.shields.io/badge/EC2-FF9900.svg?&style=for-the-badge&logo=amazonec2&logoColor=white"/>
-            </div>
-        </div>
-    </div>
-
-    <div class="grid grid-cols-4 mb-4">
-        <div class="col-span-1">
-            <div class="text-lg text-neutral-400 font-medium">
-                2018.11 ~ 2020.01
-            </div>
-        </div>
-        <div class="col-span-3">
-            <div class="text-lg font-medium">
-                마이셀럽스
-            </div>
-            <div class="text-sm text-neutral-500 mb-4">
-                Data 엔지니어
-            </div>
-            <ul class="list-inside list-disc mb-4">
-                <li>Face-alignment, opencv를 사용하여 얼굴 부위 별 색상 추출 모듈 개발</li>
-                <li>yolov3를 사용하여 영상의 주요장면 추출 모듈 개발</li>
-                <li>사용자 로그 데이터 전처리 및 대시보드 구현</li>
-            </ul>
-            <div class="skil">
-                <img alt="Html" src ="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/flask-000000.svg?&style=for-the-badge&logo=flask&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/javascript-c99547.svg?&style=for-the-badge&logo=javascript&logoColor=white"/>
-            </div>
-        </div>
-    </div>
-
-    <div class="grid grid-cols-4 mb-4">
-        <div class="col-span-1">
-            <div class="text-lg text-neutral-400 font-medium">
-                2015.02 - 2017.12 
-            </div>
-        </div>
-        <div class="col-span-3">
-            <div class="text-lg font-medium">
-                아라엔지니어링
-            </div>
-            <div class="text-sm text-neutral-500 mb-4">
-                IT 엔지니어
-            </div> 
-            <ul class="list-inside list-disc mb-4">
-                <li>OTS software 개발</li>
-	            <li>Aveva사의 PDMS utility software 개발</li>
-                <li>Aveva사의 rvm 파일을 fbx파일로 변환하는 모듈 개발</li>
-                <li>UnisimDesign, OLGA 제어 프로그램 개발</li>
-                <li>GDI+ 사용하여 자체 차트 모듈 개발</li>
-            </ul>
-            <div class="skil">
-                <img alt="Html" src ="https://img.shields.io/badge/-C%23-239120.svg?&style=for-the-badge&logo=csharp&logoColor=white"/> 
-                <img alt="Html" src ="https://img.shields.io/badge/-c++-00599C.svg?&style=for-the-badge&logo=c%2B%2B&logoColor=white"/>
-                <img alt="Html" src ="https://img.shields.io/badge/mariadb-003545.svg?&style=for-the-badge&logo=mariadb&logoColor=white"/>
-            </div>
-        </div>
+        <br>
+        함께 일하면 좋은, 문제해결에 도움이 되는 개발자로 성장하기 위해 학습하고 있습니다.
     </div>
 </div>
 
-<hr>
 
-<h2 class="font-semibold" id="Project">Recent Projects</h2>
-
+<h2 class="font-semibold print-break" id="Experience">Project</h2>
 <div class="grid grid-cols-4 mb-4">
-    <div class="text-2xl">도도포인트</div>
+    <div class="col-span-4">
+        <div class="text-xl font-medium">
+            야놀자 FNB Solution, 스포카
+        </div>
+        <div class="text-sm text-neutral-500 mb-4">
+            도도포인트 백엔드 개발자
+        </div>
+    </div>
+    <div class="col-span-4 skil mb-4">
+        <img alt="Html" src ="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/>
+        <img alt="Html" src ="https://img.shields.io/badge/flask-000000.svg?&style=for-the-badge&logo=flask&logoColor=white"/>
+        <img alt="Html" src ="https://img.shields.io/badge/postgresql-4169E1.svg?&style=for-the-badge&logo=postgresql&logoColor=white"/>
+        <img alt="Html" src ="https://img.shields.io/badge/terraform-7B42BC.svg?&style=for-the-badge&logo=terraform&logoColor=white"/>
+        <img alt="Html" src ="https://img.shields.io/badge/circleci-343434.svg?&style=for-the-badge&logo=circleci&logoColor=white"/>
+        <img alt="Html" src ="https://img.shields.io/badge/helm-0F1689.svg?&style=for-the-badge&logo=helm&logoColor=white"/>
+        <img alt="Html" src ="https://img.shields.io/badge/k8s-326CE5.svg?&style=for-the-badge&logo=kubernetes&logoColor=white"/>
+        <img alt="Html" src ="https://img.shields.io/badge/docker-2496ED.svg?&style=for-the-badge&logo=docker&logoColor=white"/>
+        <img alt="Html" src ="https://img.shields.io/badge/redis-DC382D.svg?&style=for-the-badge&logo=redis&logoColor=white"/>
+    </div>
+
+    <div class="col-span-1">
+        <div class="text-lg text-neutral-400 font-medium">
+            2021.03 -
+        </div>
+    </div>
+    <div class="col-span-3">
+        <div class="mb-2 text-lg font-medium">도도포인트 전체 서비스 도메인 교체</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>도메인 교체를 위해 ELB를 새로 구성하여 도메인 이중화 작업 진행</li>
+            <li>Route53, ACM, LoadBalancer, k8s secret 도메인 사용 현황 전수 조사</li>
+        </ul>
+    
+        <div class="mb-2 text-lg font-medium">프로젝트 전체 정비 작업</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>전체 서비스 CircleCI context 정비 작업 진행</li>
+            <li>전 회사의 슬랙 채널 정보 및 메일 주소 모두 제거 및 교체</li>
+        </ul>
+
+        <div class="mb-2 text-lg font-medium">휴면 전환 예정 사용자에게 안내 메시지 발송 기능 구현</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>매일 4000~5000 명의 휴면 전환 예정 사용자를 필터링하여 알림톡, LMS 메시지 발송하도록 celery cronjob 구현</li>
+        </ul>
+
+        <div class="mb-2 text-lg font-medium">개인정보 제 3자 동의 정책 반영</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>개인정보 제3자 동의 여부 갱신 기능 구현</li>
+            <li>백오피스에서 동의 여부 수정 가능 및 수정 후 사용자에게 알림 기능 구현</li>
+            <li>매장의 광고 메시지 발신시 동의 사용자에게만 발신되도록 메시지 발신 로직 수정</li>
+        </ul>
+
+        <div class="mb-2 text-lg font-medium">도도포인트 앱 서버 푸시 기능 구현</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>도도포인트 서버에서 포인트 활동 이벤트 생성 시 메세지 발신되도록 설계</li>
+            <li>PyFCM 패키지를 사용하여 푸시 기능 구현</li>
+            <li>DocumentDB를 사용하여 푸시 메시지 보관</li>
+        </ul>
+
+        <div class="mb-2 text-lg font-medium">QA 테스트 더미 데이터 생성기</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>가상의 사용자 포인트 활동 생성</li>
+            <li>운영 환경의 매장 데이터 추출하여 개발 환경 매장 데이터로 구성</li>
+            <li>Flask Jinja2를 사용하여 백오피스 페이지 구성</li>
+            <li>구글 OAuth 적용 하여 접근 제한 구현</li>
+        </ul>
+
+        <div class="mb-2 text-lg font-medium">도도포인트 앱 API 서버 개발</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>Python 패키지 관리 방식 Poetry로 변경</li>
+            <li>Marshmallow 적용하여 오브젝트의 직렬화, 역직렬화, 데이터 검증 </li>
+            <li>레포지토리 패턴 적용하여 데이터 관리 로직 분리</li>
+        </ul>
+
+        <div class="mb-2 text-lg font-medium">배치 프로세스 수정</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>AWS Event Bridge - Lambda를 사용한 배치 작업을 Celery Cronjob으로 교체</li>
+        </ul>
+    </div>
 </div>
-<div>
-    <div class="grid grid-cols-4 mb-4">
-        <div class="col-span-1">
-            <div class="text-lg text-neutral-400 font-medium">
-                2022.03 ~ 2022.08
-            </div>
-        </div>
-        <div class="col-span-3">
-            <div class="mb-2 text-lg font-medium">야놀자 이관 후 도도포인트 전체 서비스 도메인 교체</div>
-            <ul class="list-inside list-disc mb-4">
-                <li>도메인 교체 작업을 위해 ELB를 새로 구성하여 도메인 이중화 작업 진행</li>
-                <li>Route53, ACM, LoadBalancer, k8s secret 도메인 사용 현황 전수 조사</li>
-                <li>전체 서비스 CircleCI 정비 작업 진행</li>
-            </ul>
-        </div>
-    </div> 
 
-    <div class="grid grid-cols-4 mb-4">
-        <div class="col-span-1">
-            <div class="text-lg text-neutral-400 font-medium">
-                2021.10 ~ 2021.11
-            </div>
+<div class="grid grid-cols-4 mb-4 print-break">
+    <div class="col-span-4">
+        <div class="text-xl font-medium">
+            시티스푸너스
         </div>
-        <div class="col-span-3">
-            <div class="mb-2 text-lg font-medium">개인정보 제 3자 동의 정책 반영</div>
-            <ul class="list-inside list-disc mb-4">
-                <li>개인정보 제3자 동의 여부 갱신 기능 구현</li>
-                <li>백오피스에서 동의 여부 수정 가능 및 수정 후 사용자에게 알림 기능 구현</li>
-                <li>매장의 광고 메시지 발신시 동의 사용자에게만 발신되도록 메시지 발신 로직 수정</li>
-            </ul>
+        <div class="text-sm text-neutral-500 mb-4">
+            IT 엔지니어
         </div>
-    </div> 
+    </div>
+    <div class="col-span-4 skil mb-4">
+        <img alt="Html" src ="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/>
+        <img alt="Html" src ="https://img.shields.io/badge/flask-000000.svg?&style=for-the-badge&logo=flask&logoColor=white"/>
+        <img alt="Html" src ="https://img.shields.io/badge/Vue-4FC08D.svg?&style=for-the-badge&logo=vuedotjs&logoColor=white"/> 
+        <img alt="Html" src ="https://img.shields.io/badge/EC2-FF9900.svg?&style=for-the-badge&logo=amazonec2&logoColor=white"/>
+    </div>
 
-    <div class="grid grid-cols-4 mb-4">
-        <div class="col-span-1">
-            <div class="text-lg text-neutral-400 font-medium">
-                2021.10 ~ 2021.11
-            </div>
-        </div>
-        <div class="col-span-3">
-            <div class="mb-2 text-lg font-medium">도도포인트 앱 서버 푸시 기능 구현</div>
-            <ul class="list-inside list-disc mb-4">
-                <li>도도포인트 서버에서 포인트 활동 이벤트 생성 시 메세지 발신되도록 설계</li>
-                <li>PyFCM 패키지를 사용하여 푸시 기능 구현</li>
-                <li>DocumentDB를 사용하여 푸시 메시지 보관</li>
-            </ul>
+    
+    <div class="col-span-1">
+        <div class="text-lg text-neutral-400 font-medium">
+            2020.01 - 2021.03
         </div>
     </div>
 
-    <div class="grid grid-cols-4 mb-4">
-        <div class="col-span-1">
-            <div class="text-lg text-neutral-400 font-medium">
-                2021.07 ~ 2021.08
-            </div>
-        </div>
-        <div class="col-span-3">
-            <div class="mb-2 text-lg font-medium">QA 테스트 더미 데이터 생성기</div>
-            <ul class="list-inside list-disc mb-4">
-                <li>가상의 사용자 포인트 활동 생성</li>
-                <li>운영 환경의 매장 데이터 추출하여 개발 환경 매장 데이터로 구성</li>
-                <li>Flask Jinja2를 사용하여 백오피스 페이지 구성</li>
-                <li>구글 OAuth 적용 하여 접근 제한 구현</li>
-            </ul>
-        </div>
-    </div>
+    <div class="col-span-3">
+        <div class="mb-2 text-lg font-medium">페이스북 광고 비용과 cafe24 매출 데이터 분석을 위한 대시보드 구현</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>페이스북 API를 사용한 광고 데이터 수집 자동화</li>
+            <li>Python selenium을 사용한 Cafe24 매출 데이터 수집 자동화</li>
+            <li>Google Datastudio 보고서 작성</li>
+            <li>D3를 광고데이터 시각화 대시보드 구축</li>
+        </ul>
 
-    <div class="grid grid-cols-4 mb-4">
-        <div class="col-span-1">
-            <div class="text-lg text-neutral-400 font-medium">
-                2021.04 ~ 2021.07
-            </div>
-        </div>
-        <div class="col-span-3">
-            <div class="mb-2 text-lg font-medium">도도포인트 앱 API 서버 개발</div>
-            <ul class="list-inside list-disc mb-4">
-                <li>Python 패키지 관리 방식 Poetry로 변경</li>
-                <li>Marshmallow 적용하여 오브젝트의 직렬화, 역직렬화, 데이터 검증 </li>
-                <li>레포지토리 패턴 적용하여 데이터 관리 로직 분리</li>
-            </ul>
-        </div>
-    </div>
 
-    <div class="grid grid-cols-4 mb-4">
-        <div class="col-span-1">
-            <div class="text-lg text-neutral-400 font-medium">
-                2021.03 ~ 2021.03
-            </div>
-        </div>
-        <div class="col-span-3">
-            <div class="mb-2 text-lg font-medium">배치 프로세스 수정</div>
-            <ul class="list-inside list-disc mb-4">
-                <li>AWS Event Bridge - Lambda를 사용한 배치 작업을 Celery Cronjob으로 교체</li>
-            </ul>
-        </div>
-    </div> 
+        <div class="mb-2 text-lg font-medium"> 사내 ERP 개발</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>AWS EC2 환경에서 Flask와 Nuxt.js를 사용하여 개발</li>
+            <li>Shopify API를 사용하여 주문 수집 자동화</li>
+            <li>Google API를 사용하여 주문 내역을 Gsheet 입력 자동화</li>
+            <li>Cafe24 API를 사용하여 제품 커스텀 기능 개발 및 주문 수집 자동화</li>
+        </ul>
+    </div>
 </div>
 
 <div class="grid grid-cols-4 mb-4">
-    <div class="text-2xl">시티스푸너스</div>
-</div>
-<div>
-    <div class="grid grid-cols-4 mb-4">
-        <div class="col-span-1">
-            <div class="text-lg text-neutral-400 font-medium">
-                2020.09 - 2020.11
-            </div>
+    <div class="col-span-4">
+        <div class="text-xl font-medium">
+            마이셀럽스
         </div>
-        <div class="col-span-3">
-            <div class="mb-2 text-lg font-medium">페이스북 광고 비용과 cafe24 매출 데이터 분석을 위한 대시보드 구현</div>
-            <ul class="list-inside list-disc mb-4">
-                <li>페이스북 API를 사용한 광고 데이터 수집 자동화</li>
-                <li>Python selenium을 사용한 Cafe24 매출 데이터 수집 자동화</li>
-                <li>Google Datastudio 보고서 작성</li>
-                <li>D3를 광고데이터 시각화 대시보드 구축</li>
-            </ul>
+        <div class="text-sm text-neutral-500 mb-4">
+            Data 엔지니어
         </div>
     </div>
+    <div class="col-span-4 skil mb-4">
+        <img alt="Html" src ="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/>
+        <img alt="Html" src ="https://img.shields.io/badge/flask-000000.svg?&style=for-the-badge&logo=flask&logoColor=white"/>
+        <img alt="Html" src ="https://img.shields.io/badge/javascript-c99547.svg?&style=for-the-badge&logo=javascript&logoColor=white"/>
+    </div>
 
-    <div class="grid grid-cols-4 mb-4">
-        <div class="col-span-1">
-            <div class="text-lg text-neutral-400 font-medium">
-                2020.02 - 2020.05
-            </div>
+    <div class="col-span-1">
+        <div class="text-lg text-neutral-400 font-medium">
+            2018.11 ~ 2020.01
         </div>
-        <div class="col-span-3">
-            <div class="mb-2 text-lg font-medium"> 사내 ERP 개발</div>
-            <ul class="list-inside list-disc mb-4">
-                <li>AWS EC2 환경에서 Flask와 Nuxt.js를 사용하여 개발</li>
-                <li>Shopify API를 사용하여 주문 수집 자동화</li>
-                <li>Google API를 사용하여 주문 내역을 Gsheet 입력 자동화</li>
-                <li>Cafe24 API를 사용하여 제품 커스텀 기능 개발 및 주문 수집 자동화</li>
-            </ul>
-        </div>
+    </div>
+    <div class="col-span-3">
+        <div class="mb-2 text-lg font-medium">사용자의 얼굴 부위별 색상 추출 모듈 개발</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>Face-alignment, opencv를 사용하여 얼굴 인식 모듈 개발 </li>
+            <li>k-means를 사용하여 얼굴 부위별 색상 추출</li>
+        </ul>
+        
+        <div class="mb-2 text-lg font-medium">영화 포스터와 트레일러 영상 전처리</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>k-means를 사용하여 대표 색상 추출 후 색상 검색 모듈 구현 </li>
+            <li>yolov3 사용하여 영상의 주요 장면 편집 모듈 개발</li>
+        </ul>
+
+        <div class="mb-2 text-lg font-medium">이미지 색상을 기반으로한 검색 모듈 개발</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>k-means를 활용한 이미지 색상 추출 모듈 개발 </li>
+            <li>색상 추출 모듈을 사용하여 이미지 색상 추출 후 결과 DB에 저장</li>
+            <li>색상 검색 결과 최적화를 위해 HSL color space를 활용하여 색상의 계열 구분</li>
+            <li>색상 계열 구분과 색상 검색 결과를 사용하여 색상 검색 모듈 개발</li>
+        </ul>
     </div>
 </div>
 
+<div class="grid grid-cols-4 mb-4 print-break">
+    <div class="col-span-4">
+        <div class="text-xl font-medium">
+            아라엔지니어링
+        </div>
+        <div class="text-sm text-neutral-500 mb-4">
+            IT 엔지니어
+        </div>
+    </div>
+    <div class="col-span-4 skil mb-4">
+        <img alt="Html" src ="https://img.shields.io/badge/-C%23-239120.svg?&style=for-the-badge&logo=csharp&logoColor=white"/> 
+        <img alt="Html" src ="https://img.shields.io/badge/-c++-00599C.svg?&style=for-the-badge&logo=c%2B%2B&logoColor=white"/>
+        <img alt="Html" src ="https://img.shields.io/badge/mariadb-003545.svg?&style=for-the-badge&logo=mariadb&logoColor=white"/>
+    </div>
+
+    <div class="col-span-1">
+        <div class="text-lg text-neutral-400 font-medium">
+            2015.02 - 2017.12 
+        </div>
+    </div>
+    <div class="col-span-3">
+        <div class="mb-2 text-lg font-medium">UnisimDesign, OLGA 제어 프로그램 개발</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>Face-alignment, opencv를 사용하여 얼굴 인식 모듈 개발 </li>
+            <li>Unisim, Olga, Synergi 제어프로그램을 TCP/IP 기반으로 개발</li>
+            <li>OPC Client 기능 구현</li>
+        </ul>
+
+        <div class="mb-2 text-lg font-medium">Aveva E3D rvm 파일을 fbx파일로 변환하는 모듈</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>rvm 파일 구조 파악 후 범용 3d 프로그램에서 사용할 수 잇도록 *.fbx로 변환</li>
+        </ul>
+
+        <div class="mb-2 text-lg font-medium">OTS 제어 프로그램 개발</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>기존 프로젝트 코드 리펙토링, 메모리 사용 최적화</li>
+            <li>MariaDB를 통한 데이터 관리</li>
+        </ul>
+
+        <div class="mb-2 text-lg font-medium">Chart Component 기획 및 개발</div>
+        <ul class="list-inside list-disc mb-4">
+            <li>GDI+를 사용하여 개발 진행 하였으며 Multiple Axis, 드래그를 이용한 Zoom, Mouse tracking 기능 구현 </li>
+        </ul>
+    </div>
+</div>
+
+ 
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
