@@ -1,2 +1,3 @@
 - JEKYLL YAT THEME 를 사용하여 제작하였습니다.
 - notion으로 작성한 메모, 작업 기록을 블로그로 작성중입니다.
+- `bundle exec jekyll serve --trace` 로 로컬에서 확인
