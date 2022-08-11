@@ -47,17 +47,28 @@ https://jbee.io/about/ -->
             margin-top: 0px !important;
         }
 
+        #print-start{
+            padding-top: 24px;
+        }
+
         .print-break{
             page-break-before:always;
+            padding-top: 22px;
         }
 
         .page-content{
-            padding-top: 10px !important;
+            padding-top: 0px !important;
+            padding-left: 24px !important;
+            padding-right: 24px !important;
         }
 
         .page-content > .wrapper{
-            padding-left: 10px !important;
-            padding-right: 10px !important;
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+
+        #print-contents{
+            line-height: 1.55;
         }
     }
 
@@ -65,7 +76,7 @@ https://jbee.io/about/ -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
 <script src="https://cdn.tailwindcss.com"></script>
 
-<div class="grid grid-cols-4">
+<div class="grid grid-cols-4" id="print-start">
     <div class="col-span-1">
         <img src="assets/images/dooyeoung.png">
     </div>
@@ -85,29 +96,36 @@ https://jbee.io/about/ -->
     Introduce
 </h2>
 <div class="grid grid-cols-4">
-    <div class="col-span-4">
+    <div class="col-span-4" id="print-contents" style="word-break: keep-alive;">
 
         여러 스타트업에서 백엔드 개발, 데이터 엔지니어, 업무 자동화를 위한 ERP 개발 등 개발자로서 다양한 업무를 경험하였습니다.
         <br>
         AWS 기반의 프로덕션 서비스를 설계, 개발, 운영을 경험하였고 확장성과 유지 보수성이 높은 제품을 개발하기 위해 고민하고 있습니다.
+        적극적인 커뮤니케이션으로 문제를 해결하려 합니다. 비즈니스에 집중할 수 있도록 반복 업무의 자동화를 모색합니다.
         <br><br>
 
-        AWS 인프라 레거시 정리 작업 시 제대로 된 이해와 작업을 위해 devops 강의를 수강하였으며 AWS 인프라 현황을 전수 조사 하였습니다.
-        region을 하나로 통합하였으며 사용하지 않는 보안그룹 약 230개 제거와 접근 제한 설정, RDS vpc를 통일하는 작업을 진행하였습니다.
+        <ul class="list-inside list-disc mb-4">
+            <li class="mb-2">
+                최근 도도포인트팀에서 Python Flask, SQLAlchemy 로 구성된 서비스를 운영, 관리 하였습니다. CircleCI를 사용한 테스트, 이미지 빌드 그리고 배포 자동화와 EKS, ECS 환경에서 서비스를 운영하고 테라폼으로 인프라 리소스를 관리한 경험이 있습니다.
+            </li>
+        
+            <li class="mb-2">
+                AWS 인프라 레거시 정리 작업 시 제대로 된 이해와 작업을 위해 devops 강의를 수강하였으며 AWS 인프라 현황을 전수 조사 하였습니다.
+                region을 하나로 통합하였으며 사용하지 않는 보안그룹 약 230개 제거와 접근 제한 설정, RDS vpc를 통일하는 작업을 진행하였습니다.
+            </li>
 
-        <br><br>
-        도도포인트 앱 구현 초반 QA에서 수동으로 가입과 포인트 적립을 시도하여 QA를 준비하는 모습을 보고 
-        QA 백오피스를 구현하여 다양한 조건의 dummy 데이터 생성할 수 있게 하여 QA 기간을 대폭 줄이는 데 도움이 된 경험이 있습니다.
+            <li class="mb-2">
+                도도포인트 앱 구현 초반 QA에서 수동으로 가입과 포인트 적립을 시도하여 QA를 준비하는 모습을 보고 
+                QA 백오피스를 구현하여 다양한 조건의 dummy 데이터 생성할 수 있게 하여 QA 기간을 대폭 줄이는 데 도움이 된 경험이 있습니다.
+            </li>
 
-        <br><br>
-        서비스 개발이란 결국 비즈니스와의 커뮤니케이션이 가장 중요하다고 생각하고 있으며 팀원들과 논의하여
-        외부 서비스 적용, 운영 정책 수정, 기능 개발 등 여러 수단으로 적합한 문제 해결 방법을 찾는 것을 좋아합니다.
-
-        <br><br>
-        적극적인 커뮤니케이션으로 문제를 해결하려 합니다. 비즈니스에 집중 할수있도록 반복 업무의 자동화를 모색합니다.
-
-        <br>
-        함께 일하면 좋은, 문제해결에 도움이 되는 개발자로 성장하기 위해 학습하고 있습니다.
+            <li class="">
+                서비스 개발이란 결국 비즈니스와의 커뮤니케이션이 가장 중요하다고 생각하고 있으며 팀원들과 논의하여
+                외부 서비스 적용, 운영 정책 수정, 기능 개발 등 여러 수단으로 적합한 문제 해결 방법을 찾는 것을 좋아합니다.
+            </li>
+        </ul>
+        
+        함께 일하기 좋은, 문제해결에 도움을 줄 수 있는 개발자가 되려 합니다.
     </div>
 </div>
 
@@ -123,7 +141,6 @@ https://jbee.io/about/ -->
         </div>
     </div>
     <div class="col-span-4 skil mb-4">
-        <img alt="Html" src ="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/>
         <img alt="Html" src ="https://img.shields.io/badge/flask-000000.svg?&style=for-the-badge&logo=flask&logoColor=white"/>
         <img alt="Html" src ="https://img.shields.io/badge/postgresql-4169E1.svg?&style=for-the-badge&logo=postgresql&logoColor=white"/>
         <img alt="Html" src ="https://img.shields.io/badge/terraform-7B42BC.svg?&style=for-the-badge&logo=terraform&logoColor=white"/>
@@ -142,14 +159,15 @@ https://jbee.io/about/ -->
     <div class="col-span-3">
         <div class="mb-2 text-lg font-medium">도도포인트 전체 서비스 도메인 교체</div>
         <ul class="list-inside list-disc mb-4">
-            <li>도메인 교체를 위해 ELB를 새로 구성하여 도메인 이중화 작업 진행</li>
-            <li>Route53, ACM, LoadBalancer, k8s secret 도메인 사용 현황 전수 조사</li>
+            <li>안정적인 도메인 교체를 위해 ELB를 추가하여 도메인 이중화 구성</li>
+            <li>Route53, ACM, LoadBalancer, k8s secret, DB에서 도메인 사용 현황 전수 조사</li>
+            <li>서비스에서 사용중인 도메인 전체 변경</li>
         </ul>
     
-        <div class="mb-2 text-lg font-medium">프로젝트 전체 정비 작업</div>
+        <div class="mb-2 text-lg font-medium">전체 프로젝트 정비 작업</div>
         <ul class="list-inside list-disc mb-4">
-            <li>전체 서비스 CircleCI context 정비 작업 진행</li>
-            <li>전 회사의 슬랙 채널 정보 및 메일 주소 모두 제거 및 교체</li>
+            <li>전체 서비스의 CircleCI 정비 작업 담당</li>
+            <li>전 회사의 슬랙 채널 정보 및 메일 주소 제거 및 교체</li>
         </ul>
 
         <div class="mb-2 text-lg font-medium">휴면 전환 예정 사용자에게 안내 메시지 발송 기능 구현</div>
@@ -203,7 +221,6 @@ https://jbee.io/about/ -->
         </div>
     </div>
     <div class="col-span-4 skil mb-4">
-        <img alt="Html" src ="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/>
         <img alt="Html" src ="https://img.shields.io/badge/flask-000000.svg?&style=for-the-badge&logo=flask&logoColor=white"/>
         <img alt="Html" src ="https://img.shields.io/badge/Vue-4FC08D.svg?&style=for-the-badge&logo=vuedotjs&logoColor=white"/> 
         <img alt="Html" src ="https://img.shields.io/badge/EC2-FF9900.svg?&style=for-the-badge&logo=amazonec2&logoColor=white"/>
@@ -246,7 +263,6 @@ https://jbee.io/about/ -->
         </div>
     </div>
     <div class="col-span-4 skil mb-4">
-        <img alt="Html" src ="https://img.shields.io/badge/python-3776AB.svg?&style=for-the-badge&logo=python&logoColor=white"/>
         <img alt="Html" src ="https://img.shields.io/badge/flask-000000.svg?&style=for-the-badge&logo=flask&logoColor=white"/>
         <img alt="Html" src ="https://img.shields.io/badge/javascript-c99547.svg?&style=for-the-badge&logo=javascript&logoColor=white"/>
     </div>
