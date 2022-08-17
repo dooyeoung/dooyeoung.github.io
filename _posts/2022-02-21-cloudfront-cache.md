@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CloudFront 캐시 무효화"
-categories: "aws"
+categories: "AWS"
 tags: ["cloudfront"]
 sidebar: ['article-menu']
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Auto Incresment 필드에서 duplicated 오류가 발생 할 때"
-categories: "aws"
+categories: "AWS"
 tags: ["cloudfront"]
 sidebar: ['article-menu']
 ---
