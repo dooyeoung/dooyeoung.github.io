@@ -162,6 +162,7 @@ terraform init -migrate-state  \
 curl -sfL https://direnv.net/install.sh | bash
 chmod +x direnv
 ```
+`.bashrc`에 `eval "$(direnv hook bash)"` 을 추가합니다.
 
 작업 디렉토리에 `.envrc` 파일을 생성합니다. `TF_VAR_`를 사용하면 `Terraform Variable`에서 사용할 수 있습니다.
 `AWS` 사용자 토큰 정보도 설정하여 인프라 접근이 가능하게 합니다.
