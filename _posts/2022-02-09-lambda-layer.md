@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lambda Layer 추가하여 패키지 사용하기"
-categories: "serverless"
+categories: "DevOps"
 tags: ["lambda"]
 sidebar: ['article-menu']
 ---

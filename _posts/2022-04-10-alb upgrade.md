@@ -2,7 +2,7 @@
 layout: post
 title: "AWS Load Balancer Controller 설치시 주의 사항"
 subtitle: 정책 설정 놓치지 않기
-categories: "serverless"
+categories: "DevOps"
 tags: ["eks", "alb"]
 sidebar: ['article-menu']
 ---

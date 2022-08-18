@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Terraform 자주 사용하는 명령어"
-categories: "script"
+categories: "DevOps"
 tags: ["terraform"]
 sidebar: ['article-menu']
 ---
