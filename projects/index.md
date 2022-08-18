@@ -29,7 +29,7 @@ dooyeoung.ryu@gmail.com / 010-5061-2576 / [**GitHub**](https://github.com/dooyeo
 1. 보유기술 
 
 	자주 사용하는 기술
-	- Python / Flask / SQLAlchemy / PostgresSQL
+	- Python / Flask / SQLAlchemy / PostgreSQL
 	- Terraform / Redis / AMQP / EC2
 	- K8S
 	- Lambda

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EKS Prvate 변경 후 bastion에서 API Endpoint 접근"
+title: "EKS Private 변경 후 bastion에서 API Endpoint 접근"
 categories: "AWS"
 tags: ["EKS"]
 sidebar: ['article-menu']
