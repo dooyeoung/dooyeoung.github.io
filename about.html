@@ -111,15 +111,14 @@ https://jbee.io/about/ -->
         <br><br>
         <ul class="list-inside list-disc">
             <li class="mb-2">
-                Flask와 SQLAlchemy 조합으로 구성된 서비스를 운영 관리 하였습니다. 
-                CircleCI를 사용하여 테스트, 빌드, 배포 자동화를 관리하였으며
-                AWS EKS, ECS 환경에서 서비스를 운영하였습니다.
-                인프라 리소스를 관리는 테라폼으로으로 관리한 경험이 있습니다.
+                도도포인트 포인트 적립 서비스를 대략 2년간 개발, 배포, 운영, 인프라를 관리하고 있습니다.
+                AWS EKS, ECS 환경에서 Python Flask와 + SQLAlchemy 조합으로 구성된 서비스를 운영 관리 하고있습니다.
+                CircleCI를 사용하여 테스트, 빌드, 배포 자동화 하고 있으며 인프라 리소스를 관리는 테라폼으로으로 관리합니다.
             </li>
         
             <li class="mb-2">
                 DevOps 역량을 키우기위해 강의 및 학습을 진행 하였으며 AWS 레거시 인프라 정리 및 사용 현황 전수 조사 작업에 적극 활용하였습니다.
-                학습한 내용을 바탕으로 RDS VPC를 단일화와 사용하지 않는 보안그룹 약 230개 제거와 인바운드 설정 그리고 Region 통합 등 관리 작업에 활용했습니다.
+                학습한 내용을 바탕으로 RDS VPC를 단일화와 사용하지 않는 보안그룹 약 230개 제거와 인바운드 설정 그리고 Region 통합 등 관리 작업에 활용했습니다. 
             </li>
 
             <li class="mb-2">
@@ -130,6 +129,8 @@ https://jbee.io/about/ -->
         </ul>
     </div>
 </div>
+
+
 
 <hr class="mt-8">
 
@@ -369,6 +370,46 @@ https://jbee.io/about/ -->
 </div>
 
 <div class="grid grid-cols-4 mb-4">
+    <div class="col-span-4 mb-4">
+        <div class="text-xl font-medium">
+            도도포인트 앱 프로젝트 구조 리펙토링
+        </div>
+    </div>
+    <div class="col-span-1">
+        <div class="text-base text-neutral-400 font-medium">문제</div>
+    </div>
+    <div class="col-span-3">
+        <div class="mb-2">
+            &nbsp;&nbsp; 기존 API 서버의 코드는 HTTP 처리와 비즈니스 로직, 데이터 조회 및 처리 코드가 한곳에서 처리되는 상태였습니다.
+            기존에는 하나의 PostgreSQL을 사용하여 데이터를 관리하였으며 새로운 기능이 추가되면서 DocumentDB가 추가되어야 했습니다.
+            코드가 더 복잡해지기 전에 리팩토링이 필요한 상태였습니다.
+        </div>
+    </div>
+    <div class="col-span-1">
+        <div class="text-base text-neutral-400 font-medium">해결 과정</div>
+    </div>
+    <div class="col-span-3">
+        <div class="mb-2">
+            &nbsp;&nbsp; 전체 서비스 코드를 레이어드 아키텍처로 리팩토링할 수 있는 상황은 아니었습니다.
+            우선 레포지토리 패턴만 적용하여 데이터 관리 코드만 분리하기로 하였습니다.
+            데이터 조회 부분을 모두 파악하여 레포지토리 패턴으로 정리하였습니다. 
+        </div>
+    </div>
+    <div class="col-span-1">
+        <div class="text-base text-neutral-400 font-medium">평가</div>
+    </div>
+    <div class="col-span-3">
+        <div class="mb-2">
+            &nbsp;&nbsp; 
+            각 API에서 사용하는 쿼리를 파악하여 중복 코드를 줄일 수 있었으며 API 테스트 코드에서 데이터 검증 과정이 제거되면서 테스트 코드도 간결해졌습니다.
+            비즈니스 로직을 분리하여 서비스 레이어로 구현하지 못한 점이 아쉬움으로 남습니다. 
+            레이어드 아키텍처의 일부분을 적용해 볼 수 있는 좋은 시간이었습니다.
+            도메인 주도개발, 레이어드 아키텍처 패턴의 중요성에 대해 새삼 깨달았으며 서비스 구조에 대해 학습을 다시 시작하게 된 계기가 되었습니다.
+        </div>
+    </div>
+</div>
+
+<div class="grid grid-cols-4 mb-4" style="display: none;">
     <div class="col-span-4 mb-4">
         <div class="text-xl font-medium">
             API Gateway를 활용한 External API 서비스 구현
