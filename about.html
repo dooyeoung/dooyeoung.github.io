@@ -189,7 +189,9 @@ https://jbee.io/about/ -->
 
         <div class="text-lg font-medium">개인별 리포트 분석 기능 개발</div>
         <ul class="list-inside list-disc mb-4">
-            <li>안정적인 도메인 교체를 위해 ELB를 추가하여 도메인 이중화 구성</li>
+            <li>제출 완료된 리뷰 데이터를 활용하여 개개인의 질문별 강약점, 자기객관화, 장단점 분석이 가능한 기능 개발</li>
+            <li>분석 대기열 구조를 추가하여 리소스 부담이 덜하도록 구조 변경</li>
+            <li>분석 내용을 정적파일로 생성할 수 있도록 발행기능을 추가하여 기능 개선에 대한 자율성 확보 작업 진행</li>
         </ul>
     </div>
 </div>
@@ -388,6 +390,53 @@ https://jbee.io/about/ -->
 <hr class="mt-8">
 
 <h2 class="font-semibold print-break" id="experience">문제 해결 및 개선 경험</h2>
+
+
+<div class="grid grid-cols-4 mb-4">
+    <div class="col-span-4 mb-4">
+        <div class="text-xl font-medium">
+            레몬베이스 목표 제품 최적화
+        </div>
+    </div>
+    <div class="col-span-1">
+        <div class="text-base text-neutral-400 font-medium">문제</div>
+    </div>
+    <div class="col-span-3">
+        <div class="mb-2">
+            대규모 고객 사용 편의성을 위한 제품 최적화 진행
+        </div>
+    </div>
+    <div class="col-span-1">
+        <div class="text-base text-neutral-400 font-medium">해결 과정</div>
+    </div>
+    <div class="col-span-3">
+        <div class="mb-2">
+            대규모 고객의 사용 환경과 유사한 상황이 필요했음 QA에 사용할 내부 툴을 만들었음
+            조직, 구성원을 한번에 쉽게 만들수 있는 툴을 먼저 개발
+            약 3,000명, 30,000개 목표를 생성하고 속도 저하 구간을 파악하고 문제점 정리하였음
+            목표 조회 요청부터 DB 조회 응답 반환까지 조회 과정의 전 구간을 나누어 속도를 파악하였음
+            데이터 독, 프로파일링 사용하여 가장 문제되는 구간을 찾아 작업 우선순위를 정하였음
+            간단하게 print와 자체 구현한 속도 측정 스크립트도 간단히 사용함
+            위계 데이터 처리 부분이 anytree라는 오픈소스 패키지를 사용하고 있었음
+            django orm에서 anytree로 변환시 인스턴스를 생성하는 과정이 시간이 오래 걸리는것을 파악, 개수가 워낙 많아 30,000개 변환에 시간이 꽤나 걸렸음 
+            해당 구간만 c, rust 로 변경하여 시도해보았으나 큰 이점이 없었음
+            anytree 패키지 사용을 제거하고 필요한 내용만 사용할 수 있도록 유틸 코드를 새로 작성하였음
+            개선 프로젝트 시작전 30초 성능을 2초 대로 개선하였음 
+        </div>
+    </div>
+    <div class="col-span-1">
+        <div class="text-base text-neutral-400 font-medium">평가</div>
+    </div>
+    <div class="col-span-3">
+        <div class="mb-2">
+            페이지네이션을 적용하고 싶었으나 위계정보를 담고 있기에 페이지네이션 기준이 모호했음
+            이 기준을 정하는 논의 시간을 길게 가질수 없음이 아쉬움
+            시간을 투자할지 눈 앞의 문제를 해결할지 트레이드 오프를 고민하였음
+            일을 두번 하더라도 눈앞에 보이는 문제를 못본척 할 수 없기에 현재 상황에서 구조의 큰 변경없이 할수 잇는 최적화를 하기로 진행하였음
+        </div>
+    </div>
+</div>
+
 
 <div class="grid grid-cols-4 mb-4">
     <div class="col-span-4 mb-4">
