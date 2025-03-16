@@ -3,11 +3,11 @@ layout: post
 title: "AWS Load Balancer Controller 설치시 주의 사항"
 subtitle: 정책 설정 놓치지 않기
 categories: "DevOps"
-tags: ["eks", "alb"]
+tags: ["EKS", "ALB"]
 sidebar: ['article-menu']
 ---
 
-eks에서 AWS Load Balancer Controller를 적용시 정책을 필수로 설정해야 합니다.
+EKS에서 AWS Load Balancer Controller를 적용시 정책을 필수로 설정해야 합니다.
 정책 설정없이 Controller를 구성할 경우 인그레스 연결 작업에서 권한에 대한 에러가 발생하게 됩니다.
 
 ## 정책 생성
@@ -22,7 +22,7 @@ aws iam create-policy --policy-name [POLICY_NAME] --policy-document [POLICY_DOCU
 ```
 
 ## 정책 연결
-eks에서 사용중인 역할에 위에서 만든 정책을 추가합니다
+EKS에서 사용중인 역할에 위에서 만든 정책을 추가합니다
 
 <img class="post_img" src="/assets/images/posts/alb_policy_03.png">
 

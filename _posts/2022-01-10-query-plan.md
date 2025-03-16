@@ -2,7 +2,7 @@
 layout: post
 title: "PostgreSQL 쿼리 플랜 확인하기"
 categories: "PostgreSQL"
-tags: ["Explain", "Visualizer" ]
+tags: ["SQL", "Visualizer" ]
 sidebar: ['article-menu']
 ---
 
