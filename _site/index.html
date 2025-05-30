@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Home | Your awesome title</title>
-<meta name="generator" content="Jekyll v4.2.2">
+<title>Home | Devlog</title>
+<meta name="generator" content="Jekyll v4.4.1">
 <meta property="og:title" content="Home">
 <meta name="author" content="dooyeoung">
 <meta property="og:locale" content="ko">
@@ -16,18 +16,18 @@
 <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
 <link rel="canonical" href="http://localhost:4000/">
 <meta property="og:url" content="http://localhost:4000/">
-<meta property="og:site_name" content="Your awesome title">
+<meta property="og:site_name" content="Devlog">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="Home">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"dooyeoung"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Home","name":"Your awesome title","url":"http://localhost:4000/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"dooyeoung"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Home","name":"Devlog","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <script src="/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title">
+  <script src="/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Devlog">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
 <!-- and it's easy to individually load additional languages -->
@@ -249,8 +249,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
   <div class="wrapper">
     <div class="site-header-inner">
 <span class="site-brand"><a class="site-brand-inner" rel="author" href="/">
-  <img class="site-favicon" title="Your awesome title" src="" onerror="this.style.display='none'">
-  Your awesome title
+  <img class="site-favicon" title="Devlog" src="" onerror="this.style.display='none'">
+  Devlog
 </a>
 </span><nav class="site-nav">
           <input type="checkbox" id="nav-trigger" class="nav-trigger">
@@ -698,25 +698,446 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
 <h2 class="post-title">
-        <a class="post-link" href="/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/2022/05/02/docker-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%A4%80%EB%B9%84.html">
-          Docker를 사용한 개발환경 구성
+        <a class="post-link" href="/devops/2025/03/02/ECS-Command-Executor-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0.html">
+          ECS Execute Command 알아보기
         </a>
       </h2>
       <div class="post-meta">
-        <span class="post-date"><i class="fa fa-calendar"></i> 2022-05-02</span>
-        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
+        <span class="post-date"><i class="fa fa-calendar"></i> 2025-03-02</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 13 mins</span>
       </div>
-      <a class="post-excerpt" href="/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/2022/05/02/docker-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%A4%80%EB%B9%84.html">
+      <a class="post-excerpt" href="/devops/2025/03/02/ECS-Command-Executor-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0.html">
         <p>
-        작업 노트북이 M1 Macbook으로 교체하면서 python 패키지 설치시 너무나도 많은 에러에 시달렸습니다.
-오류없이 설치할 방법이 없을까 생각하다 도커로 개발환경을 구성해보기로 하였습니다.
+        ECS execute-command는 무엇인가?
+EAmazon ECS의 execute-command는 ECS 컨테이너의 쉘에 접속해 명령어를 실행할 수 있는 기능으로, EKS에서 pod에 접속해 내용을 확인하는 것과 유사합니다. 이 기능을 사용하면 컨테이너 내부에서 디버깅, 로그 확인, 설정 변경 등을 자유롭게 할 수 있습... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#ECS">#ECS</a></div>
+    </li>
+<li>
+      
 
-현재 회사에서는 AWS ECR로 서비스 이미지를 관리하고 EKS, ECS로 서비스를 운영하고 있습니다
-이미 서비... <span class="read_more">Read More</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/devops/2022/09/08/CircleCi%EC%97%90%EC%84%9C-helm-%EC%9B%90%EA%B2%A9-%EC%8B%A4%ED%96%89.html">
+          CircleCI에서 원격으로 helm 제어하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-09-08</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 15 mins</span>
+      </div>
+      <a class="post-excerpt" href="/devops/2022/09/08/CircleCi%EC%97%90%EC%84%9C-helm-%EC%9B%90%EA%B2%A9-%EC%8B%A4%ED%96%89.html">
+        <p>
+        문제
+AWS EKS API 설정을 Private 환경으로 변경하면서 helm 사용도 제한이 되었습니다.
+
+해결방안
+아래와 같은 순서로 CI가 실행되며 4번 단계에서 실패하게 됩니다.
+
+
+  테스트 자동화
+  이미지 빌드
+  AWS CLI를 사용하여 ECR에 이미지 업로드
+  helm을 사용하여 이미지 업그레이드... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#CircleCI">#CircleCI</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/devops/2022/08/17/teeraform-backend-%EB%A7%88%EC%9D%B4%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%85%98.html">
+          Terraform Backend를 S3로 변경
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-08-17</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 14 mins</span>
+      </div>
+      <a class="post-excerpt" href="/devops/2022/08/17/teeraform-backend-%EB%A7%88%EC%9D%B4%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%85%98.html">
+        <p>
+        Terraform 으로 AWS 인프라를 관리하고 있으며 EKS API Endpoint 접근 설정을 Private로 변경해야 했습니다.
+Terraform에서 K8S 관련 리소스에 접근할때 EKS API Endpoint를 사용하므로 Terraform Backend 변경이 필요했습니다.
+
+EKS API Endpoint를 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#terraform">#terraform</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/aws/2022/08/11/eks-private-api.html">
+          EKS Private 변경 후 bastion에서 API Endpoint 접근
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-08-11</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/aws/2022/08/11/eks-private-api.html">
+        <p>
+        퍼블릭 엑세스였기에 로컬에서 K9S를 사용하여 편하게 사용하였으나 보안 문제로 접근 설정을 수정하기로 하였습니다.
+
+EKS 클러스터 엔드포인트 엑세스 설정을 public 에서 private로 수정할 경우 동일한 VPC 또는 연결된 VPC 환경에서만 EKS API Endpoint 접근이 가능합니다.
+
+EKS API Endpoint 접근을 Private ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#EKS">#EKS</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/aws/2022/08/04/dmrc-%EC%A0%81%EC%9A%A9.html">
+          DMARC 적용하여 발신자 정보를 위조 예방
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-08-04</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/aws/2022/08/04/dmrc-%EC%A0%81%EC%9A%A9.html">
+        <p>
+        얼마전 회사 메일로 email spoofing 공격에 노출되어 있다는 메일을 받았습니다
+보안 연구회사에서 무작위 검사를 통해 보낸 메일이었으나 DMARC 설정이 누락된것을 확인하게 되었습니다.
+이번에 작업하면서 DMARC가 무엇인지 내용을 정리합니다.
+
+DMARC ?
+spoofing을 예방하기 위해 만들어진 보안 방법입니다.... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#dmarc">#dmarc</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/devops/2022/07/03/s3-%EC%A0%91%EA%B7%BC-%EC%A0%9C%ED%95%9C-%EC%A0%95%EC%B1%85.html">
+          S3 Bucket 접근 제한 설정
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-07-03</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/devops/2022/07/03/s3-%EC%A0%91%EA%B7%BC-%EC%A0%9C%ED%95%9C-%EC%A0%95%EC%B1%85.html">
+        <p>
+        백오피스 제품에서 s3 버킷을 이미지 저장소를 사용하려 하며
+계약서류, 사업자등록증과 같은 민감한 이미지가 저장될거라 s3 버킷 정책에 보안 정책을 추가하였습니다.
+
+아래의 조건에서만 버킷 접근이 가능합니다.
+
+  회사 vpn 에서만 접근 가능해야 한다
+  특정 사용자만 접근 가능합니다.
+  버킷의 특정 디렉토리... <span class="read_more">Read More</span>
         </p>
       </a>
       <div class="post-tags">
-<a class="post-tag" href="/tags.html#jekyll">#jekyll</a><a class="post-tag" href="/tags.html#theme">#theme</a><a class="post-tag" href="/tags.html#yat">#yat</a>
+<a class="post-tag" href="/tags.html#docker">#docker</a><a class="post-tag" href="/tags.html#lambda">#lambda</a>
 </div>
     </li>
 <li>
@@ -783,15 +1204,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
 <h2 class="post-title">
-        <a class="post-link" href="/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/2022/04/01/test.html">
+        <a class="post-link" href="/devops/2022/05/02/docker-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%A4%80%EB%B9%84.html">
           Docker를 사용한 개발환경 구성
         </a>
       </h2>
       <div class="post-meta">
-        <span class="post-date"><i class="fa fa-calendar"></i> 2022-04-01</span>
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-05-02</span>
         <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
       </div>
-      <a class="post-excerpt" href="/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/2022/04/01/test.html">
+      <a class="post-excerpt" href="/devops/2022/05/02/docker-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%A4%80%EB%B9%84.html">
         <p>
         작업 노트북이 M1 Macbook으로 교체하면서 python 패키지 설치시 너무나도 많은 에러에 시달렸습니다.
 오류없이 설치할 방법이 없을까 생각하다 도커로 개발환경을 구성해보기로 하였습니다.
@@ -800,9 +1221,1221 @@ document.addEventListener('DOMContentLoaded', function(event) {
 이미 서비... <span class="read_more">Read More</span>
         </p>
       </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#docker">#docker</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/aws/2022/04/12/auto-increment-%EC%A4%91%EB%B3%B5-%EB%B0%A9%EC%A7%80.html">
+          Auto Incresment 필드에서 duplicated 오류가 발생 할 때
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-04-12</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/aws/2022/04/12/auto-increment-%EC%A4%91%EB%B3%B5-%EB%B0%A9%EC%A7%80.html">
+        <p>
+        얼마전 개발환경에서 dummy 데이터 추가 작업을 진행하였습니다. 일부 오브젝트 추가시 auto increcement 필드에 값을 직접 입력하여 구성하였습니다.
+
+오브젝트 추가 후 (psycopg2.IntegrityError) duplicate key value violates unique constraint 'id_key' 오류... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#cloudfront">#cloudfront</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/devops/2022/04/10/alb-upgrade.html">
+          AWS Load Balancer Controller 설치시 주의 사항
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-04-10</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/devops/2022/04/10/alb-upgrade.html">
+        <p>
+        EKS에서 AWS Load Balancer Controller를 적용시 정책을 필수로 설정해야 합니다.
+정책 설정없이 Controller를 구성할 경우 인그레스 연결 작업에서 권한에 대한 에러가 발생하게 됩니다.
+
+정책 생성
+아래 공식 문서의 정책 내용을 확인한 뒤 aws console에서 정책을 생성합니다
+
+
+
+
+aws ... <span class="read_more">Read More</span>
+        </p>
+      </a>
       <div class="post-tags">
-<a class="post-tag" href="/tags.html#jekyll">#jekyll</a><a class="post-tag" href="/tags.html#theme">#theme</a><a class="post-tag" href="/tags.html#yat">#yat</a>
+<a class="post-tag" href="/tags.html#EKS">#EKS</a><a class="post-tag" href="/tags.html#ALB">#ALB</a>
 </div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/devops/2022/04/05/ecr-local-%EC%97%85%EB%A1%9C%EB%93%9C.html">
+          로컬에서 ECR 업로드하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-04-05</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/devops/2022/04/05/ecr-local-%EC%97%85%EB%A1%9C%EB%93%9C.html">
+        <p>
+        ECR에 업로드된 도커 이미지를 로컬에서 작업 한 뒤 ECR에 업로드 하는 방법을 정리합니다
+
+ECR 로그인
+
+로컬 docker에 ECR 로그인을 선행합니다
+# 도커 로그인 비밀번호 확인
+DOCKER_PASSWORD=$(aws ecr get-login-password --region ap-northeas... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/tags.html#docker">#docker</a><a class="post-tag" href="/tags.html#ECR">#ECR</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/devops/2022/04/02/lambda-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%A4%80%EB%B9%84.html">
+          Lambda에 Python 프로젝트 업로드하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-04-02</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/devops/2022/04/02/lambda-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%A4%80%EB%B9%84.html">
+        <p>
+        AWS Lambda에 Flask 서버를 업로드하는 절차에 대해 정리합니다.
+
+Lambda docker 이미지 준비
+아래 명령어를 사용하여 lambda 이미지를 준비합니다. lambda에서 사용할 python 3.8 이미지를 준비하였습니다.
+docker pull amazon/aws-lambda-python:3.8
+
+
+... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/tags.html#docker">#docker</a><a class="post-tag" href="/tags.html#lambda">#lambda</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/system-design/2022/03/29/url-%EB%8B%A8%EC%B6%95%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B5%AC%ED%98%84.html">
+          대규모 시스템 설계 기초 - url 단축기 설계 구현
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-03-29</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/system-design/2022/03/29/url-%EB%8B%A8%EC%B6%95%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B5%AC%ED%98%84.html">
+        <p>
+         이전 포스트에 이어 url 단축 서비스를 실제 파이썬 코드로 구현합니다.
+코드는 github에서 보실 수 있습니다.
+
+schema
+
+단축 url 영속화를 위한 db schema는 아래와 같습니다.
+
+
+  
+    
+      field
+      type
+       
+    
+  
+  
+    
+      id
+      ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#url-shortener">#url-shortener</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/system-design/2022/03/25/url-%EB%8B%A8%EC%B6%95%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%84%A4%EA%B3%84.html">
+          대규모 시스템 설계 기초 - url 단축기 설계 리뷰
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-03-25</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 6 mins</span>
+      </div>
+      <a class="post-excerpt" href="/system-design/2022/03/25/url-%EB%8B%A8%EC%B6%95%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%84%A4%EA%B3%84.html">
+        <p>
+        가상 면접 사례로 배우는 대규모 시스템 설계 기초에서 읽은 url 단축기에 대해 정리합니다.
+
+문자 메시지에 url을 포함하여 문자를 발송할때 꼭 필요한 기능이라고 말할수 있습니다.
+
+LMS를 보내면 간편하겠지만 LMS 비용은 1건에 25원 정도로 파악됩니다.
+기준 SMS 가격은 8~12원 이며 한글 45자,... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#book">#book</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/aws/2022/02/21/cloudfront-cache.html">
+          CloudFront 캐시 무효화
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-02-21</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/aws/2022/02/21/cloudfront-cache.html">
+        <p>
+        S3에 웹페이지를 배포하고 Cloud Front를 연결하여 사용할 시 S3내용 변경 후 Cloud Front에 즉시 반영 하고자 한다면 캐시 무효화 작업이 필요합니다.
+CloudFront 설정에서 무효화 경로를 입력하여 설정 가능합니다.
+
+
+
+AWS cli로 작업 한다면 다음과 같습니다.
+
+aws s3 sync dis... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#cloudfront">#cloudfront</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/devops/2022/02/09/lambda-layer.html">
+          Lambda Layer 추가하여 패키지 사용하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-02-09</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/devops/2022/02/09/lambda-layer.html">
+        <p>
+        lambda 로 작업시 python 기본 패키지 이외 다른 패키지를 사용시 패키지 설치가 필요합니다.
+소스코드와 패키지 파일도 같이 업로드 하여 사용할 수 있지만 여러개의 lambda 함수를 사용중이라면 
+layer를 추가하여 패키지를 공통으로 사용하는 방향으로 관리하는것이 좋다고 생각합니다.
+
+lambda 도커 이미지... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#lambda">#lambda</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/postgresql/2022/01/10/query-plan.html">
+          PostgreSQL 쿼리 플랜 확인하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2022-01-10</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/postgresql/2022/01/10/query-plan.html">
+        <p>
+        postgreSQL explain 명령어로 쿼리 실행 과정을 확인 할 수 있습니다.
+실행 과정을 파악하여 쿼리를 최적화 할 수 있습니다.
+explain 결과로 내용을 파악할 수 있지만 결과를 그래프 형태로 보기 쉽게 변환하는 내용을 정리합니다.
+
+Explain 쿼리 작성
+
+실행 과정을 확인할 쿼리를 아래와 같은 형식으로 작성합니다. 사용하기 쉽... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/tags.html#SQL">#SQL</a><a class="post-tag" href="/tags.html#Visualizer">#Visualizer</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/postgresql/2021/07/03/psql-%EC%8A%A4%EB%83%85%EC%83%B7-%EB%B3%B5%EC%9B%90%ED%9B%84-%EC%86%8D%EB%8F%84-%EC%9D%B4%EC%83%81.html">
+          Postgres 스냡샷 복원 후 속도 지연 문제
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2021-07-03</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
+      </div>
+      <a class="post-excerpt" href="/postgresql/2021/07/03/psql-%EC%8A%A4%EB%83%85%EC%83%B7-%EB%B3%B5%EC%9B%90%ED%9B%84-%EC%86%8D%EB%8F%84-%EC%9D%B4%EC%83%81.html">
+        <p>
+        AWS에서 Aurora PostgreSQL 를 사용중이었으며 vpc를 변경하는 작업이 있었습니다
+cluster 단위에서 vpc 변경은 스냅샷 생성 후 해당 vpc 환경에서 복원하는 방법으로 진행했습니다
+
+문제
+cluster 복원 후 모니터링 하던 중 쿼리 속도가 지나치게 느린것을 확인하였습니다. 오래 걸려야 1초가 소비되... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#postgres">#postgres</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/devops/2021/07/02/alb-%EC%98%A4%EB%A5%98-%ED%99%95%EC%9D%B8.html">
+          ALB Ingress 에러 확인하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2021-07-02</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/devops/2021/07/02/alb-%EC%98%A4%EB%A5%98-%ED%99%95%EC%9D%B8.html">
+        <p>
+        인그레스 설정 작업중 error가 발생할 경우 확인 방법을 정리합니다.
+
+에러 확인
+인그레스 작업 후 작업내용이 로드밸런서에 반영되지 않아 k8s lens를 확인하니 아래와 같이 에러가 발생하였음을 확인했습니다
+
+
+
+
+
+에러메세지 복호화
+AWS 문서에 복호화 방법을 안내하고 있습니다
+aws sts decode-authoriza... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/tags.html#K8S">#K8S</a><a class="post-tag" href="/tags.html#ingress">#ingress</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/python/2021/05/21/poetry-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0.html">
+          Poetry로 Python 패키지 관리하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2021-05-21</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 5 mins</span>
+      </div>
+      <a class="post-excerpt" href="/python/2021/05/21/poetry-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0.html">
+        <p>
+        python 패키지 관리 방법 중 기본적인 방법은
+pip로 패키지를 설치하고 pip freeze로 requirement.txt 생성하여 패키지 목록을 관리하는 것입니다.
+
+그러나 pip 패키지 설치시 패키지 간 의존성 관계를 무시하고 강제 설치하는 일이 발생 할 수 있습니다.
+또한 requirement.txt를 작성 할 때... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#poetry">#poetry</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/postgresql/2021/05/07/pg_dump.html">
+          PostgreSQL 백업 및 복구 명령어 정리
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2021-05-07</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/postgresql/2021/05/07/pg_dump.html">
+        <p>
+        heroku로 운영중인 랜딩페이지를 k8s로 운영하기 위해
+heroku에서 사용중인 postgreSQL 을 aws rds 마이그레이션 하는 과정을 정리합니다.
+pg_dump 와 pg_restore 를 사용하여 쉽게 데이터베이스 백업이 가능합니다.
+
+pg_dump -Fc -v 
+-h "ec2-34.compute-1.amazo... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#backup">#backup</a></div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/devops/2021/04/11/terraform-%EB%AA%85%EB%A0%B9%EC%96%B4.html">
+          Terraform 자주 사용하는 명령어
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> 2021-04-11</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 5 mins</span>
+      </div>
+      <a class="post-excerpt" href="/devops/2021/04/11/terraform-%EB%AA%85%EB%A0%B9%EC%96%B4.html">
+        <p>
+        테라폼을 사용하여 인프라를 관리할때 자주 사용하는 패턴과 명령어를 정리합니다
+
+init
+terraform init
+
+작업 디렉토리를 초기화 합니다. tfenv 를 사용하여 버전을 바꾸거나 workspace를 변경할때 실행해야 합니다.
+
+
+
+plan
+작성한 테라폼 코드의 실행 결과를 확인해 볼 수 있습니다. 실제 인프라에 반영... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#terraform">#terraform</a></div>
     </li>
 </ul>
 
@@ -838,14 +2471,38 @@ document.addEventListener('DOMContentLoaded', function(event) {
   <ul>
     <li>
       <a href="/index.html">
-        All<span>2</span>
+        All<span>21</span>
       </a>
     </li>
 
     
       <li>
-        <a href="/categories.html#h-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD">
-          개발환경 <span>2</span>
+        <a href="/categories.html#h-AWS">
+          AWS <span>4</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories.html#h-DevOps">
+          DevOps <span>11</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories.html#h-PostgreSQL">
+          PostgreSQL <span>3</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories.html#h-Python">
+          Python <span>1</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories.html#h-system-design">
+          system-design <span>2</span>
         </a>
       </li>
     
@@ -861,7 +2518,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   <div class="wrapper">
     <div class="site-footer-inner">
-<div>Unpublished Work <span class="copyleft">©</span> 2017-2022 dooyeoung</div>
+<div>
+<span class="copyleft">©</span> 2017 dooyeoung all rights reserved.</div>
       <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
       generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
       another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
