@@ -10,13 +10,13 @@ sidebar: ['article-menu']
 ## H2 연동?
 
 ### build.gradle
-``` yaml
+```
 implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 runtimeOnly 'com.h2database:h2'
 ```
 
 ### test/resource/application.yml
-``` yaml
+```yaml
 spring:
   datasource:
     driver-class-name: org.h2.Driver

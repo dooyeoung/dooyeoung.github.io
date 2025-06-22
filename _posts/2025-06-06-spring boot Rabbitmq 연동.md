@@ -25,12 +25,12 @@ services:
 
 ### build.gradle 파일 수정
 
-``` java
+```
 implementation 'org.springframework.boot:spring-boot-starter-amqp'
 ```
 
 ### resource/application.yaml 수정
-``` yaml
+```yaml
 spring:
   rabbitmq:
     host: localhost
