@@ -33,7 +33,7 @@ https://jbee.io/about/ -->
     }
 
     @media print
-    {    
+    {
         .sidebar, .site-header, .site-header-inner, .site-nav, .site-footer, .site-footer-inner, hr
         {
             display: none !important;
@@ -86,7 +86,7 @@ https://jbee.io/about/ -->
 <h2 class="font-semibold print-break" id="introduce" style="margin-top: 0">소개</h2>
 <div class="grid grid-cols-4 mb-8" id="print-start">
     <div class="col-span-1">
-        <img src="assets/images/dooyeoung.png">
+        <img src="assets/images/dooyeoung.png" width="128" height="128">
     </div>
     <div class="col-span-3 flex flex-col justify-center">
         <div class="text-2xl mb-4 font-semibold">
@@ -101,20 +101,20 @@ https://jbee.io/about/ -->
 <div class="grid grid-cols-4">
     <div class="col-span-4" id="print-contents" style="word-break: keep-alive !important;">
         레몬베이스에서 백엔드 엔지니어로, 인사평가, 목표 관리, 리뷰 분석 SaaS 제품 개발에 기여하며 확장 가능한 고품질 제품 개발과 사용자 경험 개선에 집중하고 있습니다.
-        다양한 스타트업에서 백엔드, 데이터 엔지니어, 업무 자동화 및 SaaS 제품 개발 등 폭넓은 경험을 쌓았습니다. 
+        다양한 스타트업에서 백엔드, 데이터 엔지니어, 업무 자동화 및 SaaS 제품 개발 등 폭넓은 경험을 쌓았습니다.
         현재는 AWS ECS 환경에서 Python Django 기반 서비스를 운영하며, Github Actions 기반 CI/CD 및 Terraform으로 인프라를 관리합니다.
         <br><br>
-        최대 30,000개 목표 조회 속도를 30초에서 0.5초로 단축하며 83% 이상의 성능 향상을 달성했습니다. 
-        또한, AWS 인프라 구조 개선을 통해 연간 약 5,600만 원의 비용 절감에 기여했습니다. 
+        최대 30,000개 목표 조회 속도를 30초에서 0.5초로 단축하며 83% 이상의 성능 향상을 달성했습니다.
+        또한, AWS 인프라 구조 개선을 통해 연간 약 5,600만 원의 비용 절감에 기여했습니다.
         사용자 불편함 해소 및 운영 효율 증대를 위해 목표 현황 대시보드, 구성원 대량 생성 도구, 리뷰 분석 검증 툴 등 다양한 내부 도구와 POC를 기획 및 구현하여, 고객 및 동료의 생산성 향상에 기여하고 있습니다.
-        긍정적인 사고와 과감한 실행력을 바탕으로 문제를 끈질기게 파고들어 해결하고자 합니다. 
+        긍정적인 사고와 과감한 실행력을 바탕으로 문제를 끈질기게 파고들어 해결하고자 합니다.
         <br><br>
-        고객의 불편함에 깊이 공감하고, 문제 해결을 위한 더 나은 아이디어를 적극적으로 제안하며, PoC를 통해 실행 가능성과 영향력을 빠르게 검증합니다. 
+        고객의 불편함에 깊이 공감하고, 문제 해결을 위한 더 나은 아이디어를 적극적으로 제안하며, PoC를 통해 실행 가능성과 영향력을 빠르게 검증합니다.
         이러한 시도는 다양한 기술 학습과 새로운 기능 도입으로 이어지며, 제품 개선에 실질적인 기여로 이어졌습니다.
         나아가 동료들이 핵심 업무에 집중할 수 있도록 반복 업무 자동화나 필요한 도구 개발을 고민합니다.
         <br><br>
         모든 문제를 기술로 해결하기보다 외부 서비스 도입과 운영 정책을 개선을 동료들과 적극적으로 논의하여 문제 해결에 합리적인 방법을 찾으려 합니다.
-        투명하고 따뜻한 소통을 통해 동료들과 함께 시너지를 내는 것을 중요하게 생각합니다. 
+        투명하고 따뜻한 소통을 통해 동료들과 함께 시너지를 내는 것을 중요하게 생각합니다.
         함께 일하기 좋은 동료이자, 문제 해결에 기여하는 개발자가 되기 위해 끊임없이 배우고 실행하고 있습니다.
     </div>
 </div>
@@ -147,6 +147,14 @@ https://jbee.io/about/ -->
         </div>
     </div>
     <div class="col-span-3">
+        <div class="text-lg font-medium">개인별 리포트 분석 기능 개발</div>
+        <ul class="list-inside list-disc mb-4">
+          <li>데이터팀이 작성했던 기존 R 코드를 분석하고 Python으로 변환하여 개인별 리포트 기능을 구현</li>
+          <li>제출 완료된 리뷰 데이터를 활용하여 개개인의 질문별 강약점, 자기객관화, 장단점 분석이 가능한 기능 개발</li>
+          <li>RDS 기반의 분석 대기열 구조를 설계하여 개인별 리포트 생성시 리소스 부담이 최소화 될 수 있도록 개선</li>
+          <li>분석 결과를 정적파일로 생성하고 S3에 저장하는 발행기능을 개발하였으며 제품 변경이 분석 결과에 영향을 주지않도록 개선</li>
+        </ul>
+
         <div class="text-lg font-medium">목표 제품 관리</div>
         <ul class="list-inside list-disc mb-4">
             <li>목표 승인 기능을 개발하고, QA에 사용할 승인권자 미리보기 내부 툴 페이지를 구현하여 정책 논의와 테스트 효율을 높임</li>
@@ -156,7 +164,7 @@ https://jbee.io/about/ -->
             <li>sqs와 celery beat를 도입하여 스케쥴 처리에 대한 인프라 구성</li>
             <li>모바일 환경 개선작업으로 목표 간편 체크인 기능 구현하여 목표 제품 접근성을 높이는데 기여</li>
         </ul>
-        
+
         <div class="text-lg font-medium">AWS 인프라 비용 절감 TF 참여</div>
         <ul class="list-inside list-disc mb-4">
             <li>파편화 되어 운영되던 ECS 서비스를 도메인 단위로 묶어 하나의 서비스로 구성하여 비용 절감</li>
@@ -172,13 +180,6 @@ https://jbee.io/about/ -->
             <li>전체 목표를 한눈에 볼 수 있는 Tree view를 React flow를 사용하여 PoC로 구현하여 제안하였으며, 로드맵에 추가되어 이후 제품에 반영됨</li>
         </ul>
 
-        <div class="text-lg font-medium">개인별 리포트 분석 기능 개발</div>
-        <ul class="list-inside list-disc mb-4">
-            <li>데이터팀이 작성했던 기존 R 코드를 분석하고 Python으로 변환하여 개인별 리포트 기능을 구현</li>
-            <li>제출 완료된 리뷰 데이터를 활용하여 개개인의 질문별 강약점, 자기객관화, 장단점 분석이 가능한 기능 개발</li>
-            <li>RDS 기반의 분석 대기열 구조를 설계하여 개인별 리포트 생성시 리소스 부담이 최소화 될 수 있도록 개선</li>
-            <li>분석 결과를 정적파일로 생성하는 발행기능을 개발하였으며 제품 변경과 무관하게 결과의 일관성을 보장하였음</li>
-        </ul>
     </div>
 </div>
 
@@ -256,11 +257,11 @@ https://jbee.io/about/ -->
     </div>
     <div class="col-span-4 skil mb-4">
         <img src ="https://img.shields.io/badge/flask-000000.svg?&style=for-the-badge&logo=flask&logoColor=white"/>
-        <img src ="https://img.shields.io/badge/Vue-4FC08D.svg?&style=for-the-badge&logo=vuedotjs&logoColor=white"/> 
+        <img src ="https://img.shields.io/badge/Vue-4FC08D.svg?&style=for-the-badge&logo=vuedotjs&logoColor=white"/>
         <img src ="https://img.shields.io/badge/EC2-FF9900.svg?&style=for-the-badge&logo=amazonec2&logoColor=white"/>
     </div>
 
-    
+
     <div class="col-span-1">
         <div class="text-lg text-neutral-400 font-medium">
             2020.01 - 2021.03
@@ -311,7 +312,7 @@ https://jbee.io/about/ -->
             <li>Face-alignment, opencv를 사용하여 얼굴 인식 모듈 개발 </li>
             <li>k-means를 사용하여 얼굴 부위별 색상 추출</li>
         </ul>
-        
+
         <div class="text-lg font-medium">영화 포스터와 트레일러 영상 전처리</div>
         <ul class="list-inside list-disc mb-4">
             <li>k-means를 사용하여 대표 색상 추출 후 색상 검색 모듈 구현 </li>
@@ -338,14 +339,14 @@ https://jbee.io/about/ -->
         </div>
     </div>
     <div class="col-span-4 skil mb-4">
-        <img src ="https://img.shields.io/badge/-C%23-239120.svg?&style=for-the-badge&logo=csharp&logoColor=white"/> 
+        <img src ="https://img.shields.io/badge/-C%23-239120.svg?&style=for-the-badge&logo=csharp&logoColor=white"/>
         <img src ="https://img.shields.io/badge/-c++-00599C.svg?&style=for-the-badge&logo=c%2B%2B&logoColor=white"/>
         <img src ="https://img.shields.io/badge/mariadb-003545.svg?&style=for-the-badge&logo=mariadb&logoColor=white"/>
     </div>
 
     <div class="col-span-1">
         <div class="text-lg text-neutral-400 font-medium">
-            2015.02 - 2017.12 
+            2015.02 - 2017.12
         </div>
     </div>
     <div class="col-span-3">
@@ -404,7 +405,7 @@ https://jbee.io/about/ -->
             새로운 서버를 구성하지 않고 비동기 worker를 추가하여 빌드만 담당하도록 코드를 추가하였음
             서브프로세스를 호출하여 정적파일 생성하고 s3에 업로드 하는 방향으로 정적 파일 생성 작업을 진행하였음
             정적파일 생성 결과를 한번에 업로드 하기 위해 aws s3 cli를 사용하였음, 이또한 서브프로세스를 호출하는 방식으로 진행했음
-            s3는 민감정보를 보관하는 비공개 버킷과 assets을 보관하는 공개 버킷을 구분하였고 
+            s3는 민감정보를 보관하는 비공개 버킷과 assets을 보관하는 공개 버킷을 구분하였고
             공개 버킷에 cloudfront와 route 53 레코드를 추가로 설정하여 외부 접근에 대한 캐시를 구성하였음
         </div>
     </div>
@@ -416,7 +417,7 @@ https://jbee.io/about/ -->
             부득이하게 ECS에 공통으로 사용되는 백엔드 도커 이미지 파일이 커졌으며
             배포 시간도 길어졌음, 이는 이후 도커 이미지를 분리하는 방향으로 개선 하려함
             분석 요청 트래픽이 많지 않아 빌드 서버를 분리하지 않는 판단을 내렸음, 오버스펙을 우려하였음
-            제품 사용 규모에 맞는 구조로 설계하여 요구사항을 만족하였으며 
+            제품 사용 규모에 맞는 구조로 설계하여 요구사항을 만족하였으며
             제품 개선이 전보다 자유로워 졌음
         </div>
     </div>
@@ -450,10 +451,10 @@ https://jbee.io/about/ -->
             데이터 독, 프로파일링 사용하여 가장 문제되는 구간을 찾아 작업 우선순위를 정하였음
             간단하게 print와 자체 구현한 속도 측정 스크립트도 간단히 사용함
             위계 데이터 처리 부분이 anytree라는 오픈소스 패키지를 사용하고 있었음
-            django orm에서 anytree로 변환시 인스턴스를 생성하는 과정이 시간이 오래 걸리는것을 파악, 개수가 워낙 많아 30,000개 변환에 시간이 꽤나 걸렸음 
+            django orm에서 anytree로 변환시 인스턴스를 생성하는 과정이 시간이 오래 걸리는것을 파악, 개수가 워낙 많아 30,000개 변환에 시간이 꽤나 걸렸음
             해당 구간만 c, rust 로 변경하여 시도해보았으나 큰 이점이 없었음
             anytree 패키지 사용을 제거하고 필요한 내용만 사용할 수 있도록 유틸 코드를 새로 작성하였음
-            개선 프로젝트 시작전 30초 성능을 2초 대로 개선하였음 
+            개선 프로젝트 시작전 30초 성능을 2초 대로 개선하였음
         </div>
     </div>
     <div class="col-span-1">
@@ -492,7 +493,7 @@ https://jbee.io/about/ -->
         <div class="mb-2">
             개발 리소스 부족으로 전체 서비스 코드를 레이어드 아키텍처로 리팩토링할 수 있는 상황은 아니었습니다.
             우선 레포지토리 패턴만 적용하여 데이터 관리 코드를 분리하기로 하였습니다.
-            데이터 조회 부분을 모두 파악하여 레포지토리 패턴으로 정리하였습니다. 
+            데이터 조회 부분을 모두 파악하여 레포지토리 패턴으로 정리하였습니다.
             앱 API 서버 기본정보를 다루는 레포지토리 선언부를 추가하고 PostgreSQL이 연결되는 구현체를 작성하였고
             푸시메시지 보관 목적을 지닌 레포지토리 선언부를 추가하고 DocuemntDB가 연결되는 구현체를 작성하였습니다
         </div>
@@ -504,7 +505,7 @@ https://jbee.io/about/ -->
         <div class="mb-2">
             각 API에서 사용하는 쿼리를 파악하여 중복 코드를 줄일 수 있었으며 API 테스트 코드에서 데이터 검증 과정이 제거되면서 테스트 코드가 간결해졌습니다.
             <br>
-            비즈니스 로직을 분리하여 서비스 레이어로 구현하지 못한 점이 아쉬움으로 남습니다. 
+            비즈니스 로직을 분리하여 서비스 레이어로 구현하지 못한 점이 아쉬움으로 남습니다.
             레이어드 아키텍처의 일부분을 적용해 볼 수 있는 좋은 시간이었으며
             도메인 주도개발, 레이어드 아키텍처 패턴의 중요성에 대해 다시 한번 깨달았습니다.
             서비스 구조에 대해 다시 학습을 시작하게 된 계기가 되었습니다.
@@ -538,7 +539,7 @@ https://jbee.io/about/ -->
             매장 목록 조회 후 직렬화 하는 과정에서 속도가 많이 소비되었으며 다시 구간을 나누어 수행 속도를 확인해보니
             매장 썸네일 이미지 URL 조회 단계에 시간이 많이 소비되는 문제였습니다.
             <br>
-            SQLAlchemy-ImageAttach 패키지를 사용하여 매장 이미지를 S3에서 관리하고 있었으며 
+            SQLAlchemy-ImageAttach 패키지를 사용하여 매장 이미지를 S3에서 관리하고 있었으며
             s3의 업로드된 url을 db에 저장하는 방식이 아닌 이미지 파일의 메타정보만 db에 저장하고 이미지 url 접근시
             메타정보를 s3에 전달하여 url을 확인하여 전달하는 방식이였습니다.
             <br>
@@ -620,7 +621,7 @@ https://jbee.io/about/ -->
     <div class="col-span-3">
         <div class="mb-2">
             초기 작업으로 약 70,000명의 가상 사용자를 대량으로 미리 생성하였습니다.
-            QA 대상 기능 중 포인트 적립 형태가 비슷한 사용자들이 방문한 매장을 추천해주는 기능이 있었으며 QA를 위해 
+            QA 대상 기능 중 포인트 적립 형태가 비슷한 사용자들이 방문한 매장을 추천해주는 기능이 있었으며 QA를 위해
             대량의 포인트 활동 생성 기능 필요했기에
             백오피스에서 포인트 활동 내역이 있는 사용자가 몇 명 필요한지, 날짜 기간 범위는 언제로 할지, 활동 지역은 어디인지 선택할 수 있게 하였습니다.
             쿠폰 발급 기능도 추가하여 쿠폰 QA도 가능하도록 기능을 추가하였습니다.
@@ -637,7 +638,7 @@ https://jbee.io/about/ -->
         </div>
     </div>
 </div>
-<!-- 
+<!--
 <div class="grid grid-cols-4">
     <div class="col-span-4 mb-4">
         <div class="text-xl font-medium">
@@ -650,7 +651,7 @@ https://jbee.io/about/ -->
     </div>
     <div class="col-span-3">
         <div class="mb-2">
-            PDMS 프로그램의 *.rvm 3D 파일 변환 업무를 개선했습니다. 
+            PDMS 프로그램의 *.rvm 3D 파일 변환 업무를 개선했습니다.
             *.rvm 파일을 Autodesk의 Navisworks 프로그램 사용하여 *.fbx 파일로 변환가능했으나
             Navisworks는 한 번에 하나의 파일만 변환할 수 있었습니다. 변환 작업 시간은 1분 이상 소요되었습니다.
             PDMS 프로그램에서 추출된 3,000개 이상의 파일을 수동으로 변환 하는 것은 비효율적인 작업이었습니다.
