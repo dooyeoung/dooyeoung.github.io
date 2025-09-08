@@ -1,0 +1,84 @@
+---
+layout: post
+title: "로컬 환경에서 AWS API 호출을 위한 설정 (AWS CLI, MFA)"
+categories: "AWS"
+tags: ["aws", "cli", "mfa", "iam", "python"]
+sidebar: ['article-menu']
+---
+
+로컬 개발 환경에서 AWS의 다양한 서비스와 상호작용하기 위해서는 AWS CLI를 설치하고, 안전한 인증을 위한 설정을 해주어야 합니다. 특히 MFA(Multi-Factor Authentication)가 활성화된 계정의 경우, 추가적인 인증 절차가 필요합니다.
+
+이 글에서는 AWS CLI를 설치하고, MFA 인증을 통해 임시 토큰을 발급받아 AWS API를 호출하는 방법을 단계별로 안내합니다.
+
+### **0. AWS CLI 설치**
+
+먼저, 자신의 운영체제에 맞는 AWS CLI를 설치해야 합니다. 아래 공식 문서를 참고하여 설치를 진행해주세요.
+
+- **macOS:** [macOS에서 AWS CLI 버전 1 설치](https://docs.aws.amazon.com/ko_kr/cli/v1/userguide/install-macos.html)
+- **가상 환경(virtualenv):** [가상 환경에서 AWS CLI 버전 1 설치](https://docs.aws.amazon.com/ko_kr/cli/v1/userguide/install-virtualenv.html)
+
+설치가 완료되면 터미널에서 다음 명령어로 설치를 확인할 수 있습니다.
+
+```bash
+aws --version
+```
+
+### **1. `aws configure`를 이용한 기본 설정**
+
+AWS CLI를 사용하기 위해서는 Access Key ID와 Secret Access Key를 설정해야 합니다. [IAM 콘솔](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/security_credentials?section=IAM_credentials)에서 "액세스 키 만들기"를 통해 새로운 키를 발급받을 수 있습니다.
+
+![](/assets/images/posts/2023-08-09-local-aws-api-1.png)
+
+발급받은 키를 사용하여 터미널에서 `aws configure` 명령어를 실행하고, 각 항목에 값을 입력합니다.
+
+```bash
+aws configure
+AWS Access Key ID [****************]: YOUR_ACCESS_KEY
+AWS Secret Access Key [****************]: YOUR_SECRET_KEY
+Default region name [ap-northeast-2]: ap-northeast-2
+Default output format [json]: json
+```
+
+하지만 이 설정만으로는 MFA가 활성화된 계정에서 API를 호출할 때 `AccessDenied` 오류가 발생합니다.
+
+```bash
+> aws s3 ls
+An error occurred (AccessDenied) when calling the ListBuckets operation: Access Denied
+```
+
+### **2. MFA 인증을 통한 임시 토큰 얻기**
+
+MFA가 활성화된 경우, API를 호출하기 위해서는 임시 보안 자격 증명(Access Key, Secret Key, Session Token)을 발급받아야 합니다.
+
+먼저, [IAM 보안 자격 증명 페이지](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/security_credentials)에서 자신의 MFA 디바이스의 "할당된 MFA 디바이스 ARN"을 확인합니다.
+
+![](/assets/images/posts/2023-08-09-local-aws-api-2.png)
+
+그 다음, 아래와 같이 `get-session-token` 명령어를 사용하여 임시 토큰을 발급받습니다. `--serial-number`에는 위에서 확인한 ARN을, `--token-code`에는 MFA 디바이스에 표시되는 6자리 코드를 입력합니다.
+
+```bash
+aws sts get-session-token --serial-number YOUR_MFA_DEVICE_ARN --token-code 123456
+```
+
+명령이 성공하면 다음과 같이 임시 자격 증명이 포함된 JSON 응답을 받게 됩니다.
+
+```json
+{
+    "Credentials": {
+        "AccessKeyId": "ASIA...",
+        "SecretAccessKey": "...",
+        "SessionToken": "...",
+        "Expiration": "2023-08-10T00:00:00Z"
+    }
+}
+```
+
+이제 발급받은 임시 자격 증명을 환경 변수로 설정하여 AWS API를 사용할 수 있습니다.
+
+```bash
+export AWS_ACCESS_KEY_ID=ASIA...
+export AWS_SECRET_ACCESS_KEY=...
+export AWS_SESSION_TOKEN=...
+```
+
+이제 `aws s3 ls`와 같은 명령어를 실행하면 정상적으로 동작하는 것을 확인할 수 있습니다.
