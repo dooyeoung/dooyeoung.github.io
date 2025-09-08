@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Interceptor AOP 차이"
+title: "Spring Interceptor와 AOP, 언제 무엇을 써야 할까?"
 subtitle: "Interceptor"
 categories: "Spring Boot"
-tags: ["Spring Boot"]
+tags: ["Spring Boot", "aop", "interceptor"]
 sidebar: ['article-menu']
 ---
 Interceptor

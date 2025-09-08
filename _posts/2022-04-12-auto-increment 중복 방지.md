@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Auto Incresment 필드에서 duplicated 오류가 발생 할 때"
+title: "PostgreSQL Auto-Increment 중복 키 오류 해결 방법 (Sequence 갱신)"
 categories: "AWS"
-tags: ["cloudfront"]
+tags: ["cloudfront", "postgres"]
 sidebar: ['article-menu']
 ---
 

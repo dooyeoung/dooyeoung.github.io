@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Terraform 자주 사용하는 명령어"
+title: "Terraform 필수 명령어 가이드: init, plan, import, state"
 categories: "DevOps"
-tags: ["terraform"]
+tags: ["terraform", "devOps", "iac"]
 sidebar: ['article-menu']
 ---
 
