@@ -2,7 +2,7 @@
 layout: post
 title: "SQL에서 계층 구조 데이터 표현 방식 비교 (Adjacency List, Nested Set, Closure Table, Path Enumeration)"
 categories: "Database"
-tags: ["sql", "database-design", "hierarchical-data", "adjacency-list", "nested-set", "closure-table", "path-enumeration"]
+tags: ["SQL"]
 sidebar: ['article-menu']
 ---
 
@@ -23,7 +23,7 @@ sidebar: ['article-menu']
     -   특정 노드의 모든 하위 노드를 찾는 것(서브트리 조회)이 매우 비효율적입니다. 재귀 쿼리(Recursive CTE)를 사용해야 하며, 데이터베이스에 따라 성능이 저하될 수 있습니다.
     -   계층의 깊이가 깊어질수록 쿼리가 복잡해지고 성능이 저하됩니다.
 
-**쿼리 예시 (PostgreSQL - Recursive CTE):**
+**쿼리 예시 (postgres - Recursive CTE):**
 
 ```sql
 -- 'Food' 카테고리의 모든 하위 카테고리 조회

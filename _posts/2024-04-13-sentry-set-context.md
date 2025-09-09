@@ -2,7 +2,7 @@
 layout: post
 title: "Sentry 에러 리포트에 set_context로 풍부한 정보 추가하기"
 categories: "Debugging"
-tags: ["sentry", "debugging", "python", "error-reporting"]
+tags: ["sentry"]
 sidebar: ['article-menu']
 ---
 

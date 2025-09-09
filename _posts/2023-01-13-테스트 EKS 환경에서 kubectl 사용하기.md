@@ -2,7 +2,7 @@
 layout: post
 title: "테스트 EKS 환경에 Kubectl로 접근하기 위한 설정 가이드"
 categories: "Kubernetes"
-tags: ["kubernetes", "kubectl", "aws", "eks", "iam", "security"]
+tags: ["k8s", "kubectl"]
 sidebar: ['article-menu']
 ---
 

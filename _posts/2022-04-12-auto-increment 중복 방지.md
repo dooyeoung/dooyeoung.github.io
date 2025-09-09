@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PostgreSQL Auto-Increment 중복 키 오류 해결 방법 (Sequence 갱신)"
+title: "postgres Auto-Increment 중복 키 오류 해결 방법 (Sequence 갱신)"
 categories: "AWS"
 tags: ["cloudfront", "postgres"]
 sidebar: ['article-menu']
@@ -10,9 +10,9 @@ sidebar: ['article-menu']
 
 오브젝트 추가 후 `(psycopg2.IntegrityError) duplicate key value violates unique constraint 'id_key'` 오류가 발생하였습니다.
 
-원인을 파악해보니 `postgreSQL`에서 사용할 id 값이 중복인 문제였습니다. `postgreSQL`은 `auto increcement` 필드에 대해 `seqence` 값을 따로 관리합니다. 
+원인을 파악해보니 `postgres`에서 사용할 id 값이 중복인 문제였습니다. `postgres`은 `auto increcement` 필드에 대해 `seqence` 값을 따로 관리합니다. 
 
-문제 해결을  `postgreSQL` 이 관리하는 `seqence` 값을 테이블의 max id 값으로 갱신하였습니다.
+문제 해결을  `postgres` 이 관리하는 `seqence` 값을 테이블의 max id 값으로 갱신하였습니다.
 
 아래 문제 확인을 위해 사용한 쿼리문을 정리합니다.
 

@@ -2,7 +2,7 @@
 layout: post
 title: "S3와 CloudFront를 연동하여 정적 콘텐츠 제공하기"
 categories: "AWS"
-tags: ["aws", "s3", "cloudfront", "cdn", "route53", "kms"]
+tags: ["AWS", "s3", "cloudfront", "route53"]
 sidebar: ['article-menu']
 ---
 

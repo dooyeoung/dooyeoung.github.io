@@ -2,7 +2,7 @@
 layout: post
 title: "로컬 개발 환경에서 Datadog APM 설정하고 사용하기"
 categories: "APM"
-tags: ["datadog", "apm", "docker", "local-development", "django"]
+tags: ["datadog"]
 sidebar: ['article-menu']
 ---
 

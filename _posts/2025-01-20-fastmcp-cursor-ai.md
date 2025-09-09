@@ -2,7 +2,7 @@
 layout: post
 title: "FastMCP로 자체 MCP 서버 구현하고 Cursor AI에 등록하기"
 categories: "AI"
-tags: ["fastmcp", "mcp", "cursor", "ai", "python"]
+tags: ["MCP"]
 sidebar: ['article-menu']
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Celery 작업 로그 추가하기"
 categories: "Celery"
-tags: ["celery", "log", "python", "django"]
+tags: ["celery"]
 sidebar: ['article-menu']
 ---
 

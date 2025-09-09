@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "PostgreSQL 쿼리 플랜 확인하기"
-categories: "PostgreSQL"
+title: "postgres 쿼리 플랜 확인하기"
+categories: "postgres"
 tags: ["SQL", "Visualizer" ]
 sidebar: ['article-menu']
 ---
 
-`postgreSQL explain` 명령어로 쿼리 실행 과정을 확인 할 수 있습니다.
+`postgres explain` 명령어로 쿼리 실행 과정을 확인 할 수 있습니다.
 실행 과정을 파악하여 쿼리를 최적화 할 수 있습니다.
 `explain` 결과로 내용을 파악할 수 있지만 결과를 그래프 형태로 보기 쉽게 변환하는 내용을 정리합니다.
 

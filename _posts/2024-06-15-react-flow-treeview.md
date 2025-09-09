@@ -2,7 +2,7 @@
 layout: post
 title: "React Flow로 대규모 목표 트리뷰 구현 및 최적화하기"
 categories: "Frontend"
-tags: ["react", "react-flow", "tree-view", "performance", "optimization"]
+tags: ["react-flow"]
 sidebar: ['article-menu']
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "로컬에서 Slack 앱(App) 개발 환경 설정하기"
 categories: "Development"
-tags: ["slack", "api", "local-development", "python", "ngrok"]
+tags: ["slack"]
 sidebar: ['article-menu']
 ---
 
