@@ -2,7 +2,7 @@
 layout: post
 title: "UUID를 Primary Key로 사용시 주의할 점"
 categories: "RDS"
-tags: ["rds", "uuid", "pk
+tags: ["rds", "uuid"]
 sidebar: ['article-menu']
 ---
 
