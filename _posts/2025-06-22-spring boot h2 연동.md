@@ -60,8 +60,8 @@ jpa.hibernate.ddl-auto 옵션별 동작 방식은 아래와 같습니다.
 Spring Boot 애플리케이션을 실행하고, 웹 브라우저를 열어 아래 주소로 접속합니다.
 > `http://localhost:8080/h2-console`
 
-로그인 화면에서 **JDBC URL** 입력란에 `application.yml`에 작성했던 주소인 **`jdbc:h2:mem:testdb`** 을 입력합니다.
-JDBC URL을 수정하고, 사용자 이름에 `sa`를 입력한 뒤 **[Connect]** 버튼을 클릭하면 관리화면에 접속됩니다.
+로그인 화면에서 JDBC URL 입력란에 `application.yml`에 작성했던 주소인 `jdbc:h2:mem:testdb` 을 입력합니다.
+JDBC URL을 수정하고, 사용자 이름에 `sa`를 입력한 뒤 Connect 버튼을 클릭하면 관리화면에 접속됩니다.
 
 ## 4. 동작 확인하기
 
@@ -86,4 +86,4 @@ JDBC URL을 수정하고, 사용자 이름에 `sa`를 입력한 뒤 **[Connect]*
     INSERT INTO member (name) VALUES ('김철수');
     ```
 
-서버를 **재시작**하고, 다시 H2 콘솔에 접속하면. 왼쪽 화면에 `MEMBER` 테이블이 생성됩니다. SQL 입력창에 `SELECT * FROM MEMBER` 입력후 실행하면 데이터를 조회할 수 있습니다. 
+서버를 재시작하고, 다시 H2 콘솔에 접속하면. 왼쪽 화면에 `MEMBER` 테이블이 생성됩니다. SQL 입력창에 `SELECT * FROM MEMBER` 입력후 실행하면 데이터를 조회할 수 있습니다. 
