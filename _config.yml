@@ -84,7 +84,7 @@ lang: "ko"  # default lang is en
 #   - lang: ko
 #     img: https://cdn.countryflags.com/thumbs/south-korea/flag-400.png
 #     text: Korean
- 
+
 header_text_color: "#ffffff"
 
 # You can choose a theme color
@@ -135,6 +135,7 @@ code_badge:
 header_pages:
   - index.html
   - about.html
+  - portfolio.html
   - archives.html
   - categories.html
   - tags.html

@@ -1,0 +1,193 @@
+---
+layout: portfolio
+title: Portfolio
+hidden: comments
+---
+<!-- https://www.inflearn.com/course/%EB%85%B8%EC%85%98-notion-%ED%99%9C%EC%9A%A9#curriculum
+https://jojoldu.github.io/
+https://resume.yowu.dev/
+https://jbee.io/about/ -->
+
+<style>
+    .content-title {
+        margin-top: 30px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .skil{
+        display: flex !important;
+        flex-flow: row wrap;
+    }
+
+    .skil > img{
+        margin-left:0 !important;
+        margin-right:2px !important;
+        margin-bottom:2px !important;
+        height: 22px;
+    }
+
+    ul.list-inside > li{
+        margin-left:4px;
+        text-indent: -18px;
+        padding-left: 14px;
+    }
+
+    @media print
+    {
+        .sidebar, .site-header, .site-header-inner, .site-nav, .site-footer, .site-footer-inner, hr
+        {
+            display: none !important;
+            margin:0 !important;
+        }
+
+        #introduce{
+            grid-column: span 4 / span 4
+        }
+
+        #projects, #experience{
+            margin-top: 0px !important;
+        }
+
+        #print-start{
+            padding-top: 24px;
+        }
+
+        .print-break{
+            page-break-before:always;
+            padding-top: 22px;
+        }
+
+        .page-content{
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+            padding-left: 24px !important;
+            padding-right: 24px !important;
+        }
+
+        .page-content > .wrapper{
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+
+        #print-contents{
+            line-height: 1.55;
+        }
+    }
+
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+<h2 class="font-semibold print-break" id="introduce" style="margin-top: 0">소개</h2>
+<div class="grid grid-cols-4 mb-8" id="print-start">
+    <div class="col-span-1">
+        <img src="assets/images/dooyeoung.png" width="128" height="128">
+    </div>
+    <div class="col-span-3 flex flex-col justify-center">
+        <div class="text-2xl mb-4 font-semibold">
+            류두영 / Dooyeoung Ryu
+        </div>
+
+        010-5061-2576 <br>
+        dooyeoung.ryu@gmail.com
+    </div>
+</div>
+
+<div class="grid grid-cols-4">
+  <div class="col-span-4" id="print-contents" style="word-break: keep-alive !important;">
+
+  </div>
+</div>
+
+<hr class="mt-8">
+
+<h2 class="font-semibold print-break" id="projects">프로젝트</h2>
+
+<div class="grid grid-cols-4 mb-4">
+  <div class="col-span-4">
+    <div class="text-xl font-semibold mb-2">헥사고날 아키텍처 기반 병원 예약 관리 시스템</div>
+    <div class="text-sm text-gray-600 mb-2">
+      Java/Spring Boot 학습 프로젝트
+      <a href="https://medops.vercel.app/" target="_blank"
+         class="text-blue-600 hover:text-blue-800 underline">
+        🔗 Demo Site
+      </a>
+    </div>
+  </div>
+  <div class="col-span-4 skil mb-2">
+    <img src="https://img.shields.io/badge/springboot-6DB33F.svg?&style=for-the-badge&logo=springboot&logoColor=white"/>
+    <img src="https://img.shields.io/badge/mongodb-47A248.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/>
+    <img src="https://img.shields.io/badge/redis-DC382D.svg?&style=for-the-badge&logo=redis&logoColor=white"/>
+    <img src="https://img.shields.io/badge/react-61DAFB.svg?&style=for-the-badge&logo=react&logoColor=white"/>
+    <img src="https://img.shields.io/badge/typescript-3178C6.svg?&style=for-the-badge&logo=typescript&logoColor=white"/>
+  </div>
+
+  <div class="col-span-1">
+    <div class="text-lg text-neutral-400 font-medium">
+      2025.08 - 2025.09
+    </div>
+  </div>
+  <div class="col-span-3">
+    <div class="text-lg font-medium">헥사고날 아키텍처 및 이벤트 소싱 구현</div>
+    <ul class="list-inside list-disc mb-4">
+      <li>Java/Spring Boot 기반 헥사고날 아키텍처 학습을 통해 도메인 중심 설계와 Port-Adapter 패턴 적용</li>
+      <li>이벤트 소싱과 CQRS 패턴을 도입하여 의료 기록 변경 이력 추적 및 읽기/쓰기 모델 분리 구현</li>
+      <li>MongoDB와 Redis를 활용한 데이터 저장소 구성 및 외부 기술 의존성 최소화 구조 설계</li>
+      <li>JWT 인증과 역할 기반 접근 제어를 통한 보안 강화 및 Docker를 활용한 개발 환경 구성</li>
+      <li>React/TypeScript로 관리자 대시보드 개발 및 SSE 기반 실시간 알림 시스템 구축</li>
+    </ul>
+  </div>
+</div>
+
+
+<hr class="mt-8">
+
+<h2 class="font-semibold print-break" id="experience">문제 해결 및 개선 경험</h2>
+
+<div class="grid grid-cols-4 mb-4">
+    <div class="col-span-4 mb-4">
+        <div class="text-xl font-medium">개인별 리포트 분석 결과 정적 파일 생성</div>
+        <div class="text-base text-neutral-500">서버 증설 없이 달성한 데이터 불변성 확보</div>
+    </div>
+    <div class="col-span-1">
+        <div class="text-base text-neutral-400 font-medium">문제</div>
+    </div>
+    <div class="col-span-3">
+        <div class="mb-2">
+          분석 결과 생성 후에도 제품의 변경이 분석 결과에 영향을 주지 않도록 분석 결과를 정적파일로 다룰 필요성이 있었습니다.
+          고객은 분석 결과를 분리되고 독립된 내용이라 이해했습니다.
+          분석이 추가되거나 분석 방법이 변경되었을 때 분석 결과 조회 페이지에 즉시 반영되는 구조였기에 개선이 필요했습니다.
+          분석이 완료된 결과는 제품 변경에 영향을 받지 않아야 한다는 요구사항을 만족시켜야 했습니다.
+        </div>
+    </div>
+    <div class="col-span-1">
+        <div class="text-base text-neutral-400 font-medium">해결 과정</div>
+    </div>
+    <div class="col-span-3">
+        <div class="mb-2">
+          정적파일 생성 서버를 추가하려는 방향을 생각하다 팀원들과 여러 논의를 거쳐
+          FE의 vike 패키지를 활용하여 기존 코드 기반에서 정적 빌드가 가능한 것을 확인했습니다.
+          새로운 서버를 구성하지 않고 비동기 worker를 추가하여 빌드만 담당하도록 코드를 추가했습니다.
+          서브프로세스를 호출하여 정적파일 생성하고 S3에 업로드하는 방향으로 정적 파일 생성 작업을 진행했습니다.
+          정적파일 생성 결과를 한번에 업로드하기 위해 AWS S3 CLI를 사용했으며, 이 또한 서브프로세스를 호출하는 방식으로 진행했습니다.
+          S3는 민감정보를 보관하는 비공개 버킷과 assets을 보관하는 공개 버킷을 구분했고,
+          공개 버킷에 CloudFront와 Route 53 레코드를 추가로 설정하여 외부 접근에 대한 캐시를 구성했습니다.
+        </div>
+    </div>
+    <div class="col-span-1">
+        <div class="text-base text-neutral-400 font-medium">평가</div>
+    </div>
+    <div class="col-span-3">
+        <div class="mb-2">
+          부득이하게 ECS에 공통으로 사용되는 백엔드 도커 이미지 파일이 커졌으며
+          배포 시간도 길어졌습니다. 이는 이후 도커 이미지를 분리하는 방향으로 개선하려 합니다.
+          분석 요청 트래픽이 많지 않아 빌드 서버를 분리하지 않는 판단을 내렸으며, 오버스펙을 우려했습니다.
+          제품 사용 규모에 맞는 구조로 설계하여 요구사항을 만족했으며
+          제품 개선이 이전보다 자유로워졌습니다.
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
