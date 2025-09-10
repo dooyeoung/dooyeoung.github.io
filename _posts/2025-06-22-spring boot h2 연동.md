@@ -2,7 +2,7 @@
 layout: post
 title: "Spring Boot - H2: 내 컴퓨터에 DB 설치 없이 개발하기"
 subtitle: "H2 데이터베이스 연동 가이드"
-categories: "Spring Boot"
+categories: ["Spring Boot"]
 tags: ["Spring Boot", "JPA", "H2"]
 sidebar: ['article-menu']
 ---

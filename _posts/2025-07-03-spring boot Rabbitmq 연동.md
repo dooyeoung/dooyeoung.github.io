@@ -2,7 +2,7 @@
 layout: post
 title: "Spring Boot에서 RabbitMQ 연동"
 subtitle: "Spring Boot에서 RabbitMQ 연동"
-categories: "Spring Boot"
+categories: ["Spring Boot"]
 tags: ["Spring Boot"]
 sidebar: ['article-menu']
 ---

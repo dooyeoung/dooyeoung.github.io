@@ -2,7 +2,7 @@
 layout: post
 title: "Spring Boot - QueryDsl 연동하기"
 subtitle: "QueryDSL 설정 가이드: build.gradle부터 Q-Type 생성까지"
-categories: "Spring Boot"
+categories: ["Spring Boot"]
 tags: ["Spring Boot"]
 sidebar: ['article-menu']
 ---
