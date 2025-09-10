@@ -1,18 +1,18 @@
 ---
 layout: post
-title: "Spring Boot에서 QueryDsl 연동"
-subtitle: "Spring Boot에서 QueryDsl 연동"
+title: "Spring Boot - QueryDsl 연동하기"
+subtitle: "QueryDSL 설정 가이드: build.gradle부터 Q-Type 생성까지"
 categories: "Spring Boot"
 tags: ["Spring Boot"]
 sidebar: ['article-menu']
 ---
+QueryDSL을 Spring Boot 프로젝트에 연동하고, 쿼리 작성을 위한 기본 설정을 완료하는 과정을 정리합니다.
 
-## QueryDsl?
 - Querydsl의 가장 큰 장점은 컴파일 시점에 오류를 감지할 수 있는 타입-세이프한 쿼리 작성입니다.
 - SQL을 문자열로 작성하는 경우, 오타나 잘못된 컬럼명 등은 런타임에 오류를 발생시킵니다. 하지만 Querydsl은 엔티티에 기반한 Q-Type이라는 메타모델 클래스를 자동으로 생성하여, 자바 코드처럼 쿼리를 작성할 수 있습니다.
 
 
-### build.gradle 설정
+## build.gradle 설정
 ```
 dependencies {
     ...
@@ -38,7 +38,7 @@ tasks.named("clean") {
 }
 ```
 
-### QueryDsl 설정 추가
+## QueryDsl 설정 추가
 ```java
 @Configuration
 public class QuerydslConfig {
@@ -52,8 +52,11 @@ public class QuerydslConfig {
     }
 }
 ```
+여기까지 진행했다면 프로젝트에 QueryDSL을 사용할 준비가 되었습니다.
 
-### QueryDsl 사용
+
+## QueryDsl 사용방법
+설정이 완료되었으니, JPAQueryFactory를 주입받아 실제 쿼리를 작성하는 방법을 알아봅니다.
 ```java
 @Repository
 @RequiredArgsConstructor
@@ -83,7 +86,7 @@ public class JpaUserListPagingQueryRepository {
 }
 ```
 
-### QEntity 인식을 위한 ide 설정
+## QEntity 인식을 위한 IDE 설정
 build.generated.querydsl 디렉토리에서 오른쪽 마우스 클릭, 메뉴 하단의 `Mark Directory as` 이동하여 `Generated Sources Root`를 클릭합니다
 <img class="post_img" src="/assets/images/posts/query_dsl1.png">
 
