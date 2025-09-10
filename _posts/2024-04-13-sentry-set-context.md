@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Sentry 에러 리포트에 set_context로 풍부한 정보 추가하기"
-categories: "Debugging"
-tags: ["sentry"]
+categories: "DevOps"
+tags: ["sentry", "error-tracking", "logging", "monitoring"]
 sidebar: ['article-menu']
 ---
 

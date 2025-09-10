@@ -2,7 +2,7 @@
 layout: post
 title: "CloudFront 캐시 무효화"
 categories: "AWS"
-tags: ["cloudfront"]
+tags: ["aws", "cloudfront", "cache", "invalidation"]
 sidebar: ['article-menu']
 ---
 

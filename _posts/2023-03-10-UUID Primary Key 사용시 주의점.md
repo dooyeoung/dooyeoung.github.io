@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "UUID를 Primary Key로 사용시 주의할 점"
-categories: "RDS"
-tags: ["rds", "uuid"]
+categories: "Database"
+tags: ["database", "uuid", "primary-key", "performance", "rds"]
 sidebar: ['article-menu']
 ---
 

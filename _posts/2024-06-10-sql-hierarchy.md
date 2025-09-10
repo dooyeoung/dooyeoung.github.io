@@ -2,7 +2,7 @@
 layout: post
 title: "SQL에서 계층 구조 데이터 표현 방식 비교"
 categories: "Database"
-tags: ["SQL"]
+tags: ["database", "sql", "hierarchy", "cte", "recursive-query"]
 sidebar: ['article-menu']
 ---
 

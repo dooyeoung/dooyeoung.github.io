@@ -2,8 +2,8 @@
 layout: post
 title: "ECS Execute Command 알아보기"
 subtitle: ECS Command 접속하여 상태 알아보기
-categories: "DevOps"
-tags: ["ECS"]
+categories: "AWS"
+tags: ["aws", "ecs", "docker", "container"]
 sidebar: ['article-menu']
 ---
 

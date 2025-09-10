@@ -3,7 +3,7 @@ layout: post
 title: "Spring Boot - 생성자 주입을 사용해야 하는 이유"
 subtitle: "필드 주입, 수정자 주입, 생성자 주입 완벽 비교 및 모범 사례 가이드"
 categories: ["Spring Boot"]
-tags: ["Spring Boot", "DI", "IoC", "Autowired", "Test"]
+tags: ["spring-boot", "di", "ioc", "test", "injection"]
 sidebar: ['article-menu']
 ---
 

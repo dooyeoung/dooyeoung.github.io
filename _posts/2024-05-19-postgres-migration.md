@@ -2,7 +2,7 @@
 layout: post
 title: "MySQL에서 postgres 마이그레이션 체험기"
 categories: "Database"
-tags: ["postgres", "RDS"]
+tags: ["postgres", "database", "migration", "mysql"]
 sidebar: ['article-menu']
 ---
 

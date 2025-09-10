@@ -3,7 +3,7 @@ layout: post
 title: "Spring Boot - QueryDsl 연동하기"
 subtitle: "QueryDSL 설정 가이드: build.gradle부터 Q-Type 생성까지"
 categories: ["Spring Boot"]
-tags: ["Spring Boot"]
+tags: ["spring-boot", "querydsl", "jpa", "database"]
 sidebar: ['article-menu']
 ---
 QueryDSL을 Spring Boot 프로젝트에 연동하고, 쿼리 작성을 위한 기본 설정을 완료하는 과정을 정리합니다.

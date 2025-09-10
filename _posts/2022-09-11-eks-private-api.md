@@ -2,7 +2,7 @@
 layout: post
 title: "EKS Private 변경 후 bastion에서 API Endpoint 접근"
 categories: "AWS"
-tags: ["EKS"]
+tags: ["kubernetes", "eks", "aws", "bastion"]
 sidebar: ['article-menu']
 ---
 

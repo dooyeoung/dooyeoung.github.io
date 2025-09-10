@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "React Flow로 대규모 데이터 트리뷰 구현 및 최적화하기"
-categories: "Frontend"
-tags: ["react-flow"]
+categories: "React"
+tags: ["react", "react-flow", "javascript", "visualization", "performance"]
 sidebar: ['article-menu']
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Cloudwatch Log와 Lambda를 이용해 슬랙으로 RDS Slow Query 알림 받기"
 categories: "AWS"
-tags: ["AWS", "Cloudwatch", "lambda", "rds"]
+tags: ["aws", "cloudwatch", "lambda", "rds", "slack", "monitoring"]
 sidebar: ['article-menu']
 ---
 

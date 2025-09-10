@@ -3,7 +3,7 @@ layout: post
 title: "Terraform Backend를 S3로 변경"
 subtitle: EKS Private 환경에서 terraform backend s3로 변경하기
 categories: "DevOps"
-tags: ["terraform"]
+tags: ["terraform", "backend", "s3", "state", "migration"]
 sidebar: ['article-menu']
 ---
 

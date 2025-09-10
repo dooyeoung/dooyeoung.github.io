@@ -2,7 +2,7 @@
 layout: post
 title: "MariaDB/InnoDB의 Lock 종류와 동작 방식 이해하기"
 categories: "Database"
-tags: ["MariaDB"]
+tags: ["mariadb", "database", "lock", "innodb"]
 sidebar: ['article-menu']
 ---
 

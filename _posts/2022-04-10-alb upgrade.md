@@ -3,7 +3,7 @@ layout: post
 title: "AWS Load Balancer Controller 설치시 주의 사항"
 subtitle: 정책 설정 놓치지 않기
 categories: "DevOps"
-tags: ["EKS", "ALB"]
+tags: ["kubernetes", "eks", "aws", "alb", "load-balancer-controller"]
 sidebar: ['article-menu']
 ---
 

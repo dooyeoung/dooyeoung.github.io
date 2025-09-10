@@ -3,7 +3,7 @@ layout: post
 title: "CircleCI에서 원격으로 helm 제어하기"
 subtitle: EKS Private 환경에서 helm으로 배포하기
 categories: "DevOps"
-tags: ["CircleCI"]
+tags: ["circleci", "helm", "kubernetes", "devops", "ci-cd"]
 sidebar: ['article-menu']
 ---
 

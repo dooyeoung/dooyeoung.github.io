@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "postgres 쿼리 플랜 확인하기"
-categories: "postgres"
-tags: ["SQL", "Visualizer" ]
+categories: "Database"
+tags: ["database", "postgres", "visualizer", "performance", "query-plan"]
 sidebar: ['article-menu']
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "postgres Auto-Increment 중복 키 오류 해결 방법 (Sequence 갱신)"
-categories: "AWS"
-tags: ["cloudfront", "postgres"]
+categories: "Database"
+tags: ["postgres", "database", "sequence", "auto-increment"]
 sidebar: ['article-menu']
 ---
 

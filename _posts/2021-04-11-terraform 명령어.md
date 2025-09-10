@@ -2,7 +2,7 @@
 layout: post
 title: "Terraform 필수 명령어 가이드: init, plan, import, state"
 categories: "DevOps"
-tags: ["terraform", "devOps", "iac"]
+tags: ["terraform", "devops", "iac", "aws", "infrastructure"]
 sidebar: ['article-menu']
 ---
 

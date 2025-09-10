@@ -2,7 +2,7 @@
 layout: post
 title: "Lambda Layer 추가하여 패키지 사용하기"
 categories: "DevOps"
-tags: ["lambda"]
+tags: ["lambda", "aws", "layer", "python", "package"]
 sidebar: ['article-menu']
 ---
 lambda 로 작업시 python 기본 패키지 이외 다른 패키지를 사용시 패키지 설치가 필요합니다.

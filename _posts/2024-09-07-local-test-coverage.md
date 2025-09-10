@@ -2,7 +2,7 @@
 layout: post
 title: "SonarCloud 없이 로컬에서 Test Coverage 측정하고 리포트 생성하기"
 categories: "Testing"
-tags: ["Test"]
+tags: ["testing", "coverage", "python", "pytest", "sonar"]
 sidebar: ['article-menu']
 ---
 

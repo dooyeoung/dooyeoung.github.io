@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "FastMCP로 자체 MCP 서버 구현해보기"
-categories: "AI"
-tags: ["MCP"]
+categories: ["MCP"]
+tags: ["mcp"]
 sidebar: ['article-menu']
 ---
 
