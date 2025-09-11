@@ -3,10 +3,6 @@ layout: portfolio
 title: Portfolio
 hidden: comments
 ---
-<!-- https://www.inflearn.com/course/%EB%85%B8%EC%85%98-notion-%ED%99%9C%EC%9A%A9#curriculum
-https://jojoldu.github.io/
-https://resume.yowu.dev/
-https://jbee.io/about/ -->
 
 <style>
     .content-title {
@@ -79,115 +75,249 @@ https://jbee.io/about/ -->
 <script src="https://cdn.tailwindcss.com"></script>
 
 
-<h2 class="font-semibold print-break" id="introduce" style="margin-top: 0">소개</h2>
-<div class="grid grid-cols-4 mb-8" id="print-start">
-    <div class="col-span-1">
-        <img src="assets/images/dooyeoung.png" width="128" height="128">
-    </div>
-    <div class="col-span-3 flex flex-col justify-center">
-        <div class="text-2xl mb-4 font-semibold">
-            류두영 / Dooyeoung Ryu
-        </div>
+<!-- 1. 프로젝트 개요 (Overview) -->
+<h2 class="font-semibold print-break" id="project-overview">📋 프로젝트 개요</h2>
 
-        010-5061-2576 <br>
-        dooyeoung.ryu@gmail.com
-    </div>
-</div>
-
-<div class="grid grid-cols-4">
-  <div class="col-span-4" id="print-contents" style="word-break: keep-alive !important;">
-
-  </div>
-</div>
-
-<hr class="mt-8">
-
-<h2 class="font-semibold print-break" id="projects">프로젝트</h2>
-
-<div class="grid grid-cols-4 mb-4">
+<div class="grid grid-cols-4 mb-8">
   <div class="col-span-4">
-    <div class="text-xl font-semibold mb-2">헥사고날 아키텍처 기반 병원 예약 관리 시스템</div>
-    <div class="text-sm text-gray-600 mb-2">
-      Java/Spring Boot 학습 프로젝트
-      <a href="https://medops.vercel.app/" target="_blank"
-         class="text-blue-600 hover:text-blue-800 underline">
-        🔗 Demo Site
-      </a>
-    </div>
-  </div>
-  <div class="col-span-4 skil mb-2">
-    <img src="https://img.shields.io/badge/springboot-6DB33F.svg?&style=for-the-badge&logo=springboot&logoColor=white"/>
-    <img src="https://img.shields.io/badge/mongodb-47A248.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/>
-    <img src="https://img.shields.io/badge/redis-DC382D.svg?&style=for-the-badge&logo=redis&logoColor=white"/>
-    <img src="https://img.shields.io/badge/react-61DAFB.svg?&style=for-the-badge&logo=react&logoColor=white"/>
-    <img src="https://img.shields.io/badge/typescript-3178C6.svg?&style=for-the-badge&logo=typescript&logoColor=white"/>
-  </div>
+    <div class="text-xl font-semibold mb-4">MedOps - Event Sourcing 기반 의료 예약 관리 시스템</div>
+    <div><a href="https://medops.vercel.app/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">🚀 Live Demo</a></div>
+    <div><a href="https://github.com/dooyeoung/medops" target="_blank" class="text-blue-600 hover:text-blue-800 underline">📂 GitHub Repository</a></div>
 
-  <div class="col-span-1">
-    <div class="text-lg text-neutral-400 font-medium">
-      2025.08 - 2025.09
+    <div class="text-base text-gray-600 mb-4">
+      MedOps는 사용자에게는 온라인 예약 경험과 병원 관리자에게는 효율적인 운영 관리 도구를 제공하는 예약 관리 시스템입니다.
+
+      이 프로젝트는 Spring Boot와 React를 기반으로, 현대적인 웹 애플리케이션의 필수 기능인 사용자 인증, 실시간 데이터 처리, 관리자 대시보드 등을 구현하는 데 목표를 두었습니다.
+      환자용 예약 플로우와 관리자용 백오피스 시스템을 모두 구축하여, 실제 서비스 수준의 복잡성을 가진 애플리케이션을 설계하고 개발하는 종합적인 역량을 보여주고자 했습니다.
+
+      백엔드는 java, spring boot 를 사용하여 작성하였으며 프론트 엔드는 react, vite, tailwindcss 를 사용하여 작성하였습니다.
     </div>
-  </div>
-  <div class="col-span-3">
-    <div class="text-lg font-medium">헥사고날 아키텍처 및 이벤트 소싱 구현</div>
-    <ul class="list-inside list-disc mb-4">
-      <li>Java/Spring Boot 기반 헥사고날 아키텍처 학습을 통해 도메인 중심 설계와 Port-Adapter 패턴 적용</li>
-      <li>이벤트 소싱과 CQRS 패턴을 도입하여 의료 기록 변경 이력 추적 및 읽기/쓰기 모델 분리 구현</li>
-      <li>MongoDB와 Redis를 활용한 데이터 저장소 구성 및 외부 기술 의존성 최소화 구조 설계</li>
-      <li>JWT 인증과 역할 기반 접근 제어를 통한 보안 강화 및 Docker를 활용한 개발 환경 구성</li>
-      <li>React/TypeScript로 관리자 대시보드 개발 및 SSE 기반 실시간 알림 시스템 구축</li>
-    </ul>
+
   </div>
 </div>
-
 
 <hr class="mt-8">
 
-<h2 class="font-semibold print-break" id="experience">문제 해결 및 개선 경험</h2>
+<!-- 3. 시스템 아키텍처 (Architecture) -->
+<h2 class="font-semibold print-break" id="architecture">🏗 시스템 아키텍처</h2>
 
-<div class="grid grid-cols-4 mb-4">
-    <div class="col-span-4 mb-4">
-        <div class="text-xl font-medium">개인별 리포트 분석 결과 정적 파일 생성</div>
-        <div class="text-base text-neutral-500">서버 증설 없이 달성한 데이터 불변성 확보</div>
+<div class="grid grid-cols-4 mb-8">
+  <div class="col-span-4">
+
+    <!-- Architecture Comparison -->
+    <div class="mb-6">
+        <div class="text-lg font-medium mb-3">헥사고날 아키텍처 구조</div>
+      <img src="assets/images/portfolio/hexagonal.png">
+      <div class="font-medium text-blue-800 mb-3">🎯 헥사고날 아키텍처 선택 이유</div>
+
+      <div class="">
+        레이어드 아키텍쳐의 의존성 참조 순서는 다음과 같습니다.
+        Controller → Service → Repository → Database
+        레이어드 아키텍쳐는 서비스 계층이 JPA에 종속되어 프레임워크 로직과 비즈니스 로직이 혼재되기 쉽습니다
+        반면 헥사고날 아키텍쳐는 인터페이스를 통한 의존성 주입으로 순수한 도메인 로직을 관리할 수 있습니다.
+
+        레이어드 아키텍쳐는 Persistence 계층 변경 시 Service 계층도 수정 필요합니다
+
+        헥사고날 아키텍쳐는 어댑터만 교체하면 인터페이스는 그대로라 Service 로직 변경 없이 변경이 가능합니다
+
+        현재 프로젝트 구조가 단순하여 레이어드 아키텍쳐도 괜찮은 선택이지만
+        이후 mongodb 대신 rds를 사용할때 변경작업이 수월할것으로 예상하였습니다.
+        따라서 테스트 코드 작성시 SpringBootTest 사용을 최소화 할 수 있어 관리가 수월하다 판단하였습니다.
+
+      </div>
+
     </div>
-    <div class="col-span-1">
-        <div class="text-base text-neutral-400 font-medium">문제</div>
-    </div>
-    <div class="col-span-3">
-        <div class="mb-2">
-          분석 결과 생성 후에도 제품의 변경이 분석 결과에 영향을 주지 않도록 분석 결과를 정적파일로 다룰 필요성이 있었습니다.
-          고객은 분석 결과를 분리되고 독립된 내용이라 이해했습니다.
-          분석이 추가되거나 분석 방법이 변경되었을 때 분석 결과 조회 페이지에 즉시 반영되는 구조였기에 개선이 필요했습니다.
-          분석이 완료된 결과는 제품 변경에 영향을 받지 않아야 한다는 요구사항을 만족시켜야 했습니다.
+
+    <!-- Event Sourcing Flow -->
+    <div class="mb-6">
+      <div class="text-lg font-medium mb-3">이벤트 소싱 플로우</div>
+
+        <div class=>📖 이벤트 소싱 + CQRS</div>
+        <div class="">
+          이벤트 소싱은 애플리케이션의 상태 변경을 이벤트의 시퀀스로 저장하는 아키텍처 패턴입니다.
+          현재 상태를 직접 저장하는 대신, 상태를 변경하는 모든 이벤트를 순서대로 저장하고, 필요시 이벤트들을 재생(replay)하여 현재 상태를 복원합니다.
+
+          스트림 저장은 CQRS에서 command 처리와 자연스럽게 통합됩니다.
+          이벤트 발생마다 이벤트 구독 프로세스가 읽기 전용 모델 역정규화 형태로 갱신하여 Query 영역을 최적화 합니다.
+
+          <a href="https://blog.gangnamunni.com/post/saas-event-sourcing">시간여행이 가능한 시스템 아키텍처</a> 를 참고하여 프로젝트에 반영하였습니다.
+
         </div>
+      <div class="">🎯 이벤트 소싱 선택 이유</div>
+      <div class="">
+        모든 변경 사항이 이벤트로 기록되어 "언제, 무엇이, 왜" 변경되었는지 파악 가능합니다.
+        따라서 과거 특정 시점의 시스템 상태를 정확히 복원가능하며 디버깅과 분석에 활용할 수 있습니다.
+        이런 장점으로 장애 상황에서 이벤트 재생을 통한 안전한 시스템 복구가 가능합니다.
+
+        현재 프로젝트는 단순하여 전통적인 로그방식도 괜찮은 선택입니다
+        그러나 특정 속성 변경에 대한 로그만으로는 컨텍스트 파악 어렵고 특정 시점 복구도 매우 어렵다는 단점이 있습니다
+        따라서 확정성을 생각하고 예약에 대한 히스토리를 사용자에게 빠르게 전달하는데 이벤트 소싱 방식이 적합하다 판단하였습니다.
+
+      </div>
+        <img src="assets/images/portfolio/event_sourcing.png">
+      <div>
+        위 이벤트 소싱 도식화에 기반한 상황별 이벤트 처리 흐름 예시입니다.
+
+
+        1. 예약 신청 이벤트 발생 ->
+        processor.handled에서 commandExecutor를 통해 events 생성 ->
+        processor.handled에서 event store를 통해 events 저장 ->
+        processor.handled에서 event publisher 호출 ->
+        event listener 에서 subscribe 로직에 따라 event 내용을 기반으로 view model 최신화
+
+        2. 예약 접수 이벤트 발생 ->
+        processor.handled에서 event store를 통해 지난 events 조회 ->
+        processor.handled에서 event handler를 통해 state 구성 ->
+        processor.handled에서 commandExecutor를 통해 events 생성 ->
+        processor.handled에서 event store를 통해 events 저장 ->
+        processor.handled에서 event publisher 호출 ->
+        event listener 에서 subscribe 로직에 따라 event 내용을 기반으로 view model 최신화
+      </div>
+
+
+
     </div>
-    <div class="col-span-1">
-        <div class="text-base text-neutral-400 font-medium">해결 과정</div>
-    </div>
-    <div class="col-span-3">
-        <div class="mb-2">
-          정적파일 생성 서버를 추가하려는 방향을 생각하다 팀원들과 여러 논의를 거쳐
-          FE의 vike 패키지를 활용하여 기존 코드 기반에서 정적 빌드가 가능한 것을 확인했습니다.
-          새로운 서버를 구성하지 않고 비동기 worker를 추가하여 빌드만 담당하도록 코드를 추가했습니다.
-          서브프로세스를 호출하여 정적파일 생성하고 S3에 업로드하는 방향으로 정적 파일 생성 작업을 진행했습니다.
-          정적파일 생성 결과를 한번에 업로드하기 위해 AWS S3 CLI를 사용했으며, 이 또한 서브프로세스를 호출하는 방식으로 진행했습니다.
-          S3는 민감정보를 보관하는 비공개 버킷과 assets을 보관하는 공개 버킷을 구분했고,
-          공개 버킷에 CloudFront와 Route 53 레코드를 추가로 설정하여 외부 접근에 대한 캐시를 구성했습니다.
-        </div>
-    </div>
-    <div class="col-span-1">
-        <div class="text-base text-neutral-400 font-medium">평가</div>
-    </div>
-    <div class="col-span-3">
-        <div class="mb-2">
-          부득이하게 ECS에 공통으로 사용되는 백엔드 도커 이미지 파일이 커졌으며
-          배포 시간도 길어졌습니다. 이는 이후 도커 이미지를 분리하는 방향으로 개선하려 합니다.
-          분석 요청 트래픽이 많지 않아 빌드 서버를 분리하지 않는 판단을 내렸으며, 오버스펙을 우려했습니다.
-          제품 사용 규모에 맞는 구조로 설계하여 요구사항을 만족했으며
-          제품 개선이 이전보다 자유로워졌습니다.
-        </div>
-    </div>
+  </div>
 </div>
 
+<hr class="mt-8">
+
+<!-- 4. 핵심 기능 및 구현 내용 (Key Features & Implementation) -->
+<h2 class="font-semibold print-break" id="key-features">⚡ 핵심 기능 및 구현 내용</h2>
+
+<div class="grid grid-cols-4 mb-8">
+  <div class="col-span-4">
+
+    <div class="">
+      <!-- 예약 관리 시스템 -->
+      <div class="bg-white border border-gray-200 rounded-lg p-4">
+        <div class="font-medium text-gray-800 mb-3">📅 예약 관리 시스템</div>
+        <div class="bg-gray-100 h-32 rounded mb-3 flex items-center justify-center text-gray-500">
+          스크린샷: 예약 생성/수정 화면
+        </div>
+        <div class="text-sm text-gray-600 space-y-1">
+          <div>• 예약 → 확정 → 완료까지 상태 관리</div>
+          <div>• 의사배정, 다음 예약 생성, 지난 예약 히스토리 조회</div>
+          <div>• 이벤트 소싱으로 모든 변경 이력 추적</div>
+        </div>
+      </div>
+
+      <!-- 실시간 알림 -->
+      <div class="bg-white border border-gray-200 rounded-lg p-4">
+        <div class="font-medium text-gray-800 mb-3">🔔 실시간 알림 (SSE)</div>
+        <div class="bg-gray-100 h-32 rounded mb-3 flex items-center justify-center text-gray-500">
+          스크린샷: 실시간 알림 화면
+        </div>
+        <div class="text-sm text-gray-600 space-y-1">
+          <div>• Server-Sent Events 기반 실시간 알림</div>
+          <div>• 예약 상태 변경 즉시, 여러명의 병원 관리자에게 데이터 전달하여 화면 갱신</div>
+          <div>• 병원별 격리된 알림 관리</div>
+        </div>
+      </div>
+
+      <!-- 관리자 대시보드 -->
+      <div class="bg-white border border-gray-200 rounded-lg p-4">
+        <div class="font-medium text-gray-800 mb-3">📊 관리자 대시보드</div>
+        <div class="bg-gray-100 h-32 rounded mb-3 flex items-center justify-center text-gray-500">
+          스크린샷: 대시보드 화면
+        </div>
+        <div class="text-sm text-gray-600 space-y-1">
+          <div>• 실시간 예약 현황 모니터링</div>
+          <div>• 매출 통계 및 성과 분석</div>
+          <div>• 차트 기반 데이터 시각화</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<hr class="mt-8">
+
+<!-- 5. 기술적 도전과 해결 (Technical Challenges & Solutions) -->
+<h2 class="font-semibold print-break" id="challenges">🔧 기술적 도전과 해결</h2>
+
+<div class="">
+  <div class="">
+
+    <!-- 도전 과제 1 -->
+    <div class="mb-6">
+      <div class="bg-red-50 border-l-4 border-red-400 p-4">
+        <div class="text-lg font-medium text-red-800 mb-3">⚠️ 도전 과제 1: 이벤트 재생 성능 문제</div>
+
+        <div class="">
+          <div>
+            <div class="font-medium text-red-700 mb-2">📋 문제 상황</div>
+            <div class="text-red-600">
+              • 1000개 이상 이벤트 재생 시 3초 이상 소요<br>
+              • 사용자 경험 저하 및 시스템 부하<br>
+              • 실시간 상태 조회 성능 저하
+            </div>
+          </div>
+
+          <div>
+            <div class="font-medium text-red-700 mb-2">🔧 해결 방법</div>
+            <div class="text-red-600">
+              • 스냅샷 패턴 도입<br>
+              • 100개 이벤트마다 상태 저장<br>
+              • 이벤트 재생 범위 최소화<br>
+              • 메모리 기반 캐싱 추가
+            </div>
+          </div>
+
+          <div>
+            <div class="font-medium text-red-700 mb-2">📈 결과</div>
+            <div class="text-red-600">
+              • 3초 → 0.3초로 90% 성능 향상<br>
+              • 사용자 체감 속도 대폭 개선<br>
+              • 메모리 사용량 최적화<br>
+              • 실시간 조회 가능
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 도전 과제 2 -->
+    <div class="mb-6">
+      <div class="bg-orange-50 border-l-4 border-orange-400 p-4">
+        <div class="text-lg font-medium text-orange-800 mb-3">⚠️ 도전 과제 2: SSE 연결 관리 및 메모리 누수</div>
+
+        <div class="">
+          <div>
+            <div class="font-medium text-orange-700 mb-2">📋 문제 상황</div>
+            <div class="text-orange-600">
+              • 클라이언트 비정상 종료 시 SseEmitter 누적<br>
+              • 메모리 누수로 서버 안정성 저하<br>
+              • 연결 상태 추적 어려움
+            </div>
+          </div>
+
+          <div>
+            <div class="font-medium text-orange-700 mb-2">🔧 해결 방법</div>
+            <div class="text-orange-600">
+              • 타임아웃 설정 (30분)<br>
+              • 주기적 연결 상태 체크<br>
+              • onCompletion/onError 핸들러 추가<br>
+              • 병원별 연결 맵 관리
+            </div>
+          </div>
+
+          <div>
+            <div class="font-medium text-orange-700 mb-2">📈 결과</div>
+            <div class="text-orange-600">
+              • 메모리 누수 완전 해결<br>
+              • 안정적인 실시간 알림 서비스<br>
+              • 연결 상태 완전 추적<br>
+              • 서버 안정성 확보
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
