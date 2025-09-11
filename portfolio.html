@@ -27,6 +27,9 @@ hidden: comments
       text-indent: -18px;
       padding-left: 14px;
   }
+  p {
+      line-height: 1.55;
+  }
 
   @media print
   {
@@ -68,149 +71,140 @@ hidden: comments
       #print-contents{
           line-height: 1.55;
       }
-  }
 
+
+  }
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"/>
 <script src="https://cdn.tailwindcss.com"></script>
 
 <!-- 1. 프로젝트 개요 (Overview) -->
-<h2 class="font-semibold print-break" id="project-overview">프로젝트 개요</h2>
-<div class="grid grid-cols-4 mb-8">
-  <div class="col-span-4">
-    <div class="text-xl font-semibold mb-4">MedOps - 의료 예약 관리 시스템</div>
-    <a href="https://medops.vercel.app/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Live Demo</a>
+<h2 class="font-semibold mt-0" id="project-overview" style="margin-top: 0">프로젝트 개요</h2>
+<div class="">
+  <div class="mb-2">
+    <a href="https://medops.vercel.app/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Live
+      Demo</a>
     <a href="https://github.com/dooyeoung/medops" target="_blank"
-            class="text-blue-600 hover:text-blue-800 underline">GitHub</a>
-    <div class="">
+       class="text-blue-600 hover:text-blue-800 underline">GitHub</a>
+
+  </div>
+  <div class="">
+    <p>
       MedOps는 사용자에게 편리한 온라인 예약 경험을 제공하고 병원 관리자에게는 효율적인 운영 관리 도구로 백오피스를 제공하는 시스템입니다.
       이 프로젝트는 <strong>Spring Boot</strong>와 <strong>React</strong>를 기반으로,
       <strong>헥사고날 아키텍처</strong>와 <strong>이벤트 소싱</strong> 패턴을 적용하여 확장성과 유지보수성을 높이는 데 중점을 두었습니다.
-    </div>
+    </p>
   </div>
 </div>
+
 
 <!-- 2. 시스템 아키텍처 (Architecture) -->
 <h2 class="font-semibold print-break" id="architecture">프로젝트 구조</h2>
 
-<div class="grid grid-cols-4 mb-8">
-  <div class="col-span-4">
+<div class="">
+  <!-- Hexagonal Architecture -->
+  <div class="mb-4">
+    <img src="assets/images/portfolio/hexagonal.png" alt="헥사고날 아키텍처 다이어그램" class="mb-2 rounded w-8/12">
+    <div class="text-lg font-medium mb-2">헥사고날 아키텍처 (Hexagonal Architecture)</div>
+    <p class="mb-2">
+      헥사고날 아키텍처를 선택한 가장 큰 이유는 <strong>순수한 비즈니스 로직을 외부 기술로부터 보호</strong>하고 싶었기 때문입니다. 일반적인 레이어드 아키텍처는 서비스 계층이 JPA와 같은
+      특정 기술에 종속되기 쉬워 비즈니스 로직과 인프라 로직이 섞이는 경향이 있습니다. 반면, 헥사고날 아키텍처는 인터페이스를 통한 의존성 주입으로 이를 명확히 분리합니다.
+    </p>
+    <p>
+      이러한 구조는 미래에 Persistence 기술을 MongoDB에서 RDB로 변경하더라도, <strong>핵심 서비스 로직의 수정 없이 어댑터만 교체</strong>하면 되므로 높은 유연성을
+      제공합니다. 또한, 핵심 로직이 프레임워크로부터 독립적이기 때문에, 무거운 통합 테스트 대신 가벼운 단위 테스트만으로도 <strong>핵심 기능을 빠르고 안정적으로 검증</strong>할 수 있다는
+      장점도 있었습니다.
+    </p>
+  </div>
 
-    <!-- Hexagonal Architecture -->
-    <div class="mb-8">
-      <img src="assets/images/portfolio/hexagonal.png" alt="헥사고날 아키텍처 다이어그램" class="mb-4 rounded">
-      <div class="text-lg font-medium mb-3">헥사고날 아키텍처 (Hexagonal Architecture)</div>
-      <p class="mb-2">
-        헥사고날 아키텍처를 선택한 가장 큰 이유는 <strong>순수한 비즈니스 로직을 외부 기술로부터 보호</strong>하고 싶었기 때문입니다. 일반적인 레이어드 아키텍처는 서비스 계층이 JPA와 같은
-        특정 기술에 종속되기 쉬워 비즈니스 로직과 인프라 로직이 섞이는 경향이 있습니다. 반면, 헥사고날 아키텍처는 인터페이스를 통한 의존성 주입으로 이를 명확히 분리합니다.
-      </p>
-      <p>
-        이러한 구조는 미래에 Persistence 기술을 MongoDB에서 RDB로 변경하더라도, <strong>핵심 서비스 로직의 수정 없이 어댑터만 교체</strong>하면 되므로 높은 유연성을
-        제공합니다. 또한, 핵심 로직이 프레임워크로부터 독립적이기 때문에, 무거운 통합 테스트 대신 가벼운 단위 테스트만으로도 <strong>핵심 기능을 빠르고 안정적으로 검증</strong>할 수 있다는
-        장점도 있었습니다.
-      </p>
-    </div>
+  <!-- Event Sourcing Flow -->
+  <div class="mb-4">
+    <div class="text-lg font-medium mb-2">이벤트 소싱 및 CQRS (Event Sourcing & CQRS)</div>
+    <p class="mb-2">
+      MedOps 프로젝트에서 이벤트 소싱을 도입한 핵심 이유는 <strong>모든 변경 과정을 완벽하게 추적</strong>하여 시스템의 안정성과 확장성을 높이기 위함이었습니다. 이벤트 소싱은
+      애플리케이션의 상태 변경을 단순히 덮어쓰는 대신, 상태를 변화시키는 모든 행위를 '이벤트'로 순차적으로 기록하는 아키텍처 패턴입니다.
+    </p>
+    <p class="mb-2">
+      이러한 접근 방식은 "언제, 누가, 무엇을" 변경했는지에 대한 명확한 감사 추적(Audit Trail)이 중요한 의료 예약 시스템의 요구사항을 자연스럽게 만족시킵니다. 또한, 기록된 이벤트를
+      재처리하여 과거 특정 시점의 상태를 완벽히 재현할 수 있으므로 <strong>디버깅과 분석이 용이</strong>하고, 장애 발생 시 <strong>안전한 데이터 복구가 가능</strong>하다는
+      큰 장점이 있습니다.
+    </p>
+    <p>
+      나아가 명령(Command)과 조회(Query)의 책임을 분리하는 CQRS 패턴과 결합하면, 이벤트 구독을 통해 다양한 목적의 읽기 전용 모델을 유연하게 생성할 수 있습니다. 이는 앞으로 복잡해질
+      데이터 조회 요구사항에도 효과적으로 대응할 수 있는 확장성 높은 구조를 만들어 준다고 판단했습니다.
+      <a href="https://blog.gangnamunni.com/post/saas-event-sourcing" target="_blank"
+         class="text-sm text-blue-600 underline">시간여행이 가능한 시스템 아키텍처</a> 참고하여 작성했습니다.
+    </p>
 
-    <!-- Event Sourcing Flow -->
-    <div class="mb-6">
-      <div class="text-lg font-medium mb-3">이벤트 소싱 및 CQRS (Event Sourcing & CQRS)</div>
-      <div class="mb-4">
-        <p class="mb-2">
-          MedOps 프로젝트에서 이벤트 소싱을 도입한 핵심 이유는 <strong>모든 변경 과정을 완벽하게 추적</strong>하여 시스템의 안정성과 확장성을 높이기 위함이었습니다. 이벤트 소싱은
-          애플리케이션의 상태 변경을 단순히 덮어쓰는 대신, 상태를 변화시키는 모든 행위를 '이벤트'로 순차적으로 기록하는 아키텍처 패턴입니다.
-        </p>
-        <p class="mb-2">
-          이러한 접근 방식은 "언제, 누가, 무엇을" 변경했는지에 대한 명확한 감사 추적(Audit Trail)이 중요한 의료 예약 시스템의 요구사항을 자연스럽게 만족시킵니다. 또한, 기록된 이벤트를
-          재처리하여 과거 특정 시점의 상태를 완벽히 재현할 수 있으므로 <strong>디버깅과 분석이 용이</strong>하고, 장애 발생 시 <strong>안전한 데이터 복구가 가능</strong>하다는
-          큰 장점이 있습니다.
-        </p>
-        <p>
-          나아가 명령(Command)과 조회(Query)의 책임을 분리하는 CQRS 패턴과 결합하면, 이벤트 구독을 통해 다양한 목적의 읽기 전용 모델을 유연하게 생성할 수 있습니다. 이는 앞으로 복잡해질
-          데이터 조회 요구사항에도 효과적으로 대응할 수 있는 확장성 높은 구조를 만들어 준다고 판단했습니다.
-        </p>
-        <a href="https://blog.gangnamunni.com/post/saas-event-sourcing" target="_blank"
-           class="text-sm text-blue-600 hover:text-blue-800 underline">참고: 시간여행이 가능한 시스템 아키텍처</a>
-      </div>
+    <img src="assets/images/portfolio/event_sourcing.png" alt="이벤트 소싱 및 CQRS 흐름도" class="mb-4 rounded w-8/12">
+    <div class="mb-2">상황별 이벤트 처리 동작 순서를 간단히 설명하면 다음과 같습니다.</div>
 
-      <img src="assets/images/portfolio/event_sourcing.png" alt="이벤트 소싱 및 CQRS 흐름도" class="mb-4 rounded">
-      <div>
-        <div class="font-medium mb-2">상황별 이벤트 처리 동작 순서를 간단히 설명하면 다음과 같습니다.</div>
-
-        <ol class="list-decimal list-outside space-y-4 pl-5">
-          <li>
-            신규 예약 신청 (이벤트 발생)
-            <ul class="list-disc list-outside mt-2 space-y-1 pl-5">
-              <li><strong>CommandExecutor:</strong> 커맨드 처리 후 이벤트 생성</li>
-              <li><strong>EventStore:</strong> 생성된 이벤트를 저장</li>
-              <li><strong>EventPublisher:</strong> 이벤트 발행</li>
-              <li><strong>EventListener:</strong> 구독 중인 View Model 최신화</li>
-            </ul>
-          </li>
-          <li>
-            기존 예약 접수 (상태 변경)
-            <ul class="list-disc list-outside mt-2 space-y-1 pl-5">
-              <li><strong>EventStore:</strong> 해당 예약의 과거 이벤트들을 모두 조회</li>
-              <li><strong>EventHandler:</strong> 조회된 이벤트들을 순차적으로 적용하여 현재 상태(State) 재구성</li>
-              <li><strong>CommandExecutor:</strong> 커맨드 처리 후 이벤트 생성</li>
-              <li><strong>EventStore:</strong> 새로운 이벤트를 추가로 저장</li>
-              <li><strong>EventListener:</strong> View Model 최신화</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-    </div>
+    <ol class="list-decimal list-outside space-y-4 pl-4">
+      <li>
+        신규 예약 신청 (이벤트 발생)
+        <ul class="list-disc list-outside mt-2 space-y-1 pl-4">
+          <li><strong>CommandExecutor:</strong> 커맨드 처리 후 이벤트 생성</li>
+          <li><strong>EventStore:</strong> 생성된 이벤트를 저장</li>
+          <li><strong>EventPublisher:</strong> 이벤트 발행</li>
+          <li><strong>EventListener:</strong> 구독 중인 View Model 최신화</li>
+        </ul>
+      </li>
+      <li>
+        기존 예약 접수 (상태 변경)
+        <ul class="list-disc list-outside mt-2 space-y-1 pl-4">
+          <li><strong>EventStore:</strong> 해당 예약의 과거 이벤트들을 모두 조회</li>
+          <li><strong>EventHandler:</strong> 조회된 이벤트들을 순차적으로 적용하여 현재 상태(State) 재구성</li>
+          <li><strong>CommandExecutor:</strong> 커맨드 처리 후 이벤트 생성</li>
+          <li><strong>EventStore:</strong> 새로운 이벤트를 추가로 저장</li>
+          <li><strong>EventListener:</strong> View Model 최신화</li>
+        </ul>
+      </li>
+    </ol>
   </div>
 </div>
 
-<h2 class="font-semibold print-break" id="key-features">핵심 기능 및 구현 내용</h2>
-<div class="space-y-12">
 
+<h2 class="font-semibold print-break" id="key-features">핵심 기능 및 구현 내용</h2>
+<div>
   <!-- 예약 관리 시스템 -->
-  <div class="">
-    <div class="md:col-span-1">
-      <img src="assets/images/portfolio/admin_page.gif" alt="예약 관리 시스템 화면" class="rounded-lg border">
-    </div>
-    <div class="md:col-span-1">
-      <div class="font-semibold text-xl text-gray-800 mb-3">예약 관리 시스템</div>
-      <div class="text-gray-700 space-y-3">
-        <p><strong>이벤트 소싱 기반 상태 관리:</strong> 예약의 생성, 확정, 완료 등 모든 상태 변경을 이벤트로 기록하여 데이터의 변경 과정을 완벽하게 추적하고, 특정 시점의 상태를 복원할 수 있는 안정적인 시스템을 구축했습니다.</p>
-        <p><strong>React-Query 활용:</strong> 서버 상태 관리 라이브러리를 도입하여 예약 데이터를 효율적으로 캐싱하고 동기화했습니다. 이를 통해 불필요한 API 호출을 줄이고 사용자에게 빠르고 일관된 UI 경험을 제공합니다.</p>
-      </div>
+  <div class="mb-4">
+    <div class="font-semibold text-xl text-gray-800 mb-2">예약 관리 시스템</div>
+    <img src="assets/images/portfolio/admin_page.gif" alt="예약 관리 시스템 화면" class="rounded-lg border mb-2">
+    <div class="">
+      <p>
+        <strong>이벤트 소싱 기반 상태 관리:</strong> 예약의 생성, 확정, 완료 등 모든 상태 변경을 이벤트로 기록하여 데이터의 변경 과정을 완벽하게 추적하고, 특정 시점의 상태를 복원할 수
+        있는 안정적인 시스템을 구축했습니다.
+        <strong>React-Query 활용:</strong> 서버 상태 관리 라이브러리를 도입하여 예약 데이터를 효율적으로 캐싱하고 동기화했습니다. 이를 통해 불필요한 API 호출을 줄이고 사용자에게
+        빠르고 일관된 UI 경험을 제공합니다.
+      </p>
     </div>
   </div>
 
   <!-- 실시간 알림 -->
-  <div class="">
-    <div class="md:col-span-1">
-      <img src="assets/images/portfolio/admin_sse.gif" alt="실시간 알림 화면" class="rounded-lg border">
-    </div>
-    <div class="md:col-span-1">
-      <div class="font-semibold text-xl text-gray-800 mb-3">실시간 알림 (SSE)</div>
-      <div class="text-gray-700 space-y-3">
-        <p><strong>Spring Boot의 `SseEmitter`</strong>를 활용하여 서버에서 클라이언트로 단방향 데이터 푸시가 가능한 실시간 알림 기능을 구현했습니다. WebSocket에 비해 가볍고 구현이 용이한 장점이 있습니다.</p>
-        <p>여러 관리자가 <strong>별도의 새로고침 없이 최신 예약 현황을 동기화</strong>할 수 있어, 다중 사용자 환경에서의 운영 효율성과 데이터 일관성을 크게 향상시켰습니다.</p>
-      </div>
+  <div class="mb-4">
+    <div class="font-semibold text-xl text-gray-800 mb-2">실시간 알림 (SSE)</div>
+    <img src="assets/images/portfolio/admin_sse.gif" alt="실시간 알림 화면" class="rounded-lg border mb-2">
+    <div class="">
+      <p>
+        <strong>Spring Boot의 `SseEmitter`</strong>를 활용하여 서버에서 클라이언트로 단방향 데이터 푸시가 가능한 실시간 알림 기능을 구현했습니다. WebSocket에 비해
+        가볍고 구현이 용이한 장점이 있습니다.
+        여러 관리자가 <strong>별도의 새로고침 없이 최신 예약 현황을 동기화</strong>할 수 있어, 다중 사용자 환경에서의 운영 효율성과 데이터 일관성을 크게 향상시켰습니다.
+      </p>
     </div>
   </div>
 
   <!-- 관리자 대시보드 -->
-  <div class="">
-    <div class="md:col-span-1">
-      <img src="assets/images/portfolio/admin_dashboard.gif" alt="관리자 대시보드 화면" class="rounded-lg border">
-    </div>
-    <div class="md:col-span-1">
-      <div class="font-semibold text-xl text-gray-800 mb-3">관리자 대시보드</div>
-      <div class="text-gray-700 space-y-3">
-        <p><strong>CQRS 패턴 적용:</strong> Command와 분리된 Query 모델을 통해 실시간 예약 현황, 매출 통계 등 복잡한 조회 요건을 효율적으로 처리했습니다. 이를 통해 쓰기 작업과 읽기 작업을 최적화하여 시스템 전반의 성능을 개선했습니다.</p>
-        <p><strong>Chart.js 연동:</strong> 통계 데이터를 동적인 차트로 시각화하여 관리자가 비즈니스 현황을 직관적으로 파악하고 데이터 기반의 의사결정을 내릴 수 있도록 지원합니다.</p>
-      </div>
+  <div class="mb-4">
+    <div class="font-semibold text-xl text-gray-800 mb-2">관리자 대시보드</div>
+    <img src="assets/images/portfolio/admin_dashboard.gif" alt="관리자 대시보드 화면" class="rounded-lg border mb-2">
+    <div class="">
+      <p>
+        <strong>CQRS 패턴 적용:</strong> Command와 분리된 Query 모델을 통해 실시간 예약 현황, 매출 통계 등 복잡한 조회 요건을 효율적으로 처리했습니다. 이를 통해 쓰기
+        작업과 읽기 작업을 최적화하여 시스템 전반의 성능을 개선했습니다.
+        <strong>Chart.js 연동:</strong> 통계 데이터를 동적인 차트로 시각화하여 관리자가 비즈니스 현황을 직관적으로 파악하고 데이터 기반의 의사결정을 내릴 수 있도록 지원합니다.
+      </p>
     </div>
   </div>
-
 </div>
-
-<!-- 5. 기술적 도전과 해결 (Technical Challenges & Solutions) -->
-<h2 class="font-semibold print-break" id="challenges">기술적 도전과 해결</h2>
-
 
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
