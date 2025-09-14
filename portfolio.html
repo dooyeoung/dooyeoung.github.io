@@ -79,7 +79,7 @@ hidden: comments
 <script src="https://cdn.tailwindcss.com"></script>
 
 <!-- 1. 프로젝트 개요 (Overview) -->
-<h2 class="font-semibold mt-0" id="project-overview" style="margin-top: 0">프로젝트 개요</h2>
+<h2 class="font-semibold mt-0" id="project-overview" style="margin-top: 0">MedOps 프로젝트 개요</h2>
 <div class="">
   <div class="mb-2">
     <a href="https://medops.vercel.app/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Live
@@ -90,9 +90,11 @@ hidden: comments
   </div>
   <div class="">
     <p>
-      MedOps는 사용자에게 편리한 온라인 예약 경험을 제공하고 병원 관리자에게는 효율적인 운영 관리 도구로 백오피스를 제공하는 시스템입니다.
-      이 프로젝트는 <strong>Spring Boot</strong>와 <strong>React</strong>를 기반으로,
-      <strong>헥사고날 아키텍처</strong>와 <strong>이벤트 소싱</strong> 패턴을 적용하여 확장성과 유지보수성을 높이는 데 중점을 두었습니다.
+      MedOps는 사용자에게 편리한 온라인 예약 경험을 제공하고 병원 관리자에게는 효율적인 운영 관리를 위해 백오피스를 제공하는 시스템입니다.
+
+      이 프로젝트는 Java, Spring Boot 등 엔터프라이즈 환경에서 널리 사용되는 새로운 기술 스택을 학습하고,
+      헥사고날 아키텍처와 이벤트 소싱, CQRS 패턴을 실제 프로젝트에 적용하여 아키텍처 설계 역량을 강화하는 것을 목표로 했습니다.
+      또한 예약 도메인을 분석하고 도메인 주도 설계 관점에서 견고한 모델을 구축하는 경험을 쌓고자 했습니다.
     </p>
   </div>
 </div>
@@ -107,12 +109,12 @@ hidden: comments
     <img src="assets/images/portfolio/hexagonal.png" alt="헥사고날 아키텍처 다이어그램" class="mb-2 rounded w-8/12">
     <div class="text-lg font-medium mb-2">헥사고날 아키텍처 (Hexagonal Architecture)</div>
     <p class="mb-2">
-      헥사고날 아키텍처를 선택한 가장 큰 이유는 <strong>순수한 비즈니스 로직을 외부 기술로부터 보호</strong>하고 싶었기 때문입니다. 일반적인 레이어드 아키텍처는 서비스 계층이 JPA와 같은
+      헥사고날 아키텍처를 선택한 가장 큰 이유는 순수한 비즈니스 로직을 외부 기술로부터 보호하고 싶었기 때문입니다. 일반적인 레이어드 아키텍처는 서비스 계층이 JPA와 같은
       특정 기술에 종속되기 쉬워 비즈니스 로직과 인프라 로직이 섞이는 경향이 있습니다. 반면, 헥사고날 아키텍처는 인터페이스를 통한 의존성 주입으로 이를 명확히 분리합니다.
     </p>
     <p>
-      이러한 구조는 미래에 Persistence 기술을 MongoDB에서 RDB로 변경하더라도, <strong>핵심 서비스 로직의 수정 없이 어댑터만 교체</strong>하면 되므로 높은 유연성을
-      제공합니다. 또한, 핵심 로직이 프레임워크로부터 독립적이기 때문에, 무거운 통합 테스트 대신 가벼운 단위 테스트만으로도 <strong>핵심 기능을 빠르고 안정적으로 검증</strong>할 수 있다는
+      이러한 구조는 미래에 Persistence 기술을 MongoDB에서 RDB로 변경하더라도, 핵심 서비스 로직의 수정 없이 어댑터만 교체하면 되므로 높은 유연성을
+      제공합니다. 또한, 핵심 로직이 프레임워크로부터 독립적이기 때문에, 무거운 통합 테스트 대신 가벼운 단위 테스트만으로도 핵심 기능을 빠르고 안정적으로 검증할 수 있다는
       장점도 있었습니다.
     </p>
   </div>
@@ -121,13 +123,12 @@ hidden: comments
   <div class="mb-4">
     <div class="text-lg font-medium mb-2">이벤트 소싱 및 CQRS (Event Sourcing & CQRS)</div>
     <p class="mb-2">
-      MedOps 프로젝트에서 이벤트 소싱을 도입한 핵심 이유는 <strong>모든 변경 과정을 완벽하게 추적</strong>하여 시스템의 안정성과 확장성을 높이기 위함이었습니다. 이벤트 소싱은
-      애플리케이션의 상태 변경을 단순히 덮어쓰는 대신, 상태를 변화시키는 모든 행위를 '이벤트'로 순차적으로 기록하는 아키텍처 패턴입니다.
+      MedOps 프로젝트에서 이벤트 소싱을 도입한 핵심 이유는 모든 변경 과정을 추적하여 시스템의 안정성과 확장성을 높이기 위함이었습니다. 이벤트 소싱은
+      애플리케이션의 상태 변경을 단순히 덮어쓰는 대신, 상태를 변화시키는 모든 행위를 이벤트로 순차적으로 기록하는 아키텍처 패턴입니다.
     </p>
     <p class="mb-2">
       이러한 접근 방식은 "언제, 누가, 무엇을" 변경했는지에 대한 명확한 감사 추적(Audit Trail)이 중요한 의료 예약 시스템의 요구사항을 자연스럽게 만족시킵니다. 또한, 기록된 이벤트를
-      재처리하여 과거 특정 시점의 상태를 완벽히 재현할 수 있으므로 <strong>디버깅과 분석이 용이</strong>하고, 장애 발생 시 <strong>안전한 데이터 복구가 가능</strong>하다는
-      큰 장점이 있습니다.
+      재처리하여 과거 특정 시점의 상태를 완벽히 재현할 수 있으므로 디버깅과 분석이 용이하고, 장애 발생 시 안전한 데이터 복구가 가능하다는 큰 장점이 있습니다.
     </p>
     <p>
       나아가 명령(Command)과 조회(Query)의 책임을 분리하는 CQRS 패턴과 결합하면, 이벤트 구독을 통해 다양한 목적의 읽기 전용 모델을 유연하게 생성할 수 있습니다. 이는 앞으로 복잡해질
