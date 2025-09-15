@@ -92,7 +92,7 @@ hidden: comments
     <p>
       MedOps는 사용자에게 편리한 온라인 예약 경험을 제공하고 병원 관리자에게는 효율적인 운영 관리를 위해 백오피스를 제공하는 시스템입니다.
 
-      이 프로젝트는 Java, Spring Boot 등 엔터프라이즈 환경에서 널리 사용되는 새로운 기술 스택을 학습하고,
+      이 프로젝트는 Java, Spring Boot 등 엔터프라이즈 환경에서 널리 사용되는 기술을 학습하고,
       헥사고날 아키텍처와 이벤트 소싱, CQRS 패턴을 실제 프로젝트에 적용하여 아키텍처 설계 역량을 강화하는 것을 목표로 했습니다.
       또한 예약 도메인을 분석하고 도메인 주도 설계 관점에서 견고한 모델을 구축하는 경험을 쌓고자 했습니다.
     </p>
@@ -109,7 +109,7 @@ hidden: comments
     <img src="assets/images/portfolio/hexagonal.png" alt="헥사고날 아키텍처 다이어그램" class="mb-2 rounded w-8/12">
     <h3 class="text-lg font-medium mb-2" id="hexagonal-architecture">헥사고날 아키텍처</h3>
     <p class="mb-2">
-      복잡한 의료 도메인 로직을 외부 기술 변경으로부터 보호하고, 테스트 가능한 설계를 만들기 위해 헥사고날 아키텍처를 선택했습니다.
+      복잡한 의료 도메인 로직을 외부 기술의 변경으로부터 보호하고, 테스트 가능한 설계를 만들기 위해 헥사고날 아키텍처를 선택했습니다.
       기존 레이어드 아키텍처에서는 서비스 레이어가 특정 기술에 의존하게 되어 테스트와 유지보수가 어려운 경우가 있었습니다.
     </p>
     <pre class="bg-gray-100 p-3 rounded mb-2 text-sm"><code>// 레이어드 아키텍처 - 서비스가 외부 기능에 직접적으로 의존하게 됨
@@ -161,9 +161,9 @@ public class ReservationService {
 }</code></pre>
 
     <p class="mb-2">
-      레이어드 아키텍처에서 `Service`를 직접 참조하면 해당 구현체에 강하게 결합되지만,
-      헥사고날에서 `Port` 인터페이스를 참조하면 이메일, SMS, 푸시 알림 등 어떤 구현체로도 비교적 자유롭게 교체할 수 있습니다.
-      이런 구조로 MongoDB를 MySQL로 교체하는 상황에서도 어댑터만 바꾸면 됩니다
+      레이어드 아키텍처에서 Service를 직접 참조하면 해당 구현체에 강하게 결합되지만,
+      헥사고날에서 Port인터페이스를 참조하면 이메일, SMS, 푸시 알림 등 어떤 구현체로도 비교적 자유롭게 교체할 수 있습니다.
+      이런한 구조를 통해 MongoDB를 MySQL로 교체하는 상황에서도 어댑터만 바꾸면 됩니다
     </p>
     <div class="mb-2">
       <div>
@@ -198,7 +198,7 @@ public class ReservationPersistenceAdapter implements LoadReservationPort {
     <h3 class="text-lg font-medium mb-2" id="event-sourcing">이벤트 소싱 및 CQRS</h3>
     <p class="mb-2">
       이 프로젝트에서는 이벤트 소싱 패턴의 학습과 실습을 주요 목적으로 의료 예약 시스템에 적용해보았습니다.
-      전통적인 CRUD + 로그 방식으로도 충분히 구현 가능하지만, 이벤트 소싱만의 고유한 특성을 경험해보고 싶었습니다. <br>
+      전통적인 CRUD + 로그 방식으로도 충분히 구현 가능하지만, 이벤트 소싱만의 고유한 특성을 경험해보고 싶었습니다. <br><br>
       실제로 구현하면서 느낀 이벤트 소싱의 차별점은, 시스템의 현재 상태가 과거 이벤트들의 '결과'로만 존재한다는 점입니다.
       전통적인 방식에서는 현재 상태를 저장하는 테이블이 '정답'이고 로그는 참고용 정보였다면,
       이벤트 소싱에서는 이벤트 기록 자체가 '정답'이 되어 현재 상태를 언제든 다시 계산해낼 수 있습니다. <br>
@@ -206,7 +206,7 @@ public class ReservationPersistenceAdapter implements LoadReservationPort {
       특히 과거 임의 시점의 정확한 상태 재현이나 새로운 프로젝션(읽기 모델) 생성이 매우 자연스럽게 이루어집니다. <br>
     </p>
     <p class="mb-2">
-      이벤트 소싱은 애플리케이션의 상태 변경을 단순히 덮어쓰는 대신, 상태를 변화시키는 모든 행위를 이벤트로 순차적으로 기록하는 아키텍처 패턴입니다.
+      이벤트 소싱은 애플리케이션의 상태 변경을 단순히 덮어쓰는 대신 상태를 변화시키는 모든 행위를 이벤트로 순차적으로 기록하는 아키텍처 패턴입니다.
       의료 도메인에서는 법적으로도 모든 의료 행위와 변경 사항에 대한 완전한 기록 보존이 요구되므로,
       이벤트 소싱의 완전한 감사 추적(Audit Trail) 기능이 이러한 요구사항을 자연스럽게 만족시킵니다.
     </p>
@@ -224,7 +224,7 @@ public class ReservationPersistenceAdapter implements LoadReservationPort {
     </p>
 
     <img src="assets/images/portfolio/event_sourcing.png" alt="이벤트 소싱 및 CQRS 흐름도" class="mb-4 rounded w-8/12">
-    <div class="mb-2">상황별 이벤트 처리 동작 순서를 간단히 설명하면 다음과 같습니다.</div>
+    <div class="mb-2">상황별 이벤트 처리 간단한 동작 순서는 다음과 같습니다.</div>
 
     <ol class="list-decimal list-outside space-y-4 pl-4">
       <li>
