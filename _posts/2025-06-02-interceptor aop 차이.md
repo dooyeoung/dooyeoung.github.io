@@ -145,12 +145,12 @@ public class TimerAop {
 
 위 예시 코드의 동작순서는 다음과 같습니다. UserApiController 클래스의 메서드가 호출되면
 
-- @Before: 메서드 실행 전에 UserRequest 인자를 출력.
-- @Around (전): "메소드 실행 전" 출력, UserRequest 인자를 출력하고 age를 100으로 설정.
-- 메서드 실행: joinPoint.proceed()로 실제 메서드 호출.
-- @Around (후): "메소드 실행 후" 출력 (오타로 인해 "실행후"로 의도된 것으로 보임).
-- @After: 메서드 실행 후 UserRequest 인자를 출력.
-- @AfterReturning: 메서드의 반환값과 모든 인자를 출력.
+- @Before: 메서드 실행 전에 UserRequest 인자를 출력
+- @Around (전): "메소드 실행 전" 출력, UserRequest 인자를 출력하고 age를 100으로 설정
+- 메서드 실행: joinPoint.proceed()로 실제 메서드 호출
+- @Around (후): "메소드 실행 후" 출력
+- @After: 메서드 실행 후 UserRequest 인자를 출력
+- @AfterReturning: 메서드의 반환값과 모든 인자를 출력
 
 
 
