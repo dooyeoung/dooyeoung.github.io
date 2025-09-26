@@ -21,9 +21,9 @@ https://jbee.io/about/ -->
 
   .skil > img{
       margin-left:0 !important;
-      margin-right:2px !important;
-      margin-bottom:2px !important;
-      height: 22px;
+      margin-right:1px !important;
+      margin-bottom:1px !important;
+      height: 20px;
   }
 
   ul.list-inside > li{
@@ -214,22 +214,10 @@ https://jbee.io/about/ -->
 <h2 class="font-semibold print-break" id="projects">프로젝트</h2>
 
 <section>
-  <div class="grid grid-cols-4 mb-4">
-    <div class="col-span-4">
-      <div class="text-xl font-semibold mb-2">헥사고날 아키텍처 기반 병원 예약 관리 시스템</div>
-      <div class="text-sm text-gray-600 mb-2">
-        Spring Framework 기반 시스템 설계 학습 프로젝트
-        [
-        <a href="https://medops.vercel.app/" target="_blank"
-           class="font-bold text-blue-600 hover:text-blue-800 underline">Live Demo</a>
-        ]
-        [
-        <a href="https://github.com/dooyeoung/medops" target="_blank"
-           class="font-bold text-blue-600 hover:text-blue-800 underline">GitHub</a>
-        ]
-      </div>
-    </div>
-    <div class="col-span-4 skil mb-2">
+  <div class="mb-4">
+    <div class="text-xl font-semibold mb-2">헥사고날 아키텍처 기반 병원 예약 관리 시스템</div>
+    <div class="text-base text-neutral-500 mb-2">
+      Java/Spring Boot, Redis, Mongodb, Docker, React, Vite
       <img
         src="https://img.shields.io/badge/springboot-6DB33F.svg?&style=for-the-badge&logo=springboot&logoColor=white"/>
       <img src="https://img.shields.io/badge/mongodb-47A248.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/>
@@ -239,96 +227,241 @@ https://jbee.io/about/ -->
         src="https://img.shields.io/badge/typescript-3178C6.svg?&style=for-the-badge&logo=typescript&logoColor=white"/>
     </div>
 
-    <div class="col-span-1">
-      <div class="text-lg text-neutral-400 font-medium">
-        2025.08 - 2025.09
+    <div class="grid grid-cols-5">
+      <div class="col-span-1 text-base">2025.08 - 2025.09</div>
+      <div class="col-span-4 mb-4">
+        <div class="text-lg font-medium">Spring Framework 기반 복잡한 도메인 설계 학습</div>
+        <div class="text-sm text-neutral-500 mb-4">
+          Spring Framework 기반 시스템 설계 학습 프로젝트
+          [
+          <a href="https://medops.vercel.app/" target="_blank"
+             class="font-bold text-blue-600 hover:text-blue-800 underline">Live Demo</a>
+          ]
+          [
+          <a href="https://github.com/dooyeoung/medops" target="_blank"
+             class="font-bold text-blue-600 hover:text-blue-800 underline">GitHub</a>
+          ]
+        </div>
+
+        <p>
+          실무에서 Java/Spring 생태계 경험이 부족하여 복잡한 비즈니스 로직 설계와 아키텍처에 대한 이해가 필요 생각했습니다.
+          특히 상태 관리가 복잡한 도메인에서 확장 가능하고 유지보수 가능한 시스템을 직접 설계하고자 시작한 프로젝트입니다.
+        </p>
+        <br>
+        <p>
+          따라서 의료 예약이라는 도메인을 선택하여 실무 수준의 학습 프로젝트를 진행했습니다.
+        </p>
+        <ul class="list-inside list-disc ml-4 mt-2">
+          <li>헥사고날 아키텍처로 도메인 로직과 인프라 계층을 명확히 분리</li>
+          <li>의료진 스케줄과 예약 간 복잡한 제약 조건을 이벤트 소싱 패턴으로 처리</li>
+          <li>CQRS 패턴과 Redis 캐싱을 통한 읽기/쓰기 성능 최적화</li>
+          <li>JWT 기반 인증과 역할별 접근 제어로 보안 설계 구현</li>
+        </ul>
+        <br>
+        <p>
+          Spring Boot 기반의 확장 가능한 아키텍처 설계 역량을 확보했으며, 복잡한 상태 흐름을
+          체계적으로 관리하는 방법을 습득했습니다. 이벤트 기반 아키텍처와 도메인 주도 설계에 대한 실무 적용 가능한 지식을
+          얻었습니다.
+        </p>
+        <br>
+        <p>
+          복잡한 도메인일수록 아키텍처 설계의 중요성이 크다는 것을 체감했습니다. 특히 비즈니스
+          로직과 기술적 세부사항을 분리하는 것이 장기적인 유지보수성에 얼마나 중요한지 깨달았습니다. 향후 대규모 서비스 개발
+          시 이 경험을 바탕으로 확장 가능하고 안정적인 시스템을 설계할 수 있는 기반을 마련했습니다.
+        </p>
       </div>
     </div>
-    <div class="col-span-3">
-      <div class="text-lg font-medium">헥사고날 아키텍처 및 이벤트 소싱 구현</div>
-      <ul class="list-inside list-disc mb-4">
-        <li>Java/Spring Boot 기반 헥사고날 아키텍처 학습을 통해 도메인 중심 설계와 Port-Adapter 패턴 적용</li>
-        <li>이벤트 소싱과 CQRS 패턴을 도입하여 의료 기록 변경 이력 추적 및 읽기/쓰기 모델 분리 구현</li>
-        <li>MongoDB와 Redis를 활용한 데이터 관리</li>
-        <li>JWT 인증과 역할 기반 접근 제어를 통한 보안 강화 및 Docker를 활용한 개발 환경 구성</li>
-        <li>React/TypeScript로 관리자 대시보드 개발 및 SSE 기반 실시간 알림 시스템 구축</li>
-      </ul>
+
+    <!--    <div class="col-span-3">-->
+    <!--      <div class="text-lg font-medium">헥사고날 아키텍처 및 이벤트 소싱 구현</div>-->
+    <!--      <ul class="list-inside list-disc mb-4">-->
+    <!--        <li>Java/Spring Boot 기반 헥사고날 아키텍처 학습을 통해 도메인 중심 설계와 Port-Adapter 패턴 적용</li>-->
+    <!--        <li>이벤트 소싱과 CQRS 패턴을 도입하여 의료 기록 변경 이력 추적 및 읽기/쓰기 모델 분리 구현</li>-->
+    <!--        <li>MongoDB와 Redis를 활용한 데이터 관리</li>-->
+    <!--        <li>JWT 인증과 역할 기반 접근 제어를 통한 보안 강화 및 Docker를 활용한 개발 환경 구성</li>-->
+    <!--        <li>React/TypeScript로 관리자 대시보드 개발 및 SSE 기반 실시간 알림 시스템 구축</li>-->
+    <!--      </ul>-->
+    <!--    </div>-->
+  </div>
+
+  <div class="my-8">
+    <div class="">
+      <div class="text-xl font-medium">
+        레몬베이스 - 백엔드 엔지니어
+        <!--        [2022.11 - 2025.06]-->
+      </div>
+    </div>
+
+    <div class="text-base text-neutral-500 mb-4 bg-neutral-50 p-1 rounded">
+      Python/Django, Mysql, Redis, Kafka, SQS,
+      ECS, EKS, ElasticSearch,
+      GithubAction, Terraform
+    </div>
+<!--    <div class="text-base text-neutral-500 mb-4 skil">-->
+<!--      <img src="https://img.shields.io/badge/django-092E20.svg?&style=for-the-badge&logo=django&logoColor=white"/>-->
+<!--      <img src="https://img.shields.io/badge/mysql-4479A1.svg?&style=for-the-badge&logo=mysql&logoColor=white"/>-->
+<!--      <img src="https://img.shields.io/badge/redis-DC382D.svg?&style=for-the-badge&logo=redis&logoColor=white"/>-->
+<!--      <img src="https://img.shields.io/badge/kafka-231F20.svg?&style=for-the-badge&logo=apachekafka&logoColor=white"/>-->
+<!--      <img src="https://img.shields.io/badge/ECS-FF9900.svg?&style=for-the-badge&logo=linuxcontainers&logoColor=white"/>-->
+<!--      <img src="https://img.shields.io/badge/EKS-326CE5.svg?&style=for-the-badge&logo=kubernetes&logoColor=white"/>-->
+<!--      <img src="https://img.shields.io/badge/SQS-3874D8.svg?&style=for-the-badge&logo=qubesos&logoColor=white"/>-->
+
+<!--      <img src="https://img.shields.io/badge/ElasticSearch-005571.svg?&style=for-the-badge&logo=Elasticsearch&logoColor=white"/>-->
+<!--      <img src="https://img.shields.io/badge/terraform-7B42BC.svg?&style=for-the-badge&logo=terraform&logoColor=white"/>-->
+<!--      <img-->
+<!--        src="https://img.shields.io/badge/GithubActions-2088FF.svg?&style=for-the-badge&logo=githubactions&logoColor=white"/>-->
+<!--    </div>-->
+
+    <div class="grid grid-cols-5">
+      <!--      <ul class="list-inside list-disc mb-4">-->
+      <!--        <li>오랜 개발 히스토리와 암묵적 정책이 포함된 기존 R 코드를 분석하고 Python으로 완전 변환하여 개인별 리포트 기능을 구현</li>-->
+      <!--        <li>2개월 만에 MVP를 출시하여 고객에게 즉시 가치를 전달하고, 이후 4개월간 약속된 기능을 지속적으로 제공</li>-->
+      <!--        <li>리뷰 데이터를 활용한 개개인의 질문별 강약점, 자기객관화, 장단점 분석 기능 개발</li>-->
+      <!--        <li>초기 등급형 질문 분석에서 시작하여 다중선택, 주관식 질문까지 분석 범위를 대폭 확장하여 제품 가치 증대</li>-->
+      <!--        <li>RDS 기반의 분석 대기열 구조를 설계하여 개인별 리포트 생성시 리소스 부담이 최소화 될 수 있도록 개선</li>-->
+      <!--        <li>분석 결과를 정적파일로 생성하고 S3에 저장하는 발행기능을 개발하였으며 제품 변경이 분석 결과에 영향을 주지않도록 개선</li>-->
+      <!--      </ul>-->
+
+      <div class="col-span-1 text-base">2024.09 - 2024.11</div>
+      <div class="col-span-4 mb-4 border-l-2 border-solid pl-4">
+        <div class="text-lg font-medium">개인별 리포트 분석 기능 개발</div>
+        <div class="text-sm text-neutral-500 mb-4">
+          <span>레거시 시스템 전환, 신규 기능 개발</span>
+          <span class="mx-1">|</span>
+          <span>백엔드 개발자 (설계 및 구현 주도)</span>
+        </div>
+
+        <div class="">
+          <p>
+            기존 컨설팅 상품으로 제공되던 개인별 분석 리포트를 자동화된 제품으로 전환해야 했습니다.
+            오랜 개발 히스토리와 암묵적 정책이 포함된 R 코드를 Python으로 변환하는 과정에서 분석 로직의 정확성 보장과 다양한
+            리뷰 유형(등급형, 다중선택, 주관식)에 대응하는 확장 가능한 구조 설계가 필요했습니다.
+          </p>
+          <p>
+            따라서 복잡한 분석 로직을 체계적으로 재구현하고 확장 가능한 시스템을 구축했습니다.
+          </p>
+          <ul class="list-inside list-disc mt-2">
+            <li>R 코드와 SQL 쿼리를 기능 단위로 분석하여 Python 기반으로 완전 재구현</li>
+            <li>등급형 분석에서 시작하여 다중선택, 주관식까지 분석 범위를 단계적으로 확장</li>
+            <li>RDS 기반 분석 대기열 구조 설계로 리소스 부담 최소화</li>
+            <li>분석 결과 정적파일 생성 및 S3 저장 시스템으로 데이터 불변성 확보</li>
+            <li>분석 과정 데이터를 시각적으로 확인할 수 있는 내부 검증 도구를 개발하여 QA팀과 동료들에게 제공</li>
+          </ul>
+          <br>
+          <p>
+            2개월 만에 MVP를 성공적으로 출시하여 고객에게 즉시 가치를 제공했으며,
+            이후 4개월간 약속된 기능을 지속적으로 확장했습니다.
+            복잡한 상태 흐름 관리와 대량 데이터 처리 경험을 통해 확장 가능한 분석 시스템 구축 역량을 확보했습니다.
+
+            개발한 검증 도구를 통해 수작업에 의존하던 QA 시간을 대폭 단축하고,
+            데이터 기반의 정밀한 검증 프로세스를 구축하여 제품의 신뢰도를 높였습니다.
+          </p>
+          <br>
+          <p>
+            레거시 시스템의 핵심 로직을 새로운 기술로 마이그레이션할 때는 단순 번역이 아닌 비즈니스 로직의 본질적 이해가 중요함을 깨달았습니다.
+            특히 분석 결과의 정확성이 고객의 인사 평가에 직결되는 상황에서
+            체계적인 검증 프로세스와 내부 도구 개발의 중요성을 배웠습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-span-1 text-base">2025.02 - 2025.03</div>
+      <div class="col-span-4">
+        <div class="text-lg font-medium print-break">AWS 인프라 비용 절감 TF 참여</div>
+        <div class="text-sm text-neutral-500 mt-1 mb-4">
+          <span>목표 제품 관리 및 신규 기능 개발</span>
+          <span class="mx-1">|</span>
+          <span>백엔드 개발자 (설계 및 구현 주도)</span>
+        </div>
+        <div>
+          <ul class="list-inside list-disc mb-4">
+            <li>파편화 되어 운영되던 ECS 서비스를 도메인 단위로 묶어 하나의 서비스로 구성하여 비용 절감</li>
+            <li>celery 워커를 구성하고 비동기 서비스를 통폐합 하여 인프라 리소스를 정리</li>
+            <li>작업 시점 기준 월 3,445달러(약 473만 원), 연간 약 41,340달러(약 5,642만 원) 절감</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-span-1 text-base">2022.11 - 2025.08</div>
+      <div class="col-span-4">
+        <div class="text-lg font-medium">목표 제품 관리</div>
+        <!--
+          <ul class="list-inside list-disc mb-4">
+            <li>목표 승인 기능을 개발하고, QA에 사용할 승인권자 미리보기 내부 툴 페이지를 구현하여 정책 논의와 테스트 효율을 높임</li>
+            <li>목표 관리 엑셀 업로드 기능의 성능을 대폭 개선하고, n+1 쿼리 실행을 제거하여 대규모 데이터 처리 속도를 획기적으로 향상</li>
+            <li>목표 조회 기능 최적화를 통해 처리량과 처리 속도를 크게 개선,
+              30초 → 0.5초 단축. 위계/세부 정보 조회방식을 전면 개편하고 속도 저하 원인 중 하나인 라이브러리 사용을
+              제거하여 확장성과 유지보수성을 높임.
+            </li>
+            <li>목표 이벤트 알림 기능을 추가하고, 목표 체크인을 슬랙에서 바로 할 수 있도록 부가기능을 구현하여 접근성과 편의성을 강화.</li>
+            <li>sqs와 celery beat를 도입하여 스케쥴 처리에 대한 인프라 구성</li>
+            <li>모바일 환경 개선작업으로 목표 간편 체크인 기능 구현하여 목표 제품 접근성을 높이는데 기여</li>
+          </ul>
+        -->
+        <div class="text-sm text-neutral-500 mt-1 mb-4">
+          <span>목표 제품 관리 및 신규 기능 개발</span>
+          <span class="mx-1">|</span>
+          <span>백엔드 개발자 (설계 및 구현 주도)</span>
+        </div>
+        <div>
+          <p>
+            * Problem:
+            대규모 조직의 고객이 새롭게 유입되면서 목표 제품 관리 시스템 전반에 걸쳐 사용자 효율을 저해하는 문제들이 산재해 있었습니다.
+            대량의 데이터를 엑셀로 업로드할 때 N+1 쿼리로 인한 심각한 성능 저하가 발생했고,
+            복잡한 승인 정책을 테스트할 명확한 도구가 없어 QA 효율이 떨어졌습니다.
+            또한, 사용자가 목표를 확인하고 업데이트하는 과정이 번거로워 접근성 개선이 시급했습니다.
+          </p>
+          <br>
+          <p>
+            * Action: 제품의 완성도를 높이기 위해 여러 핵심 기능을 체계적으로 개선했습니다.
+            * 성능 최적화: 엑셀 업로드 기능의 N+1 쿼리를 제거하여 데이터 처리 속도를 획기적으로 향상시켰습니다.
+            (17초 → 3초)
+            * QA 효율 증대: '승인권자 미리보기' 내부 도구를 개발하여 복잡한 정책 논의와 테스트 과정을
+            효율화했습니다.
+            * 접근성 강화: 사용자가 슬랙(Slack)에서 바로 목표를 체크인할 수 있는 기능을 구현하고, 모바일 간편
+            체크인 기능을 추가하여 사용 편의성을 극대화했습니다.
+            * 인프라 구성: SQS와 Celery Beat를 도입하여 안정적인 스케줄 처리 기반을 마련했습니다.
+          </p>
+          <br>
+          <p>
+            * Result: 일련의 개선 작업을 통해 목표 제품 관리 시스템의 성능, 테스트 효율성, 사용자 접근성을 모두 크게
+            향상시켰습니다. 사용자는 대량의 목표를 빠르고 편리하게 관리할 수 있게 되었고, 개발팀은 신규 기능을 더
+            빠르고 안정적으로 테스트하고 배포할 수 있는 환경을 갖추게 되었습니다.
+          </p>
+          <br>
+          <p>
+            * Learned: 단일 기능 개선을 넘어, 시스템 전반의 사용자 여정과 개발 프로세스를 함께 고려하는 것이 제품의
+            가치를 극대화하는 길임을 배웠습니다. 특히 QA를 위한 내부 도구 개발이 팀 전체의 생산성과 최종 제품의
+            품질에 얼마나 큰 영향을 미치는지 체감했으며, 작은 접근성 개선이 사용자 만족도를 크게 높일 수 있다는 점을
+            깨달았습니다.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="col-span-1 text-base">2023.03 - 2025.03</div>
+      <div class="col-span-4">
+        <div class="text-lg font-medium">다양한 PoC 작성 및 공유, 제품화</div>
+        <ul class="list-inside list-disc mb-4">
+          <li>목표 생성 시 조직도 기반으로 담당자/조직을 선택할 수 있도록 PoC를 React로 구현하여 공유하였으며 제품 반영 진행됨</li>
+          <li>삭제된 목표 복구, 목표 이동 등 반복 VOC를 반영한 기능을 PoC로 구현하여 제안하였으며 제품 반영까지 진행됨</li>
+          <li>목표 임시저장, 체크인 시 파일 첨부 등 실사용자 니즈를 반영한 기능을 PoC로 구현하고 제안하였으며 제품 반영까지 진행됨</li>
+          <li>전체 목표를 한눈에 볼 수 있는 Tree view를 React flow를 사용하여 PoC로 구현하여 제안하였으며, 로드맵에 추가되어 이후 제품에 반영됨</li>
+          <li>목표 체크인 현황 파악을 위한 대시보드를 구현하고 제안하였으며, 제품에 반영되었고 이후 승인 현황 대시보드, 목표 등록 현황 대시보드로 확장되었음</li>
+          <li>테스트 환경 구성을 위한 구성원, 조직 대량 생성 기능을 구현하고 구성원들에게 공유하고 제안하여 내부 도구에 반영되어 업무 효율성 기여</li>
+          <Li>목표 정보 상세보기 drawer 창 폭이 좁아 스크롤이 길어지는 불편함이 잇어 넓게 보기 좁게 보기 간단 아이디어를 제안, 이후 제품에 반영되었음</Li>
+          <li>목표 체크인 내역에 대해 반응하기 기능을 추가하고 시험하였고 이를 제안하여 정식 제품으로 반영, 체크인 이 덜 딲딱해짐</li>
+          <li></li>
+        </ul>
+      </div>
     </div>
   </div>
 
   <div class="grid grid-cols-4 mb-4">
     <div class="col-span-4">
       <div class="text-xl font-medium">
-        레몬베이스
-      </div>
-      <div class="text-sm text-neutral-500 mb-2">
-        레몬베이스 백엔드 개발자
-      </div>
-    </div>
-    <div class="col-span-4 skil mb-2">
-      <img src="https://img.shields.io/badge/ECS-FF9900.svg?&style=for-the-badge&logo=amazonecs&logoColor=white"/>
-      <img src="https://img.shields.io/badge/django-092E20.svg?&style=for-the-badge&logo=django&logoColor=white"/>
-      <img src="https://img.shields.io/badge/mariadb-003545.svg?&style=for-the-badge&logo=mariadb&logoColor=white"/>
-      <img src="https://img.shields.io/badge/terraform-7B42BC.svg?&style=for-the-badge&logo=terraform&logoColor=white"/>
-      <img
-        src="https://img.shields.io/badge/githubactions-2088FF.svg?&style=for-the-badge&logo=githubactions&logoColor=white"/>
-      <img src="https://img.shields.io/badge/redis-DC382D.svg?&style=for-the-badge&logo=redis&logoColor=white"/>
-      <img src="https://img.shields.io/badge/kafka-231F20.svg?&style=for-the-badge&logo=apachekafka&logoColor=white"/>
-    </div>
-
-    <div class="col-span-1">
-      <div class="text-lg text-neutral-400 font-medium">
-        2022.11 - 2025.06
-      </div>
-    </div>
-    <div class="col-span-3">
-      <div class="text-lg font-medium">개인별 리포트 분석 기능 개발</div>
-      <ul class="list-inside list-disc mb-4">
-        <li>오랜 개발 히스토리와 암묵적 정책이 포함된 기존 R 코드를 분석하고 Python으로 완전 변환하여 개인별 리포트 기능을 구현</li>
-        <li>2개월 만에 MVP를 출시하여 고객에게 즉시 가치를 전달하고, 이후 4개월간 약속된 기능을 지속적으로 제공</li>
-        <li>리뷰 데이터를 활용한 개개인의 질문별 강약점, 자기객관화, 장단점 분석 기능 개발</li>
-        <li>초기 등급형 질문 분석에서 시작하여 다중선택, 주관식 질문까지 분석 범위를 대폭 확장하여 제품 가치 증대</li>
-        <li>RDS 기반의 분석 대기열 구조를 설계하여 개인별 리포트 생성시 리소스 부담이 최소화 될 수 있도록 개선</li>
-        <li>분석 결과를 정적파일로 생성하고 S3에 저장하는 발행기능을 개발하였으며 제품 변경이 분석 결과에 영향을 주지않도록 개선</li>
-      </ul>
-
-      <div class="text-lg font-medium">목표 제품 관리</div>
-      <ul class="list-inside list-disc mb-4">
-        <li>목표 승인 기능을 개발하고, QA에 사용할 승인권자 미리보기 내부 툴 페이지를 구현하여 정책 논의와 테스트 효율을 높임</li>
-        <li>목표 관리 엑셀 업로드 기능의 성능을 대폭 개선하고, n+1 쿼리 실행을 제거하여 대규모 데이터 처리 속도를 획기적으로 향상</li>
-        <li>목표 조회 기능 최적화를 통해 처리량과 처리 속도를 크게 개선, 30초 → 0.5초 단축. 위계/세부 정보 조회방식을 전면 개편하고 속도 저하 원인 중 하나인 라이브러리 사용을
-          제거하여 확장성과 유지보수성을 높임.
-        </li>
-        <li>목표 이벤트 알림 기능을 추가하고, 목표 체크인을 슬랙에서 바로 할 수 있도록 부가기능을 구현하여 접근성과 편의성을 강화.</li>
-        <li>sqs와 celery beat를 도입하여 스케쥴 처리에 대한 인프라 구성</li>
-        <li>모바일 환경 개선작업으로 목표 간편 체크인 기능 구현하여 목표 제품 접근성을 높이는데 기여</li>
-      </ul>
-
-      <div class="text-lg font-medium print-break">AWS 인프라 비용 절감 TF 참여</div>
-      <ul class="list-inside list-disc mb-4">
-        <li>파편화 되어 운영되던 ECS 서비스를 도메인 단위로 묶어 하나의 서비스로 구성하여 비용 절감</li>
-        <li>celery 워커를 구성하고 비동기 서비스를 통폐합 하여 인프라 리소스를 정리</li>
-        <li>작업 시점 기준 월 3,445달러(약 473만 원), 연간 약 41,340달러(약 5,642만 원) 절감</li>
-      </ul>
-
-      <div class="text-lg font-medium">다양한 PoC 작성 및 공유</div>
-      <ul class="list-inside list-disc mb-4">
-        <li>목표 생성 시 조직도 기반으로 담당자/조직을 선택할 수 있도록 PoC를 React로 구현하여 공유하였으며 제품 반영 진행됨</li>
-        <li>삭제된 목표 복구, 목표 이동 등 반복 VOC를 반영한 기능을 PoC로 구현하여 제안하였으며 제품 반영까지 진행됨</li>
-        <li>목표 임시저장, 체크인 시 파일 첨부 등 실사용자 니즈를 반영한 기능을 PoC로 구현하고 제안하였으며 제품 반영까지 진행됨</li>
-        <li>전체 목표를 한눈에 볼 수 있는 Tree view를 React flow를 사용하여 PoC로 구현하여 제안하였으며, 로드맵에 추가되어 이후 제품에 반영됨</li>
-      </ul>
-
-    </div>
-  </div>
-
-  <div class="grid grid-cols-4 mb-4">
-    <div class="col-span-4">
-      <div class="text-xl font-medium">
-        야놀자 FNB Solution, 스포카
-      </div>
-      <div class="text-sm text-neutral-500 mb-2">
-        도도포인트 백엔드 개발자
+        야놀자 FNB Solution, 스포카 - 도도포인트 백엔드 개발자
+        <!--        2021.03 - 2022.10-->
       </div>
     </div>
     <div class="col-span-4 skil mb-2">
@@ -344,7 +477,7 @@ https://jbee.io/about/ -->
 
     <div class="col-span-1">
       <div class="text-lg text-neutral-400 font-medium">
-        2021.03 - 2022.10
+
       </div>
     </div>
     <div class="col-span-3">
@@ -565,6 +698,7 @@ https://jbee.io/about/ -->
     </div>
   </div>
 </div>
+
 
 <div class="grid grid-cols-4 mb-4">
   <div class="col-span-4 mb-4">
