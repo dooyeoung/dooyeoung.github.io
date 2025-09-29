@@ -114,7 +114,7 @@ hidden: comments
   <!-- 예약 관리 시스템 -->
   <div class="mb-4">
     <h3 class="text-lg  mb-2" id="reservation-system">예약 관리 시스템</h3>
-    <img src="assets/images/portfolio/admin_page.gif" alt="예약 관리 시스템 화면" class="rounded-lg border mb-2">
+    <img src="assets/images/portfolio/admin_page.gif" alt="예약 관리 시스템 화면" class="rounded-lg border mb-2 w-10/12">
     <div class="">
       <p>
         예약자 목록을 날짜별로 구분하여 확인할 수 있고 하루 단위 스케쥴 관리가 가능합니다.
@@ -127,7 +127,7 @@ hidden: comments
   <!-- 실시간 알림 -->
   <div class="mb-4">
     <h3 class="text-lg mb-2" id="realtime-notification">실시간 알림 (SSE)</h3>
-    <img src="assets/images/portfolio/admin_sse.gif" alt="실시간 알림 화면" class="rounded-lg border mb-2">
+    <img src="assets/images/portfolio/admin_sse.gif" alt="실시간 알림 화면" class="rounded-lg border mb-2 w-10/12">
     <div class="">
       <p>
         WebSocket에 비해 가볍고 구현이 용이한 장점의 SseEmitter를 활용하여 서버에서 클라이언트로 단방향 데이터 푸시가 가능한 실시간 알림 기능을 구현했습니다.
@@ -139,7 +139,7 @@ hidden: comments
   <!-- 관리자 대시보드 -->
   <div class="mb-4">
     <h3 class="text-lg mb-2" id="admin-dashboard">관리자 대시보드</h3>
-    <img src="assets/images/portfolio/admin_dashboard.gif" alt="관리자 대시보드 화면" class="rounded-lg border mb-2">
+    <img src="assets/images/portfolio/admin_dashboard.gif" alt="관리자 대시보드 화면" class="rounded-lg border mb-2 w-8/12">
     <div class="">
       <p>
         관리자 대시보드는 CQRS 패턴을 적용하여 복잡한 조회 요건을 효율적으로 처리하도록 설계했습니다.
@@ -247,7 +247,7 @@ public class ReservationPersistenceAdapter implements LoadReservationPort {
 
   <!-- Event Sourcing Flow -->
   <div class="mb-4">
-    <h3 class="text-lg mb-2" id="event-sourcing">이벤트 소싱 및 CQRS</h3>
+    <h3 class="text-lg mb-2 print-break" id="event-sourcing">이벤트 소싱 및 CQRS</h3>
     <p class="mb-2">
       이 프로젝트에서는 이벤트 소싱 패턴의 학습과 실습을 주요 목적으로 의료 예약 시스템에 적용해보았습니다.
       전통적인 CRUD + 로그 방식으로도 충분히 구현 가능하지만, 이벤트 소싱만의 고유한 특성을 경험해보고 싶었습니다. <br><br>
@@ -275,7 +275,7 @@ public class ReservationPersistenceAdapter implements LoadReservationPort {
          class="text-sm text-blue-600 underline">시간여행이 가능한 시스템 아키텍처</a> 참고하여 작성했습니다.
     </p>
 
-    <img src="assets/images/portfolio/event_sourcing.png" alt="이벤트 소싱 및 CQRS 흐름도" class="mb-4 rounded w-8/12">
+    <img src="assets/images/portfolio/event_sourcing.png" alt="이벤트 소싱 및 CQRS 흐름도" class="mb-4 rounded w-4/12">
     <div class="mb-2">상황별 이벤트 처리 간단한 동작 순서는 다음과 같습니다.</div>
 
     <ol class="list-decimal list-outside space-y-4 pl-4">
